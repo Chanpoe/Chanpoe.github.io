@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="拓扑结构_拓扑结构图, Chanpoe">
+    <meta name="keywords" content="拓扑结构, Chanpoe">
     <meta name="description" content="拓扑结构_拓扑结构图学习记录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>拓扑结构_拓扑结构图 | Chanpoe</title>
+    <title>拓扑结构 | Chanpoe</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -693,7 +693,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">拓扑结构_拓扑结构图</h1>
+                    <h1 class="description center-align post-title">拓扑结构</h1>
                 </div>
             </div>
         </div>
@@ -878,7 +878,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>###前言：<br>今天学习神经网络的时候看到了一个<code>拓扑结构</code>的概念，对此比较陌生，所以便对此展开了学习。</p>
+                <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>今天学习神经网络的时候看到了一个<code>拓扑结构</code>的概念，对此比较陌生，所以便对此展开了学习。</p>
 <h3 id="一、拓扑结构："><a href="#一、拓扑结构：" class="headerlink" title="一、拓扑结构："></a>一、拓扑结构：</h3><p>首先我们来解释一下拓扑的含义，所谓“拓扑”就是把实体抽象成与其大小、形状无关的“点”，而把连接实体的线路抽象成“线”，进而以图的形式来表示这些点与线之间关系的方法，其目的在于研究这些点、线之间的相连关系。表示点和线之间关系的图被称为拓扑结构图。拓扑结构与几何结构属于两个不同的数学概念。在几何结构中，我们要考察的是点、线之间的位置关系，或者说几何结构强调的是点与线所构成的形状及大小。如梯形、正方形、平行四边形及圆都属于不同的几何结构，但从拓扑结构的角度去看，由于点、线间的连接关系相同，从而具有相同的拓扑结构即环型结构。也就是说，不同的几何结构可能具有相同的拓扑结构。<br>类似地，在计算机网络中，我们把计算机、终端、通信处理机等设备抽象成点，把连接这些设备的通信线路抽象成线，并将由这些点和线所构成的拓扑称为网络拓扑结构。<br>网络拓扑结构反映出网络的结构关系，它对于网络的性能、可靠性以及建设管理成本等都有着重要的影响，因此网络拓扑结构的设计在整个网络设计中占有十分重要的地位，在网络构建时，网络拓常见的网络拓扑结构。<br>在计算机网络中常见的拓扑结构有<code>总线型</code>、<code>星型</code>、<code>环型</code>、<code>树型</code>和<code>网状型</code>等。</p>
 <hr>
 <h3 id="二、不同类型的拓扑结构："><a href="#二、不同类型的拓扑结构：" class="headerlink" title="二、不同类型的拓扑结构："></a>二、不同类型的拓扑结构：</h3><p>1.总线型拓扑：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/%E6%80%BB%E7%BA%BF%E5%9E%8B%E6%8B%93%E6%89%91.png"><br>总线型拓扑中采用单根传输线路作为传输介质，所有站点通过专门的连接器连到这个公共信道上，这个公共的信道称为总线。任何一个站点发送的数据都能通过总线传播，同时能被总线上的所有其他站点接收到。可见，总线型结构的网络是一种广播网络。扑结构往往是首先要考虑的因素之一。<br>在总线结构中，总线有一定的负载能力，因此，总线长度有一定限制，一条总线也只能连接一定数量的结点。<br>总线布局的特点是：结构简单灵活，非常便于扩充;可靠性高，网络响应速度快;设备量少、价格低、安装使用方便;共享资源能力强，极便于广播式工作即一个结点发送所有结点都可接收。总线型拓扑是基本局域网拓扑形式之一。<br>在总线两端连接的器件称为端结器(末端阻抗匹配器、或终止器)。主要与总线进行阻抗匹配，最大限度吸收传送端部的能量，避免信号反射回总线产生不必要的干扰。<br>总线形网络结构是目前使用最广泛的结构，也是最传统的一种主流网络结构，适合于信息管理系统、办公自动化系统领域的应用。  </p>
@@ -894,7 +894,7 @@
 <hr>
 <p>4.网状拓扑：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/wangzhuangtuopu.png"><br>在网状拓扑结构中，节点之间的连接是任意的，每个节点都有多条线路与其他节点相连，这样使得节点之间存在多条路径可选，如图1.7中从A 到C 可以是A-B-C 也可以是A-D-B-C，在传输数据时可以灵活的选用空闲路径或者避开故障线路。<br>可见网状拓扑可以充分、合理的使用网络资源，并且具有可靠性高的优点。我们知道，广域网覆盖面积大，传输距离长，网络的故障会给大量的用户带来严重的危害，因此在广域网中，为了提高网络的可靠性通常采用网状拓扑结构，如图所示为一个简单的广域网示意图。<br>但是我们也应该看到，这个优点是以高投资和高复杂的管理为代价的。将多个子网或多个局域网连接起来构成网状型拓扑结构。在一个子网中，集线器、中继器将多个设备连接起来，而桥接器、路由器及网关则将子网连接起来。根据组网硬件不同，主要有三种网状型拓扑:<br>①网状网：在一个大的区域内，用无线通信连路连接一个大型网络时，网状网是最好的拓扑结构。通过路由器与路由器相连，可让网络选择一条最快的路径传送数据。<br>②主干网：通过桥接器与路由器把不同的子网或LAN 连接起来形成单个总线或环型拓扑结构，这种网通常采用光纤做主干线。<br>③星状相连网：利用一些叫做超级集线器的设备将网络连接起来，由于星型结构的特点，网络中任一处的故障都可容易查找并修复。应该指出,在实际组网中,拓扑结构不一定是单一的,通常是几种结构的混用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/lizilizi.png"><br>比如，将总线型与星型结合起来就形成了总线型/星型拓扑结构，用一条或多条总线把多组设备连接起来，相连的每组设备呈星型分布。采用这种拓扑结构，用户很容易配置和重新配置网络设备。如图所示。  </p>
 <hr>
-<p>###参考文章：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/starshinning975/article/details/53511343">https://blog.csdn.net/starshinning975/article/details/53511343</a></p>
+<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/starshinning975/article/details/53511343">https://blog.csdn.net/starshinning975/article/details/53511343</a></p>
 
                 
             </div>
@@ -1092,9 +1092,9 @@
                 <a href="/2022/01/06/tuo-bu-jie-gou/">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/tuopufavcicon.jpg" class="responsive-img" alt="拓扑结构_拓扑结构图">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/tuopufavcicon.jpg" class="responsive-img" alt="拓扑结构">
                         
-                        <span class="card-title">拓扑结构_拓扑结构图</span>
+                        <span class="card-title">拓扑结构</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
