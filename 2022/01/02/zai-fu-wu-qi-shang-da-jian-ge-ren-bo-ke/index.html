@@ -841,7 +841,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-04
+                    2022-01-07
                 </div>
                 
 
@@ -928,7 +928,7 @@ exit // 退出到 root 登录
 chown -R git:git /home/git/repos/blog.git // 添加权限<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>5.测试<code>git</code>仓库是否可用，在Windows本地另找文件夹</p>
 <pre class="line-numbers language-none"><code class="language-none">git clone git@server_ip:/home/git/repos/blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果可以<code>git</code>下来空的仓库，就说明<code>git</code>仓库搭建成功了：<br><img src="/2022/01/02/zai-fu-wu-qi-shang-da-jian-ge-ren-bo-ke/git%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%88%90%E5%8A%9F%E5%9B%BE.png"></p>
+<p>如果可以<code>git</code>下来空的仓库，就说明<code>git</code>仓库搭建成功了：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/git%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%88%90%E5%8A%9F%E5%9B%BE.png"></p>
 <hr>
 <h3 id="三、建立本地与服务器的连接："><a href="#三、建立本地与服务器的连接：" class="headerlink" title="三、建立本地与服务器的连接："></a>三、建立本地与服务器的连接：</h3><p>1.在Windows本地建立<code>ssh</code>信任关系：  </p>
 <pre class="line-numbers language-none"><code class="language-none">ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip
@@ -971,8 +971,8 @@ vi nginx.conf
 修改 root 解析路径，如下图
 同时将 user 改为 root 如下图，不然nginx无法访问 /home/git/projects/blog
 nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/2022/01/02/zai-fu-wu-qi-shang-da-jian-ge-ren-bo-ke/Nginx%E9%85%8D%E7%BD%AE1.png"><br><img src="/2022/01/02/zai-fu-wu-qi-shang-da-jian-ge-ren-bo-ke/Nginx%E9%85%8D%E7%BD%AE2.png"></p>
-<p>4.配置<code>_config.yml</code>文件里的<code>deploy</code>属性：<br><img src="/2022/01/02/zai-fu-wu-qi-shang-da-jian-ge-ren-bo-ke/deploy%E9%85%8D%E7%BD%AE.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE1.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE2.png"></p>
+<p>4.配置<code>_config.yml</code>文件里的<code>deploy</code>属性：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/deploy%E9%85%8D%E7%BD%AE.png"></p>
 <p>5.上传本地博客到服务器：  </p>
 <pre class="line-numbers language-none"><code class="language-none">npm run deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
