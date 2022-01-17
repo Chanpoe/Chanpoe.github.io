@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python访问字典中元素</title>
+      <link href="/2022/01/17/python-fang-wen-zi-dian-zhong-yuan-su/"/>
+      <url>/2022/01/17/python-fang-wen-zi-dian-zhong-yuan-su/</url>
+      
+        <content type="html"><![CDATA[<hr><h3 id="一、通过“键值对”-key-value-访问："><a href="#一、通过“键值对”-key-value-访问：" class="headerlink" title="一、通过“键值对”(key-value)访问："></a>一、通过“键值对”(key-value)访问：</h3><p>格式：<br>1.<code>print(dict[key])</code></p><pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">dict = {1: 1, 2: 'aa', 'D': 'ee', 'Ty': 45}print(dict['D'])输出：ee<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>2.<code>dict.get(key,[default])</code><br>default为可选项，用于指定当‘键’不存在时 返回一个默认值，如果省略，默认返回None</p><pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">dict = {1: 1, 2: 'aa', 'D': 'ee', 'Ty': 45}print(dict.get(2))print(dict.get(3))print(dict.get(4, ['字典中不存在键为4的元素']))输出：aaNone['字典中不存在键为4的元素']<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h3 id="二、遍历字典："><a href="#二、遍历字典：" class="headerlink" title="二、遍历字典："></a>二、遍历字典：</h3><p>1.使用字典对象里的`dict.items()’方法获取字典的各个元素即“键值对”的<a href="https://www.runoob.com/python3/python3-tuple.html">元组</a>列表：</p><pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">dict = {1: 1, 2: 'aa', 'D': 'ee', 'Ty': 45}for item in dict.items():    print(item)输出：(1, 1)(2, 'aa')('D', 'ee')('Ty', 45)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>2.获取到具体的每个键和值：</p><pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">dict = {1: 1, 2: 'aa', 'D': 'ee', 'Ty': 45}for key, value in dict.items():    print(key, value)输出：1 12 aaD eeTy 45<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>3.还可以使用<code>keys()</code>和<code>value()</code>方法获取字典的键和值列表：</p><pre class="line-numbers language-python3" data-language="python3"><code class="language-python3">dict = {1: 1, 2: 'aa', 'D': 'ee', 'Ty': 45}for key in dict.keys():    print(key)for value in dict.values():    print(value)输出：12DTy1aaee45<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a href="https://www.cnblogs.com/xioawu-blog/p/11074887.html">https://www.cnblogs.com/xioawu-blog/p/11074887.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小One抓取位置</title>
       <link href="/2022/01/13/xiao-one-zhua-qu-wei-zhi/"/>
       <url>/2022/01/13/xiao-one-zhua-qu-wei-zhi/</url>
