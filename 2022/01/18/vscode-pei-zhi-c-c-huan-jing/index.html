@@ -883,7 +883,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    991
+                    993
                 </div>
                 
 
@@ -1006,7 +1006,7 @@
             <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"cppvsdbg"</span><span class="token punctuation">,</span>
             <span class="token property">"request"</span><span class="token operator">:</span> <span class="token string">"launch"</span><span class="token punctuation">,</span>
             <span class="token property">"program"</span><span class="token operator">:</span> <span class="token string">"${fileDirname}\\${fileBasenameNoExtension}.exe"</span><span class="token punctuation">,</span>
-            <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span> 
+            <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
                 <span class="token string">"/C"</span><span class="token punctuation">,</span>
                 <span class="token string">"${fileDirname}\\${fileBasenameNoExtension}.exe"</span><span class="token punctuation">,</span>
                 <span class="token string">"&amp;"</span><span class="token punctuation">,</span>
@@ -1017,7 +1017,8 @@
             <span class="token property">"stopAtEntry"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
             <span class="token property">"cwd"</span><span class="token operator">:</span> <span class="token string">"${fileDirname}"</span><span class="token punctuation">,</span>
             <span class="token property">"environment"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            <span class="token property">"externalConsole"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token comment">// "externalConsole": true,</span>
+            <span class="token property">"console"</span><span class="token operator">:</span> <span class="token string">"externalTerminal"</span><span class="token punctuation">,</span>
             <span class="token property">"internalConsoleOptions"</span><span class="token operator">:</span> <span class="token string">"neverOpen"</span><span class="token punctuation">,</span>
             <span class="token property">"preLaunchTask"</span><span class="token operator">:</span> <span class="token string">"C/C++: g++.exe 生成活动文件"</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1048,7 +1049,7 @@
         <span class="token comment">//     "preLaunchTask": "C/C++: g++.exe 生成活动文件"</span>
         <span class="token comment">// }</span>
     <span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>注意！！！<br>需要把<code>"externalConsole"</code>的默认值改为 true，就可以使用外部的控制台了。<br><br><br>至此安装已经成功~</p>
 <hr>
 <h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87864677">VScode配置c++环境（MinGW安装教程）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45467083/article/details/108962924">VSCode配置C/C++环境</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/113222681">史上最全vscode配置使用教程</a></p>
