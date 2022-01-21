@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Win11安装Android子系统</title>
+      <link href="/2022/01/21/win11-an-zhuang-android-zi-xi-tong/"/>
+      <url>/2022/01/21/win11-an-zhuang-android-zi-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前提说明："><a href="#前提说明：" class="headerlink" title="前提说明："></a>前提说明：</h3><p>当然你的系统必须是Windows 11 22000正式版系统（最好是专业版）。什么，我Windows 10也想上车？看见右上角那个小叉号了没？</p><hr><h3 id="一、开启处理器虚拟化支持"><a href="#一、开启处理器虚拟化支持" class="headerlink" title="一、开启处理器虚拟化支持"></a>一、开启处理器虚拟化支持</h3><p>打开电脑💻设置→应用→可选功能→更多Windows功能→勾选hyper-V→勾选powershell2.0→勾选虚拟机平台→确认→重启</p><p>注：<br>如果你的系统不是Windows11 专业版，可能会没有hyper-V这个选项，参考：<a href="https://m.jb51.net/article/182013.htm">解决方案</a></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154736.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154816.png"><br>（记得重启电脑）</p><hr><h3 id="二、安装Window-Subsystem-for-Android应用"><a href="#二、安装Window-Subsystem-for-Android应用" class="headerlink" title="二、安装Window Subsystem for Android应用"></a>二、安装Window Subsystem for Android应用</h3><p>1.应用下载链接：（任选一个（貌似微云最快））<br>百度云网盘：<a href="https://pan.baidu.com/s/1oU9nDQTNi18dgeEwlypMbQ">https://pan.baidu.com/s/1oU9nDQTNi18dgeEwlypMbQ</a> 提取码：gqi9<br>天翼网盘：<a href="https://cloud.189.cn/t/qqI7bmAZnAFz">https://cloud.189.cn/t/qqI7bmAZnAFz</a><br>微云网盘：<a href="https://share.weiyun.com/JHaPyIGH">https://share.weiyun.com/JHaPyIGH</a><br>微信网盘：<a href="https://drive.weixin.qq.com/s?k=AIIA1QdUAAs6DGHFc6">https://drive.weixin.qq.com/s?k=AIIA1QdUAAs6DGHFc6</a></p><p>2.从网盘中下载所需要的文件然后管理员身份运行了Powershell<br>执行<code>Add-AppxPackage -Path</code> 下载的文件<code>.Msixbundle</code>即可<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155310.png"></p><pre class="line-numbers language-Powershell" data-language="Powershell"><code class="language-Powershell">Add-AppxPackage -Path  (你的下载位置)\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155825.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160317.png"></p><p>3.打开Window Subsystem for Android应用开发人员模式<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160457.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160524.png"></p><hr><h3 id="通过ADB安装安卓app"><a href="#通过ADB安装安卓app" class="headerlink" title="通过ADB安装安卓app"></a>通过ADB安装安卓app</h3><p>1.解压ADB（platform-tools-latest-windows.zip),在解压后的目录右键选择”在Windows终端中打开“<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161241.png"></p><p>2.ADB链接Android系统：</p><p>输入<code>.\adb connect 127.0.0.1:58526</code></p><p>输入<code>.\adb install D:**.apk</code>,安装下载的app<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161511.png"></p><p>在开始菜单可以看到新安装的安卓应用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161538.png"></p><hr><h3 id="参考文章；"><a href="#参考文章；" class="headerlink" title="参考文章；"></a>参考文章；</h3><p><a href="https://www.coolapk.com/feed/32797179?shareKey=ODRkZTAyMmI0OWQwNjFlYTM2ZTY~&amp;shareUid=3164854&amp;shareFrom=com.coolapk.market_11.2.5">https://www.coolapk.com/feed/32797179?shareKey=ODRkZTAyMmI0OWQwNjFlYTM2ZTY~&amp;shareUid=3164854&amp;shareFrom=com.coolapk.market_11.2.5</a><br><a href="https://blog.csdn.net/u012514495/article/details/120885242">https://blog.csdn.net/u012514495/article/details/120885242</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows 11 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python format 格式化函数</title>
       <link href="/2022/01/20/ge-shi-hua-han-shu/"/>
       <url>/2022/01/20/ge-shi-hua-han-shu/</url>
