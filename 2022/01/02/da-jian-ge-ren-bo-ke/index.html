@@ -823,7 +823,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    920
+                    1k
                 </div>
                 
 
@@ -931,8 +931,26 @@ tar xzvf nginx-1.15.2.tar.gz
 cd nginx-1.15.2
 ./configure // 如果后面还想要配置 SSL 协议，就执行后面一句！
 ./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-file-aio --with-http_realip_module
+yum -y install gcc gcc-c++ autoconf automake make // 安装C++编译环境
 make &amp;&amp; make install
-alias nginx='/usr/local/nginx/sbin/nginx' // 为 nginx 取别名，后面可直接用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+alias nginx='/usr/local/nginx/sbin/nginx' // 为 nginx 取别名，后面可直接用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果Nginx不能访问：</p>
+<pre class="line-numbers language-none"><code class="language-none">1:查看防火状态
+systemctl status firewalld
+service  iptables status
+2:暂时关闭防火墙
+systemctl stop firewalld
+service  iptables stop
+3:永久关闭防火墙
+systemctl disable firewalld
+chkconfig iptables off
+4:重启防火墙
+systemctl enable firewalld
+service iptables restart  
+5:永久关闭后重启
+//暂时还没有试过
+chkconfig iptables on<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2.测试是否安装成功：</p>
 <pre class="line-numbers language-none"><code class="language-none">nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
