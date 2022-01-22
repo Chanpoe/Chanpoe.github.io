@@ -962,9 +962,14 @@ chkconfig iptables on<span aria-hidden="true" class="line-numbers-rows"><span></
 <pre class="line-numbers language-none"><code class="language-none">cd /usr/local/nginx/conf
 vi nginx.conf
 修改 root 解析路径，如下图
-同时将 user 改为 root 如下图，不然nginx无法访问 /home/git/projects/blog
-nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+同时将 user 改为 root 如下图，不然nginx无法访问 /home/git/projects/blog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE1.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE2.png"></p>
+<p>然后更新nginx配置：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
 <p>4.配置<code>_config.yml</code>文件里的<code>deploy</code>属性：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/deploy%E9%85%8D%E7%BD%AE.png"></p>
 <p>5.上传本地博客到服务器：  </p>
 <pre class="line-numbers language-none"><code class="language-none">npm run deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
