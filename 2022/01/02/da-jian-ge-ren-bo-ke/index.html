@@ -905,7 +905,7 @@ chown -R git:git /home/git/repos/blog.git // 添加权限<span aria-hidden="true
 <pre class="line-numbers language-none"><code class="language-none">git clone git@server_ip:/home/git/repos/blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果可以<code>git</code>下来空的仓库，就说明<code>git</code>仓库搭建成功了：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/git%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%88%90%E5%8A%9F%E5%9B%BE.png"></p>
 <hr>
-<h3 id="三、建立本地与服务器的连接："><a href="#三、建立本地与服务器的连接：" class="headerlink" title="三、建立本地与服务器的连接："></a>三、建立本地与服务器的连接：</h3><p>1.在Windows本地建立<code>ssh</code>信任关系：  </p>
+<h3 id="三、建立本地与服务器的连接："><a href="#三、建立本地与服务器的连接：" class="headerlink" title="三、建立本地与服务器的连接："></a>三、建立本地与服务器的连接：</h3><p>1.在Windows本地建立<code>ssh</code>信任关系：<br>（Windows使用git Bash执行）</p>
 <pre class="line-numbers language-none"><code class="language-none">ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip
 ssh git@server_ip // 测试能否登录
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
