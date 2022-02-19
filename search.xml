@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>通过53端口udp转发校园网</title>
-      <link href="/2022/02/17/tong-guo-53-duan-kou-udp-zhuan-fa-xiao-yuan-wang/"/>
-      <url>/2022/02/17/tong-guo-53-duan-kou-udp-zhuan-fa-xiao-yuan-wang/</url>
-      
-        <content type="html"><![CDATA[<p>服务器Linux系统：CentOS  7.6 64位<br>服务器端口设置记录：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218001200.png"></p><h3 id="服务端："><a href="#服务端：" class="headerlink" title="服务端："></a>服务端：</h3><p>安装GCC环境：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">yum <span class="token function">install</span> gcc gcc-c++ <span class="token function">make</span> <span class="token function">tar</span> -y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>下载：<br><a href="https://chanpoe-storage.obs.cn-north-4.myhuaweicloud.com/storage/softether-vpnserver-v4.34-9745-rtm-2020.04.05-linux-x64-64bit.tar.gz?AWSAccessKeyId=QBTXBXYVWXDRBXBVHNVW&amp;Expires=1676220979&amp;Signature=7xpNEpv85Z4lxV9nVKtwvdf/zrA=">softether-vpnserver-v4.34-9745-rtm-2020.04.05-linux-x64-64bit.tar.gz</a></p><p>上传到服务器后，解压：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> -zxvf softether-vpnserver-v4.34-9745-rtm-2020.04.05-linux-x64-64bit.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>进入目录：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vpnserver/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>编译：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">make</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意：<br>提示处输入三次1</p><p>启动：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./vpnserver start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">./vpncmd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218002559.png"></p><p>输入1</p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218002634.png"></p><h6 id="服务器没搭建网站请忽略"><a href="#服务器没搭建网站请忽略" class="headerlink" title="服务器没搭建网站请忽略"></a><del>服务器没搭建网站请忽略</del></h6><p>这里由于我的服务器搭建了网站，所以默认的443端口（https）被占用，因此输入<code>公网ip:5555</code><br>然后下一项输入回车</p><p>进入到VPN交互。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ServerPasswordSet<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后设置管理密码</p><hr><h3 id="管理端："><a href="#管理端：" class="headerlink" title="管理端："></a>管理端：</h3><p>下载：<br><a href="https://chanpoe-storage.obs.cn-north-4.myhuaweicloud.com/storage/softether-vpnserver_vpnbridge-v4.28-9669-beta-2018.09.11-windows-x86_x64-intel.exe?AWSAccessKeyId=QBTXBXYVWXDRBXBVHNVW&amp;Expires=1676219722&amp;Signature=VmLmNzZDmvGaJjpeoSgaHRQPQsU=">softether-vpnserver_vpnbridge-v4.28-9669-beta-2018.09.11-windows-x86_x64-intel.exe</a></p><p>安装：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218003857.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218003754.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218003947.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004013.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004042.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004124.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004200.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004312.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004331.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004405.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004424.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218004619.png"></p><h3 id="客户端（OpenVpn）"><a href="#客户端（OpenVpn）" class="headerlink" title="客户端（OpenVpn）"></a>客户端（OpenVpn）</h3><p>使用方法：（官网需要梯子）<br><a href="https://openvpn.net/vpn-client/">https://openvpn.net/vpn-client/</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 总结 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Tmux</title>
       <link href="/2022/01/28/tmux/"/>
       <url>/2022/01/28/tmux/</url>
