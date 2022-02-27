@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Docker容器的迁移</title>
+      <link href="/2022/02/27/docker-rong-qi-de-qian-yi/"/>
+      <url>/2022/02/27/docker-rong-qi-de-qian-yi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p><del>今天需要使用docker的迁移功能，于是又是两个小时的爆肝</del></p><hr><h3 id="docker-export-import与docker-save-load的区别："><a href="#docker-export-import与docker-save-load的区别：" class="headerlink" title="docker export/import与docker save/load的区别："></a>docker export/import与docker save/load的区别：</h3><p>export/import会丢弃历史记录和元数据信息，仅保存容器当时的快照状态<br>save/load会保存完整记录，体积更大</p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227153738.png"></p><p>如果直接将export&amp;import作用于container，那么打包的东西不会包含存储层的数据，例如，开了一个mysql容器，那么容器中的相关配置信息会保留，但是mysql数据库中存的数据不会被保留。而如果将一个container进行commit后，再使用save&amp;load，可以保留相应的数据。  </p><p>由于需要保留迁移后的数据，因此使用save&amp;load这种方式。</p><hr><h3 id="定制镜像："><a href="#定制镜像：" class="headerlink" title="定制镜像："></a>定制镜像：</h3><p>由于save&amp;load实际操作的是image，所以导出之前，要先使用commit命令把容器中相对于其底层镜像的修改，提交为一层文件系统，与原有的image结合构成一个新的image。新的image中会包含所有修改的内容。<br>（ps：这种制作镜像的方式不被提倡，因为这样做会保留一些元数据信息，导致image过大，如果想用于制作一个简洁的镜像，需使用DockerFile的方式定制镜像，这里不做详述）<br>这样以一个容器salve02为例，将它提交到一个叫做theslave02的镜像上，再打上标签</p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227153900.png"></p><p>提交完成后我们可以看到这么一个image：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227153918.png"></p><hr><h3 id="导出镜像："><a href="#导出镜像：" class="headerlink" title="导出镜像："></a>导出镜像：</h3><p>把镜像导出为一个输出文件：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154031.png"></p><p>查看导出的文件：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154050.png"></p><hr><h3 id="传输文件："><a href="#传输文件：" class="headerlink" title="传输文件："></a>传输文件：</h3><p>将导出的输出文件通过scp的方式发送到本地的主机上：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154119.png"></p><hr><h3 id="导入镜像："><a href="#导入镜像：" class="headerlink" title="导入镜像："></a>导入镜像：</h3><p>在本地主机上，将受到的文件导入为镜像文件:<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154141.png"></p><p>查看镜像文件：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154153.png"></p><hr><h3 id="使用镜像运行容器："><a href="#使用镜像运行容器：" class="headerlink" title="使用镜像运行容器："></a>使用镜像运行容器：</h3><p>使用刚刚导入的镜像，运行为一个容器：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154221.png"></p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">docker run -p <span class="token number">19132</span>:19132/udp --name my_docker_server -itd docker_lesson:1.0  <span class="token comment"># 创建并运行docker_lesson:1.0镜像 使用udp传输</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看容器运行状况：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154547.png"></p><p>进入容器：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220227154559.png"></p><h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a href="https://blog.csdn.net/weixin_36343850/article/details/80553680">https://blog.csdn.net/weixin_36343850/article/details/80553680</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>通过53端口udp转发校园网</title>
       <link href="/2022/02/17/tong-guo-53-duan-kou-udp-zhuan-fa-xiao-yuan-wang/"/>
       <url>/2022/02/17/tong-guo-53-duan-kou-udp-zhuan-fa-xiao-yuan-wang/</url>
