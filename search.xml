@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux一键搭建Alist</title>
+      <link href="/2022/03/03/alist-yun-pan-mu-lu/"/>
+      <url>/2022/03/03/alist-yun-pan-mu-lu/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Linux一键搭建脚本"><a href="#Linux一键搭建脚本" class="headerlink" title="Linux一键搭建脚本"></a>Linux一键搭建脚本</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装</span><span class="token function">curl</span> -fsSL <span class="token string">"https://nn.ci/alist.sh"</span> <span class="token operator">|</span> <span class="token function">bash</span> -s <span class="token function">install</span> /root<span class="token comment"># 更新</span><span class="token function">curl</span> -fsSL <span class="token string">"https://nn.ci/alist.sh"</span> <span class="token operator">|</span> <span class="token function">bash</span> -s update /root<span class="token comment"># 卸载</span><span class="token function">curl</span> -fsSL <span class="token string">"https://nn.ci/alist.sh"</span> <span class="token operator">|</span> <span class="token function">bash</span> -s uninstall /root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="手动搭建参考官方文档："><a href="#手动搭建参考官方文档：" class="headerlink" title="手动搭建参考官方文档："></a>手动搭建参考官方文档：</h3><p><a href="https://alist-doc.nn.ci/docs/install/manual">https://alist-doc.nn.ci/docs/install/manual</a></p><h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a href="https://alist-doc.nn.ci/docs/install/script">https://alist-doc.nn.ci/docs/install/script</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Docker容器的迁移</title>
       <link href="/2022/02/27/docker-rong-qi-de-qian-yi/"/>
       <url>/2022/02/27/docker-rong-qi-de-qian-yi/</url>
