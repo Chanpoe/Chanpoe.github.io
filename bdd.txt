@@ -1,0 +1,20 @@
+layout: false
+---
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		img{
+			height: 200;
+		}
+	</style>
+	<body>
+		<div class = "image"></div><br />
+		<div>
+			<img src="./bdd.gif" alt=""/>
+		</div>
+	</body>
+</html>
