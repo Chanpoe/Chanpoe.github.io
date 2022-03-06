@@ -846,8 +846,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                                <span class="chip bg-color">记录</span>
+                            <a href="/tags/VSCode/">
+                                <span class="chip bg-color">VSCode</span>
                             </a>
                         
                     </div>
@@ -915,7 +915,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在此之前，我是用的一直都是Visual Studio 2019这款IDE进行代码的编写运行和调试的，但是由于其功能太过冗余，多数功能对于我这种小白来说不太友好，虽然功能强大，但是实用性不高，最主要的是它太占内存了，而且写出的代码也需要放在项目文件里，每一个项目文件就有100多MB，所以确实不太方便。<br><br> VSCode作为一款微软出的轻量级编辑器，它本身只是一款文本编辑器而已，所有的功能都是以插件扩展的形式所存在，想用什么功能就安装对应的扩展即可，非常方便，同时也支持非常多的主题和图标，外观比较好看，重要的是VSCode支持各大主流操作系统，包括Windows、Linux和Mac OS。所以就选择它作为自己的一款主要的编辑器来使用。<br> <br><br>下面，就是本次配置环境的方法记录：</p>
+                <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在此之前，我是用的一直都是Visual Studio 2019这款IDE进行代码的编写运行和调试的，但是由于其功能太过冗余，多数功能对于我这种小白来说不太友好，虽然功能强大，但是实用性不高，最主要的是它太占内存了，而且写出的代码也需要放在项目文件里，每一个项目文件就有100多MB，所以确实不太方便。<br><br>VSCode作为一款微软出的轻量级编辑器，它本身只是一款文本编辑器而已，所有的功能都是以插件扩展的形式所存在，想用什么功能就安装对应的扩展即可，非常方便，同时也支持非常多的主题和图标，外观比较好看，重要的是VSCode支持各大主流操作系统，包括Windows、Linux和Mac OS。所以就选择它作为自己的一款主要的编辑器来使用。<br><br><br>下面，就是本次配置环境的方法记录：</p>
 <hr>
 <h2 id="一、安装MinGW："><a href="#一、安装MinGW：" class="headerlink" title="一、安装MinGW："></a>一、安装MinGW：</h2><p>(MinGW最好安装在C盘，后面有些问题就不会出现)<br><a target="_blank" rel="noopener" href="http://c.biancheng.net/view/8077.html">MinGW下载和安装教程</a></p>
 <hr>
@@ -987,6 +987,7 @@
     <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>使用快捷加 Ctrl + F5， 或者如下图：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118150846.png"></p>
 <br>
 会有一个报错，是因为官网版本没有gdb.exe
@@ -1055,9 +1056,10 @@
         <span class="token comment">// }</span>
     <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>注意！！！<br>（需要把<code>"externalConsole"</code>的默认值改为 <code>true</code>）加入一句<code>"console": "externalTerminal",</code>就可以使用外部的控制台了。<br><br><br>至此安装已经成功~</p>
 <hr>
-<h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87864677">VScode配置c++环境（MinGW安装教程）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45467083/article/details/108962924">VSCode配置C/C++环境</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/113222681">史上最全vscode配置使用教程</a></p>
+<h2 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87864677">VScode配置c++环境（MinGW安装教程）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45467083/article/details/108962924">VSCode配置C/C++环境</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/113222681">史上最全vscode配置使用教程VS</a></p>
 
                 
             </div>
@@ -1072,8 +1074,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%B0%E5%BD%95/">
-                                    <span class="chip bg-color">记录</span>
+                                <a href="/tags/VSCode/">
+                                    <span class="chip bg-color">VSCode</span>
                                 </a>
                             
                         </div>
@@ -1262,7 +1264,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python format 格式化函数
+                            Python 学习记录
                         
                     </div>
                     <div class="publish-info">
@@ -1273,8 +1275,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    学习记录
                                 </a>
                             
                             
@@ -1302,15 +1304,15 @@
                 <a href="/2022/01/17/python-fang-wen-zi-dian-zhong-yuan-su/">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python访问字典中元素">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 访问字典中元素">
                         
-                        <span class="card-title">Python访问字典中元素</span>
+                        <span class="card-title">Python 访问字典中元素</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python学习笔记
+                            Python 学习记录
                         
                     </div>
                     <div class="publish-info">
@@ -1321,8 +1323,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    学习记录
                                 </a>
                             
                             
