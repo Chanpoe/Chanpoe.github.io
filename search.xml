@@ -4,11 +4,55 @@
   
     
     <entry>
+      <title>Git的使用</title>
+      <link href="/2022/07/28/git-de-shi-yong/"/>
+      <url>/2022/07/28/git-de-shi-yong/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>为了对项目进行更好的维护，为了方便进行版本控制，所以Git的学习和使用就变得极为重要，此篇博客记录Git的使用方法和命令，以便之后忘记的时候进行查阅。</p><hr><h3 id="一、Git的基本使用："><a href="#一、Git的基本使用：" class="headerlink" title="一、Git的基本使用："></a>一、Git的基本使用：</h3><p>初始化Git仓库</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看状态</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>向Git仓库中添加文件（<code>.</code>是所有文件，添加后的文件在Git Bash中查看是绿色的）</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>提交修改</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> commit -m <span class="token string">'这里面是修改内容的描述，一定一定一定要好好写，写人话，让自己能看懂'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看修改日志</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>查看所有修改前后的日志</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> reflog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>回退某个版本</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">- <span class="token function">git</span> reset --hard 16028ec75b9e7b23aaf8a09e9ccbd96c5dca2529<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Django记录</title>
+      <link href="/2022/06/20/django-ji-lu/"/>
+      <url>/2022/06/20/django-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>git push的方法：</p></blockquote><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span class="token function">git</span> status //查看git仓库的状态<span class="token function">git</span> commit -m <span class="token string">"此次修改操作的名字"</span><span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><hr><blockquote><p>在acapp中添加 <code>.gitignore</code>文件<br>编辑此文件，可以设置在git push时忽略上传<code>__pycache__</code></p></blockquote><p><code>.gitignore</code>文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">*/__pycache__<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> django </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java的this关键字</title>
       <link href="/2022/05/21/java-de-this-guan-jian-zi/"/>
       <url>/2022/05/21/java-de-this-guan-jian-zi/</url>
       
-        <content type="html"><![CDATA[<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this 是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。</p><p>this 的用法在 Java 中大体可以分为3种：</p><p>1.普通的直接引用</p><p>这种就不用说了，this 相当于是指向当前对象本身。</p><p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token punctuation">{</span>    <span class="token comment">//属性</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>作用：可以区别成员变量和局部变量。</p><p>3.引用构造函数</p><p>这个和 super 一起总结，待更新中。。。。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this 是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。</p><p>this 的用法在 Java 中大体可以分为3种：</p><p>1.普通的直接引用</p><p>这种就不用说了，this 相当于是指向当前对象本身。</p><p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：<br>（this表示所在方法的调用者的地址值（2022.5.28新理解））</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token punctuation">{</span>    <span class="token comment">//属性</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>作用：可以区别成员变量和局部变量。</p><p>3.引用构造函数</p><p>这个和 super 一起总结，待更新中。。。。</p>]]></content>
       
       
       
@@ -27,7 +71,7 @@
       <link href="/2022/05/20/chong-shi-xie-bo-ke-zong-jie-de-xi-guan/"/>
       <url>/2022/05/20/chong-shi-xie-bo-ke-zong-jie-de-xi-guan/</url>
       
-        <content type="html"><![CDATA[<h3 id="为什么要坚持写博客？"><a href="#为什么要坚持写博客？" class="headerlink" title="为什么要坚持写博客？"></a>为什么要坚持写博客？</h3><p>首先明确一点，写博客从来不是写给别人看的（当然能帮助别人解决一部分问题也不错），而是自己定期做一些总结，对一些事情、一些以前没搞懂但是现在好像有了一些自己的理解的事情做一些反思和体悟。</p><hr><h3 id="博客怎么分类，又怎么贴标签？"><a href="#博客怎么分类，又怎么贴标签？" class="headerlink" title="博客怎么分类，又怎么贴标签？"></a>博客怎么分类，又怎么贴标签？</h3><p>根据之前做过的一篇思维导图来看，一定要做到写博客之前先分类，然后根据不同的类别再寻找合适的标签。当然，每种不同的类别肯定是不能有交集的，但是标签可以有交集，而且一篇博客可以有多种标签，但是只能是某一类。（目前来看这种模式应该是合适的，如果出现了不合适的地方，之后再进行修改）</p><hr><h3 id="博客写什么？"><a href="#博客写什么？" class="headerlink" title="博客写什么？"></a>博客写什么？</h3><p>当然，除了记录美好生活之外，最重要的还是对新学到的内容进行总结，当然不需要每天都写博客，但是，只要是新学到一种东西，或者是对某个知识，甚至某个事情、某个事物有了新的体会都可以写进博客进行记录，之后回看到这篇博文的时候可能会有惊喜哦~</p><hr><h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>最终的目的一定要明确，一个月薪上w的程序员应该做什么，不应该做什么，你心里应该有点数。ok先写到这里，贴一张图激励自己吧//</p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/jiliziji.jpg"></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="为什么要坚持写博客？"><a href="#为什么要坚持写博客？" class="headerlink" title="为什么要坚持写博客？"></a>为什么要坚持写博客？</h3><p>首先明确一点，写博客从来不是写给别人看的（当然能帮助别人解决一部分问题也不错），而是自己定期做一些总结，对一些事情、一些以前没搞懂但是现在好像有了一些自己的理解的事情做一些反思和体悟。</p><hr><h3 id="博客怎么分类，又怎么贴标签？"><a href="#博客怎么分类，又怎么贴标签？" class="headerlink" title="博客怎么分类，又怎么贴标签？"></a>博客怎么分类，又怎么贴标签？</h3><p>根据之前做过的一篇思维导图来看，一定要做到写博客之前先分类，然后根据不同的类别再寻找合适的标签。当然，每种不同的类别肯定是不能有交集的，但是标签可以有交集，而且一篇博客可以有多种标签，但是只能是某一类。（目前来看这种模式应该是合适的，如果出现了不合适的地方，之后再进行修改）</p><hr><h3 id="博客写什么？"><a href="#博客写什么？" class="headerlink" title="博客写什么？"></a>博客写什么？</h3><p>当然，除了记录美好生活之外，最重要的还是对新学到的内容进行总结，当然不需要每天都写博客，但是，只要是新学到一种东西，或者是对某个知识，甚至某个事情、某个事物有了新的体会都可以写进博客进行记录，之后回看到这篇博文的时候可能会有惊喜哦~</p><hr><h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>最终的目的一定要明确，一个月薪上w的程序员应该做什么，不应该做什么，你心里应该有点数。ok先写到这里，贴一张图激励自己吧</p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/jiliziji.jpg"></p>]]></content>
       
       
       

@@ -871,7 +871,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    155
+                    176
                 </div>
                 
 
@@ -910,7 +910,7 @@
 <p>this 的用法在 Java 中大体可以分为3种：</p>
 <p>1.普通的直接引用</p>
 <p>这种就不用说了，this 相当于是指向当前对象本身。</p>
-<p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：</p>
+<p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：<br>（this表示所在方法的调用者的地址值（2022.5.28新理解））</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token punctuation">{</span>
     <span class="token comment">//属性</span>
     <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>
@@ -921,6 +921,7 @@
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//0</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>作用：可以区别成员变量和局部变量。</p>
 <p>3.引用构造函数</p>
 <p>这个和 super 一起总结，待更新中。。。。</p>
@@ -1113,29 +1114,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/05/21/java-de-this-guan-jian-zi/">
+                <a href="/2022/06/20/django-ji-lu/">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/javatupian.jpg" class="responsive-img" alt="Java的this关键字">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220620193111.png" class="responsive-img" alt="Django记录">
                         
-                        <span class="card-title">Java的this关键字</span>
+                        <span class="card-title">Django记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            总结Java的this关键字
+                            记录学习django过程中的难点
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-21
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-20
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1144,12 +1144,11 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/django/">
+                        <span class="chip bg-color">django</span>
                     </a>
                     
                 </div>
