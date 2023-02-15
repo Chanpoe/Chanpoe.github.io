@@ -2197,7 +2197,7 @@ body.dark img, body.dark strong {
 
 
 /* 新增显示行号 */
-.line-numbers-rows {
+/* .line-numbers-rows {
     border-right-width: 0px !important;
 }
 
@@ -2208,6 +2208,6 @@ body.dark img, body.dark strong {
     overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
-}
+} */
 
 
