@@ -955,7 +955,7 @@
 <h3 id="一、检查版本和环境："><a href="#一、检查版本和环境：" class="headerlink" title="一、检查版本和环境："></a>一、检查版本和环境：</h3><blockquote>
 <p>打开Anaconda Prompt</p>
 </blockquote>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126122619.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126122619.png"></p>
 <blockquote>
 <p>查看安装的版本：</p>
 </blockquote>
@@ -964,7 +964,7 @@
 <p>查看已经安装的环境：</p>
 </blockquote>
 <p><code>conda env list</code></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126122544.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126122544.png"></p>
 <hr>
 <h3 id="二、创建环境："><a href="#二、创建环境：" class="headerlink" title="二、创建环境："></a>二、创建环境：</h3><blockquote>
 <p>表示创建一个名字为test_env的环境：（这里环境用的python版本是 3.9版本的）</p>
@@ -978,14 +978,14 @@
 <p>Linux下：<code>conda activate test_env</code></p>
 <p>进入之后就可以安装需要的包了</p>
 <p><code>pip install xxxxx</code></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126124509.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126124509.png"></p>
 <hr>
 <h3 id="三、删除环境："><a href="#三、删除环境：" class="headerlink" title="三、删除环境："></a>三、删除环境：</h3><blockquote>
 <p>删除环境指令：</p>
 </blockquote>
 <p><code>conda remove -n test_env --all</code></p>
 <hr>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126124803.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20221126124803.png"></p>
 <h3 id="四、复制环境："><a href="#四、复制环境：" class="headerlink" title="四、复制环境："></a>四、复制环境：</h3><blockquote>
 <p>复制环境指令：</p>
 </blockquote>
@@ -1404,60 +1404,6 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -1781,6 +1727,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

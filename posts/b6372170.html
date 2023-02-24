@@ -941,7 +941,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>今天遇到了一个很头疼的问题：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195428.png"></p>
+                <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>今天遇到了一个很头疼的问题：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195428.png"></p>
 <p>由于Github的CDN （Content Delivery Network，即内容分发网络，基本原理：利用全局负载技术将用户的访问指向当时较近的最佳的CDN节点）<del>被伟大的墙屏蔽，导致我们在国内访问Github会非常地慢，尤其是在clone仓库时，只有几十K的速度，下载半天，还会经常失败，让人头疼。</del></p>
 <p>而Github是程序员的标配，俗话说：“工欲善其事，必先利其器”，所以，本文介绍的是：通过修改hosts文件的方法来绕过国内DNS解析。由于Github只是被DNS污染，而不是像Google那样被IP封锁，所以，我们不需要科学上网，也不需要海外的服务器辅助，这样操作一波后，就可以直接访问Github的CDN节点（主DNS根据一系列策略确定当时最适当的CDN节点，并将解析的结果（IP地址）发给用户，用户向给定的CDN节点请求相应网站的内容 ），从而达到加速的目的。</p>
 <hr>
@@ -949,19 +949,19 @@
 <pre class="line-numbers language-none"><code class="language-none">github.com
 github.global.ssl.fastly.net<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195839.png"></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200125.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195839.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200125.png"></p>
 <p>记下IP地址</p>
 <p>2.打开hosts文件</p>
 <p>hosts文件是啥？将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统再会将网址提交DNS域名解析服务器进行IP地址的解析，如果发现是被屏蔽的IP或域名，就会禁止打开此网页！</p>
 <p>目录：<br><code>C:\Windows\System32\drivers\etc\hosts</code></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200338.png"></p>
-<p>3.复制查询后地ip，然后在hosts文件中做出相应地修改<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200427.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200338.png"></p>
+<p>3.复制查询后地ip，然后在hosts文件中做出相应地修改<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200427.png"></p>
 <p>4.修改后保存退出，在cmd命令行执行刷新命令:</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">ipconfig/flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200635.png"></p>
-<p>会发现已经可以ping通Github了<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200848.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200635.png"></p>
+<p>会发现已经可以ping通Github了<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200848.png"></p>
 <hr>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42102911/article/details/121485672?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_42102911/article/details/121485672?spm=1001.2014.3001.5501</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42232769/article/details/105655388">https://blog.csdn.net/weixin_42232769/article/details/105655388</a></p>
 
@@ -1371,60 +1371,6 @@ github.global.ssl.fastly.net<span aria-hidden="true" class="line-numbers-rows"><
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -1748,6 +1694,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

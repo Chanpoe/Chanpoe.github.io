@@ -952,14 +952,14 @@
 <p>它与其他库不同的地方是他要启动你电脑上的浏览器, 这就需要一个驱动程序来辅助. </p>
 <p>这里推荐用chrome浏览器</p>
 <p>chrome驱动地址:<a target="_blank" rel="noopener" href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125174618013.png"></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125174658971.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125174618013.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125174658971.png"></p>
 <p>根据你电脑的不同自行选择吧.  win64选win32即可.</p>
 <p>然后关键的来了. 把你下载的浏览器驱动放在python解释器所在的文件夹</p>
 <p>Windwos:  py -0p     查看Python路径</p>
 <p>Mac: open + 路径</p>
 <p>例如：open /usr/local/bin/</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125175328245.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125175328245.png"></p>
 <p> 前期准备工作完毕.  上代码看看 感受一下selenium</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> Chrome  <span class="token comment"># 导入谷歌浏览器的类</span>
 
@@ -971,7 +971,7 @@ web<span class="token punctuation">.</span>get<span class="token punctuation">(<
 <span class="token keyword">print</span><span class="token punctuation">(</span>web<span class="token punctuation">.</span>title<span class="token punctuation">)</span>  <span class="token comment"># 打印title</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>运行一下你会发现神奇的事情发生了. 浏览器自动打开了. 并且输入了网址. 也能拿到网页上的title标题. </p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125175906255.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20210125175906255.png"></p>
 <h2 id="二、selenium的基本使用"><a href="#二、selenium的基本使用" class="headerlink" title="二、selenium的基本使用"></a>二、selenium的基本使用</h2><h3 id="1、加载网页："><a href="#1、加载网页：" class="headerlink" title="1、加载网页："></a>1、加载网页：</h3><p>selenium通过控制浏览器，所以对应的获取的数据都是elements中的内容</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 <span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
@@ -1719,60 +1719,6 @@ driver<span class="token punctuation">.</span>close<span class="token punctuatio
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -2096,6 +2042,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

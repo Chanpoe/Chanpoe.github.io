@@ -1000,7 +1000,7 @@ chown -R git:git /home/git/repos/blog.git // 添加权限<span aria-hidden="true
 <p>5.测试<code>git</code>仓库是否可用，在Windows本地另找文件夹</p>
 <pre class="line-numbers language-none"><code class="language-none">git clone git@server_ip:/home/git/repos/blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="如果可以git下来空的仓库，就说明git仓库搭建成功了："><a href="#如果可以git下来空的仓库，就说明git仓库搭建成功了：" class="headerlink" title="如果可以git下来空的仓库，就说明git仓库搭建成功了："></a>如果可以<code>git</code>下来空的仓库，就说明<code>git</code>仓库搭建成功了：</h2><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/git%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%88%90%E5%8A%9F%E5%9B%BE.png"></p>
+<h2 id="如果可以git下来空的仓库，就说明git仓库搭建成功了："><a href="#如果可以git下来空的仓库，就说明git仓库搭建成功了：" class="headerlink" title="如果可以git下来空的仓库，就说明git仓库搭建成功了："></a>如果可以<code>git</code>下来空的仓库，就说明<code>git</code>仓库搭建成功了：</h2><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/git%E4%BB%93%E5%BA%93%E8%8E%B7%E5%8F%96%E6%88%90%E5%8A%9F%E5%9B%BE.png"></p>
 <h3 id="三、建立本地与服务器的连接："><a href="#三、建立本地与服务器的连接：" class="headerlink" title="三、建立本地与服务器的连接："></a>三、建立本地与服务器的连接：</h3><p>1.在Windows本地建立<code>ssh</code>信任关系：<br>（Windows使用git Bash执行）</p>
 <pre class="line-numbers language-none"><code class="language-none">ssh-copy-id -i C:/Users/yourname/.ssh/id_rsa.pub git@server_ip
 ssh git@server_ip // 测试能否登录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -1060,12 +1060,12 @@ vi nginx.conf
 修改 root 解析路径，如下图
 同时将 user 改为 root 如下图，不然nginx无法访问 /home/git/projects/blog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE1.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE2.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE1.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Nginx%E9%85%8D%E7%BD%AE2.png"></p>
 <p>然后更新nginx配置：</p>
 <pre class="line-numbers language-none"><code class="language-none">sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p>4.配置<code>_config.yml</code>文件里的<code>deploy</code>属性：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/deploy%E9%85%8D%E7%BD%AE.png"></p>
+<p>4.配置<code>_config.yml</code>文件里的<code>deploy</code>属性：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/deploy%E9%85%8D%E7%BD%AE.png"></p>
 <p>5.上传本地博客到服务器：</p>
 <pre class="line-numbers language-none"><code class="language-none">npm run deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1479,60 +1479,6 @@ nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span><
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -1856,6 +1802,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -947,10 +947,10 @@
 <hr>
 <h2 id="二、安装VScode："><a href="#二、安装VScode：" class="headerlink" title="二、安装VScode："></a>二、安装VScode：</h2><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">Vscode官网</a></p>
 <hr>
-<h2 id="三、安装各种插件："><a href="#三、安装各种插件：" class="headerlink" title="三、安装各种插件："></a>三、安装各种插件：</h2><p>1.中文语言包：<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118140841.png"><br>2.编程语言运行扩展：<code>Code Runner</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118141755.png"><br>3.C/C++：<code>C/C++</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118141102.png"></p>
+<h2 id="三、安装各种插件："><a href="#三、安装各种插件：" class="headerlink" title="三、安装各种插件："></a>三、安装各种插件：</h2><p>1.中文语言包：<code>Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118140841.png"><br>2.编程语言运行扩展：<code>Code Runner</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118141755.png"><br>3.C/C++：<code>C/C++</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118141102.png"></p>
 <hr>
-<h2 id="四、配置C-C-环境："><a href="#四、配置C-C-环境：" class="headerlink" title="四、配置C/C++环境："></a>四、配置C/C++环境：</h2><h3 id="1-配置编译器"><a href="#1-配置编译器" class="headerlink" title="1.配置编译器"></a>1.配置编译器</h3><p>接下来配置编译器路径，按快捷键Ctrl+Shift+P调出命令面板，输入C/C++，选择“Edit Configurations(UI)”进入配置。这里配置两个选项： - 编译器路径：C:\MinGW\bin\g++.exe<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118144952.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145040.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145111.png"></p>
-<p>配置完成后，此时在侧边栏可以发现多了一个.vscode文件夹，并且里面有一个c_cpp_properties.json文件，说明上述配置成功。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145328.png"><br>内容如下：</p>
+<h2 id="四、配置C-C-环境："><a href="#四、配置C-C-环境：" class="headerlink" title="四、配置C/C++环境："></a>四、配置C/C++环境：</h2><h3 id="1-配置编译器"><a href="#1-配置编译器" class="headerlink" title="1.配置编译器"></a>1.配置编译器</h3><p>接下来配置编译器路径，按快捷键Ctrl+Shift+P调出命令面板，输入C/C++，选择“Edit Configurations(UI)”进入配置。这里配置两个选项： - 编译器路径：C:\MinGW\bin\g++.exe<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118144952.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145040.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145111.png"></p>
+<p>配置完成后，此时在侧边栏可以发现多了一个.vscode文件夹，并且里面有一个c_cpp_properties.json文件，说明上述配置成功。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145328.png"><br>内容如下：</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"configurations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">{</span>
@@ -973,8 +973,8 @@
     <span class="token property">"version"</span><span class="token operator">:</span> <span class="token number">4</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-配置构建任务："><a href="#2-配置构建任务：" class="headerlink" title="2.配置构建任务："></a>2.配置构建任务：</h3><p>接下来，创建一个<code>tasks.json</code>文件来告诉VS Code如何构建（编译）程序。该任务将调用<code>g++</code>编译器基于源代码创建可执行文件。 按快捷键<code>Ctrl+Shift+P</code>调出命令面板，输入<code>tasks</code>，选择<code>“Tasks:Configure Default Build Task”</code>：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145613.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145654.png"></p>
-<p>此时会出现一个名为<code>tasks.json</code>的配置文件:<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145803.png"><br>内容如下：</p>
+<h3 id="2-配置构建任务："><a href="#2-配置构建任务：" class="headerlink" title="2.配置构建任务："></a>2.配置构建任务：</h3><p>接下来，创建一个<code>tasks.json</code>文件来告诉VS Code如何构建（编译）程序。该任务将调用<code>g++</code>编译器基于源代码创建可执行文件。 按快捷键<code>Ctrl+Shift+P</code>调出命令面板，输入<code>tasks</code>，选择<code>“Tasks:Configure Default Build Task”</code>：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145613.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145654.png"></p>
+<p>此时会出现一个名为<code>tasks.json</code>的配置文件:<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118145803.png"><br>内容如下：</p>
 <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"tasks"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">{</span>
@@ -1014,7 +1014,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>使用快捷加 Ctrl + F5， 或者如下图：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118150846.png"></p>
+<p>使用快捷加 Ctrl + F5， 或者如下图：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118150846.png"></p>
 <br>
 会有一个报错，是因为官网版本没有gdb.exe
 
@@ -1493,60 +1493,6 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -1870,6 +1816,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

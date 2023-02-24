@@ -945,20 +945,20 @@
 <hr>
 <h3 id="一、开启处理器虚拟化支持"><a href="#一、开启处理器虚拟化支持" class="headerlink" title="一、开启处理器虚拟化支持"></a>一、开启处理器虚拟化支持</h3><p>打开电脑💻设置→应用→可选功能→更多Windows功能→勾选hyper-V→勾选powershell2.0→勾选虚拟机平台→确认→重启</p>
 <p>注：<br>如果你的系统不是Windows11 专业版，可能会没有hyper-V这个选项，参考：<a target="_blank" rel="noopener" href="https://m.jb51.net/article/182013.htm">解决方案</a></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154736.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154816.png"><br>（记得重启电脑）</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154736.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121154816.png"><br>（记得重启电脑）</p>
 <hr>
 <h3 id="二、安装Window-Subsystem-for-Android应用"><a href="#二、安装Window-Subsystem-for-Android应用" class="headerlink" title="二、安装Window Subsystem for Android应用"></a>二、安装Window Subsystem for Android应用</h3><p>1.Window Subsystem for Android下载：<br><a target="_blank" rel="noopener" href="https://share.weiyun.com/0Idc7Cbi">Windows11 手动安装WSA（Android）</a></p>
-<p>2.从网盘中下载所需要的文件然后管理员身份运行了Powershell<br>执行<code>Add-AppxPackage -Path</code> 下载的文件<code>.Msixbundle</code>即可<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155310.png"></p>
+<p>2.从网盘中下载所需要的文件然后管理员身份运行了Powershell<br>执行<code>Add-AppxPackage -Path</code> 下载的文件<code>.Msixbundle</code>即可<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155310.png"></p>
 <pre class="line-numbers language-Powershell" data-language="Powershell"><code class="language-Powershell">Add-AppxPackage -Path  (你的下载位置)\MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155825.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160317.png"></p>
-<p>3.打开Window Subsystem for Android应用开发人员模式<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160457.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160524.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121155825.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160317.png"></p>
+<p>3.打开Window Subsystem for Android应用开发人员模式<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160457.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121160524.png"></p>
 <hr>
-<h3 id="通过ADB安装安卓app"><a href="#通过ADB安装安卓app" class="headerlink" title="通过ADB安装安卓app"></a>通过ADB安装安卓app</h3><p>1.解压ADB（platform-tools-latest-windows.zip),在解压后的目录右键选择”在Windows终端中打开“<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161241.png"></p>
+<h3 id="通过ADB安装安卓app"><a href="#通过ADB安装安卓app" class="headerlink" title="通过ADB安装安卓app"></a>通过ADB安装安卓app</h3><p>1.解压ADB（platform-tools-latest-windows.zip),在解压后的目录右键选择”在Windows终端中打开“<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161241.png"></p>
 <p>2.ADB链接Android系统：</p>
 <p>输入<code>.\adb connect 127.0.0.1:58526</code></p>
-<p>输入<code>.\adb install D:**.apk</code>,安装下载的app<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161511.png"></p>
-<p>在开始菜单可以看到新安装的安卓应用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161538.png"></p>
+<p>输入<code>.\adb install D:**.apk</code>,安装下载的app<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161511.png"></p>
+<p>在开始菜单可以看到新安装的安卓应用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121161538.png"></p>
 <hr>
 <h3 id="参考文章；"><a href="#参考文章；" class="headerlink" title="参考文章；"></a>参考文章；</h3><p><a target="_blank" rel="noopener" href="https://www.coolapk.com/feed/32797179?shareKey=ODRkZTAyMmI0OWQwNjFlYTM2ZTY%5C~&amp;shareUid=3164854&amp;shareFrom=com.coolapk.market_11.2.5">https://www.coolapk.com/feed/32797179?shareKey=ODRkZTAyMmI0OWQwNjFlYTM2ZTY\~&amp;shareUid=3164854&amp;shareFrom=com.coolapk.market_11.2.5</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012514495/article/details/120885242">https://blog.csdn.net/u012514495/article/details/120885242</a></p>
 
@@ -1368,60 +1368,6 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -1745,6 +1691,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

@@ -955,14 +955,14 @@
 <p>通过分析 第一个index.m3u8请求返回的内容中包含了第二个m3u8请求的url地址 </p>
 <p>也就是说通过第一个index.m3u8url请求返回包含第二个index.m3u8文件地址，通过拼接请求第二个index.m3u8后 返回了包含当前所有ts文件的地址内容</p>
 <p>现在分析出了第二个真正的index.m3u8的地址，但是第一个地址从哪里来的呢，别慌，接下来我们来查找一下第一个url是从哪里来的</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708105559202.png"></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708105618510.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708105559202.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708105618510.png"></p>
 </li>
 <li><p>查找第一个index.m3u8的url地址</p>
 <p>打开source</p>
 <p>发现url存在页面源代码中的js里  知道了位置，在代码中通过正则匹配就可以获取到了 </p>
 <p>现在我们缕一下思路，通过页面源代码可以找到第一个index.m3u8的url，通过请求返回包含第二个index.m3u8文件的url内容，进行拼接，请求第二个m3u8的url，以此返回所有的ts内容</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708110048589.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708110048589.png"></p>
 </li>
 </ul>
 <h2 id="3、代码实现"><a href="#3、代码实现" class="headerlink" title="3、代码实现"></a>3、代码实现</h2><h3 id="3-1-获取最后一个m3u8的url地址"><a href="#3-1-获取最后一个m3u8的url地址" class="headerlink" title="3.1 获取最后一个m3u8的url地址"></a>3.1 获取最后一个m3u8的url地址</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re
@@ -1260,13 +1260,13 @@ headers <span class="token operator">=</span> <span class="token punctuation">{<
 
 
 <h2 id="4、注意事项"><a href="#4、注意事项" class="headerlink" title="4、注意事项"></a>4、注意事项</h2><h3 id="4-1-说明"><a href="#4-1-说明" class="headerlink" title="4.1 说明"></a>4.1 说明</h3><p>在获取index.m3u8文件的内容时，有的文件内容会显示…jpg/png的情况，并没显示…ts，那么遇到这种情况需要单独处理 内容如下：</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708111809978.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708111809978.png"></p>
 <p>这种情况使用上面的代码就无法进行正常合并，合并后的视频无法播放</p>
 <p>但使用ffprobe分析，发现识别为png，进而导致无法正常拼接</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708112001167.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708112001167.png"></p>
 <p><strong>在这种情况下，只需要将其中PNG文件头部分全部使用FF填充，即可处理该问题</strong></p>
 <p>填充后的效果如图</p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708112029091.png"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20220708112029091.png"></p>
 <h3 id="4-2-使用代码进行处理"><a href="#4-2-使用代码进行处理" class="headerlink" title="4.2 使用代码进行处理"></a>4.2 使用代码进行处理</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 解析伪装成png的ts</span>
 <span class="token keyword">def</span> <span class="token function">resolve_ts</span><span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> dst_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token triple-quoted-string string">'''
@@ -2069,60 +2069,6 @@ headers <span class="token operator">=</span> <span class="token punctuation">{<
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="87531429"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.6'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-    
     <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
@@ -2446,6 +2392,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
