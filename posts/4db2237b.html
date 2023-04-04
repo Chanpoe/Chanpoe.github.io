@@ -906,7 +906,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    46
+                    163
                 </div>
                 
 
@@ -936,11 +936,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="MySQL修改密码："><a href="#MySQL修改密码：" class="headerlink" title="MySQL修改密码："></a>MySQL修改密码：</h3><blockquote>
-<p>使用mysqladmin修改密码</p>
-</blockquote>
+                <h3 id="MySQL修改密码："><a href="#MySQL修改密码：" class="headerlink" title="MySQL修改密码："></a>MySQL修改密码：</h3><h4 id="方法1-非登录mysql状态"><a href="#方法1-非登录mysql状态" class="headerlink" title="方法1.(非登录mysql状态)"></a>方法1.(非登录mysql状态)</h4><blockquote>
 <p>使用 mysqladmin 命令修改 MySQL 的 root 用户密码格式为 <code>mysqladmin -u用户名 -p旧密码 password 新密码</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220925110132.png"></p>
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20221220182007480.png"></p>
+</blockquote>
+<h4 id="方法2-登录mysql状态"><a href="#方法2-登录mysql状态" class="headerlink" title="方法2(登录mysql状态)"></a>方法2(登录mysql状态)</h4><blockquote>
+<p>如图方法更改mysql密码<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20221220182007480.png">  </p>
+</blockquote>
+<h4 id="方法3-登录mysql状态"><a href="#方法3-登录mysql状态" class="headerlink" title="方法3(登录mysql状态)"></a>方法3(登录mysql状态)</h4><blockquote>
+<p>使用如下命令更改root用户密码：</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">USER</span> <span class="token string">'root'</span><span class="token variable">@'localhost'</span> IDENTIFIED <span class="token keyword">WITH</span> mysql_native_password <span class="token keyword">BY</span> <span class="token string">'your_new_password'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将 your_new_password 替换为你要设置的新密码。该命令将使用 mysql_native_password 认证插件将 root 用户的密码更改为新密码。  </p>
+<blockquote>
+<p>如果你需要为其他用户更改密码，可以使用以下命令：</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">USER</span> <span class="token string">'username'</span><span class="token variable">@'localhost'</span> IDENTIFIED <span class="token keyword">WITH</span> mysql_native_password <span class="token keyword">BY</span> <span class="token string">'your_new_password'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
 <hr>
 <h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3>
                 
@@ -1358,7 +1370,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.5k</span>&nbsp;字
+                class="white-color">43.6k</span>&nbsp;字
             
             
             
