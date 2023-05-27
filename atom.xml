@@ -6,7 +6,7 @@
   <link href="https://www.chanpoe.top/atom.xml" rel="self"/>
   
   <link href="https://www.chanpoe.top/"/>
-  <updated>2023-05-27T16:07:49.865Z</updated>
+  <updated>2023-05-27T16:26:13.460Z</updated>
   <id>https://www.chanpoe.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.chanpoe.top/posts/b39b89bc.html"/>
     <id>https://www.chanpoe.top/posts/b39b89bc.html</id>
     <published>2023-05-27T15:46:37.000Z</published>
-    <updated>2023-05-27T16:07:49.865Z</updated>
+    <updated>2023-05-27T16:26:13.460Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="含义："><a href="#含义：" class="headerlink" title="含义："></a>含义：</h3><p><code>-&gt;</code>常常出现在python函数定义的函数名后面（在<code>:</code>的前面），为函数添加元数据，描述函数的返回类型，也可以理解为给函数添加注解。在定义函数时使用特殊的语法来注释函数的参数和返回值的类型。这些注解不会影响函数的行为，但可以提供更详细的文档，以及一些类型检查工具可以使用这些注解来进行静态类型检查。</p><p>例如：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token string">"Hello, "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"! You are "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" years old."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>在这个例子中，函数<code>greet</code>的第一个参数<code>name</code>有一个注解<code>str</code>，表示这个参数应该是一个字符串类型。第二个参数<code>age</code>有一个注解<code>int</code>，表示这个参数应该是一个整数类型。返回值也有一个注解<code>str</code>，表示该函数将返回一个字符串类型的值。</p><p>Python解释器不会对这些注解添加任何的语义。它们不会被类型检查，运行时跟没有加注解之前的效果也没有任何差距。</p>]]></content>
     
@@ -167,11 +167,11 @@
   </entry>
   
   <entry>
-    <title>MySQL手册</title>
+    <title>MySQL修改密码（整合）</title>
     <link href="https://www.chanpoe.top/posts/4db2237b.html"/>
     <id>https://www.chanpoe.top/posts/4db2237b.html</id>
     <published>2022-09-25T02:55:35.000Z</published>
-    <updated>2023-04-04T03:48:33.803Z</updated>
+    <updated>2023-05-27T16:31:52.935Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="MySQL修改密码："><a href="#MySQL修改密码：" class="headerlink" title="MySQL修改密码："></a>MySQL修改密码：</h3><h4 id="方法1-非登录mysql状态"><a href="#方法1-非登录mysql状态" class="headerlink" title="方法1.(非登录mysql状态)"></a>方法1.(非登录mysql状态)</h4><blockquote><p>使用 mysqladmin 命令修改 MySQL 的 root 用户密码格式为 <code>mysqladmin -u用户名 -p旧密码 password 新密码</code><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220925110132.png"></p></blockquote><h4 id="方法2-登录mysql状态"><a href="#方法2-登录mysql状态" class="headerlink" title="方法2(登录mysql状态)"></a>方法2(登录mysql状态)</h4><blockquote><p>如图方法更改mysql密码<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20221220182007480.png">  </p></blockquote><h4 id="方法3-登录mysql状态"><a href="#方法3-登录mysql状态" class="headerlink" title="方法3(登录mysql状态)"></a>方法3(登录mysql状态)</h4><blockquote><p>使用如下命令更改root用户密码：</p></blockquote><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">USER</span> <span class="token string">'root'</span><span class="token variable">@'localhost'</span> IDENTIFIED <span class="token keyword">WITH</span> mysql_native_password <span class="token keyword">BY</span> <span class="token string">'your_new_password'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>将 your_new_password 替换为你要设置的新密码。该命令将使用 mysql_native_password 认证插件将 root 用户的密码更改为新密码。  </p><blockquote><p>如果你需要为其他用户更改密码，可以使用以下命令：</p></blockquote><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">USER</span> <span class="token string">'username'</span><span class="token variable">@'localhost'</span> IDENTIFIED <span class="token keyword">WITH</span> mysql_native_password <span class="token keyword">BY</span> <span class="token string">'your_new_password'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3>]]></content>
     
