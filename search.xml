@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python函数注解</title>
+      <link href="posts/b39b89bc.html"/>
+      <url>posts/b39b89bc.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="含义："><a href="#含义：" class="headerlink" title="含义："></a>含义：</h3><p><code>-&gt;</code>常常出现在python函数定义的函数名后面（在<code>:</code>的前面），为函数添加元数据，描述函数的返回类型，也可以理解为给函数添加注解。在定义函数时使用特殊的语法来注释函数的参数和返回值的类型。这些注解不会影响函数的行为，但可以提供更详细的文档，以及一些类型检查工具可以使用这些注解来进行静态类型检查。</p><p>例如：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> age<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token string">"Hello, "</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"! You are "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" years old."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>在这个例子中，函数<code>greet</code>的第一个参数<code>name</code>有一个注解<code>str</code>，表示这个参数应该是一个字符串类型。第二个参数<code>age</code>有一个注解<code>int</code>，表示这个参数应该是一个整数类型。返回值也有一个注解<code>str</code>，表示该函数将返回一个字符串类型的值。</p><p>Python解释器不会对这些注解添加任何的语义。它们不会被类型检查，运行时跟没有加注解之前的效果也没有任何差距。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ChatGPT</title>
       <link href="posts/ef4f0767.html"/>
       <url>posts/ef4f0767.html</url>
@@ -45,6 +70,8 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> 爬虫 </tag>
             
         </tags>
@@ -69,6 +96,8 @@
       
       
         <tags>
+            
+            <tag> Python </tag>
             
             <tag> 爬虫 </tag>
             
@@ -168,7 +197,9 @@
       
         <tags>
             
-            <tag> xpath </tag>
+            <tag> Python </tag>
+            
+            <tag> 爬虫 </tag>
             
         </tags>
       
@@ -195,7 +226,7 @@
             
             <tag> Python </tag>
             
-            <tag> Beautifulsou4 </tag>
+            <tag> 爬虫 </tag>
             
         </tags>
       
