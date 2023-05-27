@@ -149,7 +149,7 @@
     <link href="https://www.chanpoe.top/posts/19850a30.html"/>
     <id>https://www.chanpoe.top/posts/19850a30.html</id>
     <published>2022-09-26T15:57:47.000Z</published>
-    <updated>2023-02-15T14:44:54.978Z</updated>
+    <updated>2023-05-27T16:48:18.890Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><blockquote><p>如何获取Cookies？（2022.12.29更新）</p></blockquote><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> cookie<span class="token operator">=</span>document<span class="token punctuation">.</span>cookie<span class="token punctuation">;</span><span class="token keyword">var</span> Str_Num <span class="token operator">=</span> cookie<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'_MHYUUID='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>cookie <span class="token operator">=</span><span class="token string">'添加 '</span><span class="token operator">+</span>cookie<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>Str_Num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> ask<span class="token operator">=</span><span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">'Cookie:'</span><span class="token operator">+</span>cookie<span class="token operator">+</span><span class="token string">'\n\n按确认，然后粘贴发送给机器人'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>ask<span class="token operator">==</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">copy</span><span class="token punctuation">(</span>cookie<span class="token punctuation">)</span><span class="token punctuation">;</span>msg<span class="token operator">=</span>cookie<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>msg<span class="token operator">=</span><span class="token string">'Cancel'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>1.复制上面全部代码，然后用Chrome浏览器的无痕模式打开<a href="https://user.mihoyo.com/#/login">https://user.mihoyo.com/#/login</a><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927001031.png"><br>2.在页面上右键检查或者Ctrl+Shift+i<br>3.选择控制台（Console），粘贴，回车，在弹出的窗口点确认（点完自动复制）<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927000248.png"><br>4.然后在和机器人的私聊窗口，粘贴发送即可  </p><hr><blockquote><p>如何获取Stoken？</p></blockquote><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> cookie <span class="token operator">=</span> document<span class="token punctuation">.</span>cookie<span class="token punctuation">;</span><span class="token keyword">var</span> ask <span class="token operator">=</span> <span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">'Cookie:'</span> <span class="token operator">+</span> cookie <span class="token operator">+</span> <span class="token string">'\n\n按确认，然后粘贴发送给机器人'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span>ask <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token function">copy</span><span class="token punctuation">(</span><span class="token string">"添加 stoken"</span> <span class="token operator">+</span> cookie<span class="token punctuation">)</span><span class="token punctuation">;</span>  msg <span class="token operator">=</span> cookie<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>  msg <span class="token operator">=</span> <span class="token string">'Cancel'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>1.复制上面全部代码（和第一个Cookies代码不一样，记得重新复制一次），然后用Chrome浏览器的无痕模式打开<a href="http://user.mihoyo.com/">http://user.mihoyo.com/</a><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927001031.png"><br>2.在页面上右键检查或者Ctrl+Shift+i<br>3.选择控制台（Console），粘贴，回车，在弹出的窗口点确认（点完自动复制）<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927000248.png"><br>4.然后在和机器人的私聊窗口，粘贴发送即可  </p><h4 id="警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！"><a href="#警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！" class="headerlink" title="警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！"></a>警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！</h4><hr><p>PS：<br>向机器人发送<code>绑定信息</code>，可以查看绑定状态。</p>]]></content>
     
@@ -160,6 +160,8 @@
       
     
     
+    
+    <category term="教程" scheme="https://www.chanpoe.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="说明" scheme="https://www.chanpoe.top/tags/%E8%AF%B4%E6%98%8E/"/>
@@ -297,7 +299,7 @@
     <link href="https://www.chanpoe.top/posts/a1ca777d.html"/>
     <id>https://www.chanpoe.top/posts/a1ca777d.html</id>
     <published>2022-06-20T11:26:03.000Z</published>
-    <updated>2023-02-15T14:44:54.964Z</updated>
+    <updated>2023-05-27T16:49:02.124Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>git push的方法：</p></blockquote><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span class="token function">git</span> status //查看git仓库的状态<span class="token function">git</span> commit -m <span class="token string">"此次修改操作的名字"</span><span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><hr><blockquote><p>在acapp中添加 <code>.gitignore</code>文件<br>编辑此文件，可以设置在git push时忽略上传<code>__pycache__</code></p></blockquote><p><code>.gitignore</code>文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">*/__pycache__<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr>]]></content>
     
@@ -309,32 +311,12 @@
     
     
     
+    <category term="学习记录" scheme="https://www.chanpoe.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
     
     <category term="Python" scheme="https://www.chanpoe.top/tags/Python/"/>
     
     <category term="django" scheme="https://www.chanpoe.top/tags/django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java的this关键字</title>
-    <link href="https://www.chanpoe.top/posts/f7f02c1d.html"/>
-    <id>https://www.chanpoe.top/posts/f7f02c1d.html</id>
-    <published>2022-05-21T08:58:22.000Z</published>
-    <updated>2023-02-15T14:44:54.968Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this 是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。</p><p>this 的用法在 Java 中大体可以分为3种：</p><p>1.普通的直接引用</p><p>这种就不用说了，this 相当于是指向当前对象本身。</p><p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：<br>（this表示所在方法的调用者的地址值（2022.5.28新理解））</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token punctuation">{</span>    <span class="token comment">//属性</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>作用：可以区别成员变量和局部变量。</p><p>3.引用构造函数</p><p>这个和 super 一起总结，待更新中。。。。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    
-    <category term="java" scheme="https://www.chanpoe.top/tags/java/"/>
     
   </entry>
   
@@ -505,6 +487,30 @@
     <category term="Tmux" scheme="https://www.chanpoe.top/tags/Tmux/"/>
     
     <category term="Linux" scheme="https://www.chanpoe.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7 firewalld</title>
+    <link href="https://www.chanpoe.top/posts/25dffcf6.html"/>
+    <id>https://www.chanpoe.top/posts/25dffcf6.html</id>
+    <published>2022-01-21T15:39:32.000Z</published>
+    <updated>2023-02-15T14:44:54.967Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="一、firewalld的基本使用"><a href="#一、firewalld的基本使用" class="headerlink" title="一、firewalld的基本使用"></a>一、firewalld的基本使用</h3><p>启动： <code>systemctl start firewalld</code><br>查看状态： <code>systemctl status firewalld</code><br>停止： <code>systemctl disable firewalld</code><br>禁用： <code>systemctl stop firewalld</code></p><hr><h3 id="二、systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体"><a href="#二、systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体" class="headerlink" title="二、systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体"></a>二、systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体</h3><p>启动一个服务：<code>systemctl start firewalld.service</code><br>关闭一个服务：<code>systemctl stop firewalld.service</code><br>重启一个服务：<code>systemctl restart firewalld.service</code><br>显示一个服务的状态：<code>systemctl status firewalld.service</code><br>在开机时启用一个服务：<code>systemctl enable firewalld.service</code><br>在开机时禁用一个服务：<code>systemctl disable firewalld.service</code><br>查看服务是否开机启动：<code>systemctl is-enabled firewalld.service</code><br>查看已启动的服务列表：<code>systemctl list-unit-files|grep enabled</code><br>查看启动失败的服务列表：<code>systemctl --failed</code></p><hr><h3 id="三、配置firewalld-cmd"><a href="#三、配置firewalld-cmd" class="headerlink" title="三、配置firewalld-cmd"></a>三、配置firewalld-cmd</h3><p>查看版本： <code>firewall-cmd --version</code><br>查看帮助： <code>firewall-cmd --help</code><br>显示状态： <code>firewall-cmd --state</code><br>查看所有打开的端口： <code>firewall-cmd --zone=public --list-ports</code><br>更新防火墙规则： <code>firewall-cmd --reload</code><br>查看区域信息:  <code>firewall-cmd --get-active-zones</code><br>查看指定接口所属区域： <code>firewall-cmd --get-zone-of-interface=eth0</code><br>拒绝所有包：<code>firewall-cmd --panic-on</code><br>取消拒绝状态： <code>firewall-cmd --panic-off</code><br>查看是否拒绝： <code>firewall-cmd --query-panic</code></p><hr><h3 id="四、如何开启一个端口"><a href="#四、如何开启一个端口" class="headerlink" title="四、如何开启一个端口"></a>四、如何开启一个端口</h3><p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code>    （–permanent永久生效，没有此参数重启后失效）<br>重新载入<br><code>firewall-cmd --reload</code><br>查看<br><code>firewall-cmd --zone= public --query-port=80/tcp</code><br>删除<br><code>firewall-cmd --zone= public --remove-port=80/tcp --permanent</code></p><hr><h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a href="https://www.cnblogs.com/hubing/p/6058932.ht">https://www.cnblogs.com/hubing/p/6058932.ht</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="学习记录" scheme="https://www.chanpoe.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="Firewalld" scheme="https://www.chanpoe.top/tags/Firewalld/"/>
     
   </entry>
   

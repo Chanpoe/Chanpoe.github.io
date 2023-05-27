@@ -144,6 +144,12 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><blockquote><p>如何获取Cookies？（2022.12.29更新）</p></blockquote><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> cookie<span class="token operator">=</span>document<span class="token punctuation">.</span>cookie<span class="token punctuation">;</span><span class="token keyword">var</span> Str_Num <span class="token operator">=</span> cookie<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'_MHYUUID='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>cookie <span class="token operator">=</span><span class="token string">'添加 '</span><span class="token operator">+</span>cookie<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>Str_Num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">var</span> ask<span class="token operator">=</span><span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">'Cookie:'</span><span class="token operator">+</span>cookie<span class="token operator">+</span><span class="token string">'\n\n按确认，然后粘贴发送给机器人'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>ask<span class="token operator">==</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">copy</span><span class="token punctuation">(</span>cookie<span class="token punctuation">)</span><span class="token punctuation">;</span>msg<span class="token operator">=</span>cookie<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>msg<span class="token operator">=</span><span class="token string">'Cancel'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>1.复制上面全部代码，然后用Chrome浏览器的无痕模式打开<a href="https://user.mihoyo.com/#/login">https://user.mihoyo.com/#/login</a><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927001031.png"><br>2.在页面上右键检查或者Ctrl+Shift+i<br>3.选择控制台（Console），粘贴，回车，在弹出的窗口点确认（点完自动复制）<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927000248.png"><br>4.然后在和机器人的私聊窗口，粘贴发送即可  </p><hr><blockquote><p>如何获取Stoken？</p></blockquote><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> cookie <span class="token operator">=</span> document<span class="token punctuation">.</span>cookie<span class="token punctuation">;</span><span class="token keyword">var</span> ask <span class="token operator">=</span> <span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">'Cookie:'</span> <span class="token operator">+</span> cookie <span class="token operator">+</span> <span class="token string">'\n\n按确认，然后粘贴发送给机器人'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">if</span> <span class="token punctuation">(</span>ask <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token function">copy</span><span class="token punctuation">(</span><span class="token string">"添加 stoken"</span> <span class="token operator">+</span> cookie<span class="token punctuation">)</span><span class="token punctuation">;</span>  msg <span class="token operator">=</span> cookie<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>  msg <span class="token operator">=</span> <span class="token string">'Cancel'</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>1.复制上面全部代码（和第一个Cookies代码不一样，记得重新复制一次），然后用Chrome浏览器的无痕模式打开<a href="http://user.mihoyo.com/">http://user.mihoyo.com/</a><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927001031.png"><br>2.在页面上右键检查或者Ctrl+Shift+i<br>3.选择控制台（Console），粘贴，回车，在弹出的窗口点确认（点完自动复制）<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927000248.png"><br>4.然后在和机器人的私聊窗口，粘贴发送即可  </p><h4 id="警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！"><a href="#警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！" class="headerlink" title="警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！"></a>警告：Cookies、Stoken属于个人隐私，其效用相当于账号密码，请勿随意公开！</h4><hr><p>PS：<br>向机器人发送<code>绑定信息</code>，可以查看绑定状态。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -294,31 +300,18 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>git push的方法：</p></blockquote><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span class="token function">git</span> status //查看git仓库的状态<span class="token function">git</span> commit -m <span class="token string">"此次修改操作的名字"</span><span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><hr><blockquote><p>在acapp中添加 <code>.gitignore</code>文件<br>编辑此文件，可以设置在git push时忽略上传<code>__pycache__</code></p></blockquote><p><code>.gitignore</code>文件：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">*/__pycache__<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr>]]></content>
       
       
+      <categories>
+          
+          <category> 学习记录 </category>
+          
+      </categories>
+      
       
         <tags>
             
             <tag> Python </tag>
             
             <tag> django </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java的this关键字</title>
-      <link href="posts/f7f02c1d.html"/>
-      <url>posts/f7f02c1d.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="this"><a href="#this" class="headerlink" title="this"></a>this</h3><p>this 是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。</p><p>this 的用法在 Java 中大体可以分为3种：</p><p>1.普通的直接引用</p><p>这种就不用说了，this 相当于是指向当前对象本身。</p><p>2.形参（局部变量）与成员变量名字重名，用 this 来区分：<br>（this表示所在方法的调用者的地址值（2022.5.28新理解））</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GirlFriend</span> <span class="token punctuation">{</span>    <span class="token comment">//属性</span>    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//10</span>        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//0</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>作用：可以区别成员变量和局部变量。</p><p>3.引用构造函数</p><p>这个和 super 一起总结，待更新中。。。。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> java </tag>
             
         </tags>
       
@@ -621,25 +614,6 @@
         <tags>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>小One抓取位置</title>
-      <link href="posts/8900ea1b.html"/>
-      <url>posts/8900ea1b.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><h3 id="一、自己在手机上面打卡"><a href="#一、自己在手机上面打卡" class="headerlink" title="一、自己在手机上面打卡"></a>一、自己在手机上面打卡</h3><p>一定要给小One位置权限</p><hr><h3 id="二、使用电脑登录官网"><a href="#二、使用电脑登录官网" class="headerlink" title="二、使用电脑登录官网"></a>二、使用电脑登录官网</h3><p>手机号+验证码<br><a href="https://www.ioteams.com/ncov/#/login">小One易统计</a></p><hr><h3 id="三、电脑F12，进入开发者工具调试页面"><a href="#三、电脑F12，进入开发者工具调试页面" class="headerlink" title="三、电脑F12，进入开发者工具调试页面"></a>三、电脑F12，进入开发者工具调试页面</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/xiaoonedenglu.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/chongxinshangbao.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/lastreport.png"><br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/responsesese.png"><br>找到位置信息，复制发我：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/weizhixinxi.png"></p><hr><h3 id="不会使用F12参考："><a href="#不会使用F12参考：" class="headerlink" title="不会使用F12参考："></a>不会使用F12参考：</h3><p><a href="https://blog.csdn.net/weixin_41819731/article/details/80472232">https://blog.csdn.net/weixin_41819731/article/details/80472232</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 说明 </tag>
             
         </tags>
       
