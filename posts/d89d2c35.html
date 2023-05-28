@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="清新花卉, Chanpoe 计算机 网络安全 网络爬虫">
+    <meta name="keywords" content="Python 装饰器, Chanpoe 计算机 网络安全 网络爬虫">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>清新花卉 | Chanpoe</title>
+    <title>Python 装饰器 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -729,19 +729,29 @@
 
 </header>
 
-    <link rel="stylesheet" href="/css/gallery.css">
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928015537.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">清新花卉</h1>
+                    <h1 class="description center-align post-title">Python 装饰器</h1>
                 </div>
             </div>
         </div>
@@ -751,203 +761,706 @@
 
 
 
-<!--   "  <p class=\"photo-name\">" + photo + "</p>\n" +
-文件名先注释掉  -->
+<main class="post-container content">
 
-<!-- 不加密写法 -->
-<!-- <div class="container">
-    <div class="photo-wrapper" >
-        <div class="waterfall" id="mygallery">
-            <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/01.jpg"
-       alt=清新花卉/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/02.jpg"
-       alt=清新花卉/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/03.jpg"
-       alt=清新花卉/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/04.jpg"
-       alt=清新花卉/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/05.jpg"
-       alt=清新花卉/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/06.jpg"
-       alt=清新花卉/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/07.jpg"
-       alt=清新花卉/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/08.jpg"
-       alt=清新花卉/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/09.jpg"
-       alt=清新花卉/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/10.jpg"
-       alt=清新花卉/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/11.jpg"
-       alt=清新花卉/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/12.jpg"
-       alt=清新花卉/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/13.jpg"
-       alt=清新花卉/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/14.jpg"
-       alt=清新花卉/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/15.jpg"
-       alt=清新花卉/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/16.jpg"
-       alt=清新花卉/16.jpg>
-    </a>
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
+                                <span class="chip bg-color">装饰器</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-05-28
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>内裤可以用来遮羞，但是到了冬天它没法为我们防风御寒，聪明的人们发明了长裤，有了长裤后宝宝再也不冷了，装饰器就像我们这里说的长裤，在不影响内裤作用的前提下，给我们的身子提供了保暖的功效。</p>
+<h3 id="一、什么是装饰器？"><a href="#一、什么是装饰器？" class="headerlink" title="一、什么是装饰器？"></a>一、什么是装饰器？</h3><blockquote>
+<p>装饰器（decorator）是函数嵌套定义的另一个重要应用。装饰器本质上也是一个函数，只不过这个函数接收其他函数作为参数并对其进行一定的改造之后返回新函数。</p>
+<p>它可以让其他函数在不需要做任何代码变动的前提下增加额外功能，装饰器的返回值也是一个函数对象。它经常用于有切面需求的场景，比如：插入日志、性能测试、事务处理、缓存、权限校验等场景。装饰器是解决这类问题的绝佳设计，有了装饰器，我们就可以抽离出大量与函数功能本身无关的雷同代码并继续重用。概括的讲，装饰器的作用就是为已经存在的对象添加额外的功能。</p>
+</blockquote>
+<h3 id="二、需要的前置知识："><a href="#二、需要的前置知识：" class="headerlink" title="二、需要的前置知识："></a>二、需要的前置知识：</h3><p>在此之前需要掌握函数<strong>带括号</strong>和<strong>不带括号</strong>的时候分别表示什么：</p>
+<p>现在有一个cal函数定义如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">cal</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">return</span> result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>此时可以说，我们创建了一个叫做cal的函数对象，然后你可以这样使用它：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">cal<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>或者，这样使用它：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">calculate <span class="token operator">=</span> cal
+calculate<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在第一种方式下，我们直接使用了cal这个函数对象；在第二种方式下，我们将一个名叫calculate的变量指向了cal这个函数对象，可以把这个过程看作“实例化”</p>
+<p>也就是说，对象，就像是一个模子，当你需要的时候，就用它倒一个模型出来，每一个模型可以有自己不同的名字。在上面的例子中，calculate是一个模型，而cal函数就是一个模子。</p>
+<p>OK，接下来就可以理解函数<strong>带括号和不带括号</strong>分别代表的意义了：</p>
+<p>在上面那个例子中，如果只写一个cal，那么此时的cal仅代表一个函数对象，但是当我们写cal(1, 2)的时候，就相当于告诉编译器 “执行cal这个函数”</p>
+<h3 id="三、装饰器："><a href="#三、装饰器：" class="headerlink" title="三、装饰器："></a>三、装饰器：</h3><p>现在假设我们要编写一个函数，计算两个数相加所需要的时间：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
+
+
+<span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    start_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    res <span class="token operator">=</span> a <span class="token operator">+</span> b
+    exec_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start_time
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'add函数，花费的时间是：</span><span class="token interpolation"><span class="token punctuation">{</span>exec_time<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+
+
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然而，假如现在又有减法、乘法、除法等各种函数，你都想计算他们的耗时，因此需要同样编写像上面一样长的代码很多次，显然这样会显得很麻烦，而且也不灵活，万一计算时间的代码有所改动（假设需要每个计算的时间都保留两位小数），每个函数都得改……</p>
+<p>此时，我们的装饰器就是最好的解决方案：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
+
+
+<span class="token keyword">def</span> <span class="token function">timer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        start_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        res <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        exec_time <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start_time
+        <span class="token keyword">print</span><span class="token punctuation">(</span>func<span class="token punctuation">.</span>__name__<span class="token punctuation">,</span> <span class="token string">"函数花费的时间是："</span><span class="token punctuation">,</span> exec_time<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res
+
+    <span class="token keyword">return</span> wrapper
+
+
+<span class="token decorator annotation punctuation">@timer</span>
+<span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+
+
+<span class="token decorator annotation punctuation">@timer</span>
+<span class="token keyword">def</span> <span class="token function">sub</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> a <span class="token operator">-</span> b
+
+
+add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+sub<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>注：</strong></p>
+<p>在这个装饰器中，返回的 <code>res</code> 是被修饰函数 <code>func</code> 的返回值。也就是说，在使用 <code>timer</code> 装饰器修饰一个函数后，被修饰函数的返回值会被装饰器包装成一个新的函数，并再次返回到调用端。具体代码示例如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token decorator annotation punctuation">@timer</span>
+<span class="token keyword">def</span> <span class="token function">my_func</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> x
+
+<span class="token comment"># 调用</span>
+result <span class="token operator">=</span> my_func<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment"># 输出 "my_func 函数花费的时间是： 2.002307176589966"，返回值为 2</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在 <code>wrapper</code> 这个新函数中，我们首先调用了被修饰函数 <code>func</code>，并将其返回值 <code>res</code> 存储下来。接着我们计算出 <code>func</code> 执行的时间，并将其输出到控制台。最后，我们使用 <code>return</code> 语句返回 <code>res</code>，是为了让被装饰函数的返回值能够被正常地传递到调用端，而不会被装饰器函数丢失。</p>
+<p>当装饰器函数返回 <code>wrapper</code> 函数时，我们没有加上括号的原因是，此处返回的是一个函数对象，而不是调用函数得到的返回值。换句话说，我们返回的是一个可调用对象，而不是调用函数。因此，没有必要在返回语句中加上括号。同时，如果在返回时加上了括号，就相当于是在调用返回的 <code>wrapper</code> 函数，这应该不是我们想要的效果。</p>
+</blockquote>
+<h3 id="四-装饰器运行的顺序"><a href="#四-装饰器运行的顺序" class="headerlink" title="四. 装饰器运行的顺序"></a>四. 装饰器运行的顺序</h3><p>在函数定义阶段：执行顺序是从最靠近函数的装饰器开始，自内而外的执行<br>在函数执行阶段：执行顺序由外而内，一层层执行</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">deco1</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'deco1 start'</span><span class="token punctuation">)</span>
+    func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'deco1 end'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> wrapper
+
+<span class="token keyword">def</span> <span class="token function">deco2</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'deco2 start'</span><span class="token punctuation">)</span>
+    func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'deco2 end'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> wrapper
+
+<span class="token decorator annotation punctuation">@deco1</span>
+<span class="token decorator annotation punctuation">@deco2</span>
+<span class="token keyword">def</span> <span class="token function">my_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'original function'</span><span class="token punctuation">)</span>
+
+my_func<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>该示例中，<code>my_func</code> 函数被 <code>deco1</code> 和 <code>deco2</code> 装饰器修饰。在函数执行时，实际上等价于以下代码：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_func <span class="token operator">=</span> deco1<span class="token punctuation">(</span>deco2<span class="token punctuation">(</span>my_func<span class="token punctuation">)</span><span class="token punctuation">)</span>
+my_func<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>运行结果如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">deco1 start
+deco2 start
+original function
+deco2 end
+deco1 end<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><del>很难用语言描述这个顺序，意会一下。我感觉是因为定义的时候返回的是函数对象，并没有执行，然后在执行的时候就是最外层最先开始执行。</del></p>
+<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/26930016">如何理解Python装饰器（知乎）</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzA5NjgzODM3Ng==&amp;mid=2650534086&amp;idx=2&amp;sn=0a9db486758dd803c45506bd8dafff77&amp;chksm=88a6a741bfd12e57accf3001c306a2790c10b5063aed6d1fb03680b052bca906f203a09cb500&amp;scene=27">一文带你迅速掌握python装饰器（微信公众号）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/murenyangdaren/article/details/115387165">python装饰器函数执行顺序（CSDN）</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
+                                    <span class="chip bg-color">装饰器</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">谢谢你请我喝奶茶</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184517.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184855.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div> -->
-
-<main class="content" >
-<!-- 加密写法 -->
-<div class="container">
-    <div class="photo-wrapper">
-        
-            <div class="waterfall" id="encrypt-blog">
-                <a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/01.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/01.jpg"
-       alt=清新花卉/01.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/02.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/02.jpg"
-       alt=清新花卉/02.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/03.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/03.jpg"
-       alt=清新花卉/03.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/04.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/04.jpg"
-       alt=清新花卉/04.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/05.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/05.jpg"
-       alt=清新花卉/05.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/06.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/06.jpg"
-       alt=清新花卉/06.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/07.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/07.jpg"
-       alt=清新花卉/07.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/08.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/08.jpg"
-       alt=清新花卉/08.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/09.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/09.jpg"
-       alt=清新花卉/09.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/10.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/10.jpg"
-       alt=清新花卉/10.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/11.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/11.jpg"
-       alt=清新花卉/11.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/12.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/12.jpg"
-       alt=清新花卉/12.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/13.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/13.jpg"
-       alt=清新花卉/13.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/14.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/14.jpg"
-       alt=清新花卉/14.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/15.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/15.jpg"
-       alt=清新花卉/15.jpg>
-    </a><a target="_blank" href="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed/galleries/清新花卉/16.jpg"
-     class="photo-item" rel="example_group noopener"
-     data-fancybox="images">
-      <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/galleries/清新花卉/16.jpg"
-       alt=清新花卉/16.jpg>
-    </a>
-            </div>
-        
-    </div>
 </div>
-<main>
-<script src=""></script>
-<script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
 
 <script>
-  // $(".waterfall").lazyload();
-
-$("a[rel=example_group]").fancybox();
-//  不加密写法
-// $("#mygallery").justifiedGallery({margins: 5, rowHeight: 150});
-$("#encrypt-blog").justifiedGallery({margins: 5, rowHeight: 150});
-
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/d89d2c35.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 装饰器">
+                        
+                        <span class="card-title">Python 装饰器</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            函数的装饰器
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">
+                        <span class="chip bg-color">装饰器</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/b39b89bc.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 函数注解">
+                        
+                        <span class="card-title">Python 函数注解</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是函数注解？
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%87%BD%E6%95%B0%E6%B3%A8%E8%A7%A3/">
+                        <span class="chip bg-color">函数注解</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
 
 
     <footer class="page-footer bg-color">
