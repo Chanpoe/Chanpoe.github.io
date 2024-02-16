@@ -906,14 +906,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    613
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -938,26 +938,71 @@
             <div id="articleContent">
                 <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>为了对项目进行更好的维护，为了方便进行版本控制，所以Git的学习和使用就变得极为重要，此篇博客记录Git的使用方法和命令，以便之后忘记的时候进行查阅。</p>
 <hr>
-<h3 id="一、Git的基本使用及指令："><a href="#一、Git的基本使用及指令：" class="headerlink" title="一、Git的基本使用及指令："></a>一、Git的基本使用及指令：</h3><blockquote>
-<p>初始化Git仓库</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>查看状态</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>向Git仓库中添加文件（<code>.</code>是所有文件，添加后的文件在Git Bash中查看是绿色的）</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<blockquote>
-<p>提交修改</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">'改动内容描述'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h3 id="一、Git基本指令："><a href="#一、Git基本指令：" class="headerlink" title="一、Git基本指令："></a>一、Git基本指令：</h3><ul>
+<li><p>初始化一个新的仓库：</p>
+<p><code>git init</code>    初始化Git仓库</p>
+</li>
+<li><p>查看状态和更改：</p>
+<p><code>git status</code>    查看状态</p>
+<p><code>git diff</code>    查看工作区和暂存区的差异</p>
+</li>
+<li><p>克隆一个现有的仓库</p>
+<p><code>git clone &lt;仓库URL&gt;</code>    克隆一个现有的仓库</p>
+</li>
+<li><p>添加与提交文件的更改</p>
+<p><code>git add .</code>    向Git仓库中添加文件（<code>.</code>是所有文件，添加后的文件在Git Bash中查看是绿色的）</p>
+<p><code>git commit -m '改动内容描述(提交说明)'</code>    将暂存区的更改提交到本地仓库</p>
+</li>
+<li><p>查看提交历史</p>
+<p><code>git log</code>     查看提交历史记录</p>
+<p><code>git log --oneline</code>    简化的提交历史记录</p>
+</li>
+</ul>
+<hr>
+<h3 id="二、git-stash（储藏）"><a href="#二、git-stash（储藏）" class="headerlink" title="二、git stash（储藏）"></a>二、git stash（储藏）</h3><ul>
+<li><p>stash相关常用命令：</p>
+<p><code>git stash</code>             将当前工作区所有修改过的内容存储到“某个地方”，将工作区还原到当前版本未修改过的状态</p>
+<p><code>git stash list</code>        查看“某个地方”存储的所有记录</p>
+<p><code>git stash clear</code>     清空“某个地方”</p>
+<p><code>git stash pop</code>       将第一个记录从“某个地方”重新拿到工作区（可能有冲突）</p>
+<p><code>git stash apply 编号</code>, 将指定编号记录从“某个地方”重新拿到工作区（可能有冲突） </p>
+<p><code>git stash drop 编号</code>，删除指定编号的记录</p>
+</li>
+</ul>
+<hr>
+<h3 id="三、git-branch（分支）"><a href="#三、git-branch（分支）" class="headerlink" title="三、git branch（分支）"></a>三、git branch（分支）</h3><ul>
+<li><p>branch相关常用命令：</p>
+<p><code>git branch 分支名称</code>       创建分支</p>
+<p><code>git checkout 分支名称</code>      切换分支</p>
+<p><code>git branch -m 分支名称</code>     创建并切换到指定分支</p>
+<p><code>git branch</code>              查看所有分支</p>
+<p><code>git branch -d 分支名称</code>     删除分支</p>
+<p><code>git merge 分支名称</code>        将指定分支合并到当前分支</p>
+</li>
+</ul>
+<hr>
+<h3 id="四、git-reset（撤销与回滚）"><a href="#四、git-reset（撤销与回滚）" class="headerlink" title="四、git reset（撤销与回滚）"></a>四、git reset（撤销与回滚）</h3><ul>
+<li><p>reset相关常用命令：</p>
+<p><code>git reset HEAD &lt;文件名&gt;</code>    取消已暂存的文件</p>
+<p><code>git checkout -- &lt;文件名&gt;</code>    恢复工作区的文件到上一次提交的状态</p>
+<p><code>git reset --hard HEAD^</code>    回退到上一个提交</p>
+</li>
+</ul>
+<hr>
+<h3 id="五、远程仓库"><a href="#五、远程仓库" class="headerlink" title="五、远程仓库"></a>五、远程仓库</h3><ul>
+<li><p>远程仓库常用的指令</p>
+<p><code>git remote -v</code>: 查看所有远程仓库的 URL。</p>
+<p><code>git remote add &lt;远程仓库名&gt; &lt;远程仓库URL&gt;</code>: 添加一个新的远程仓库。</p>
+<p><code>git remote remove &lt;远程仓库名&gt;</code>: 移除指定的远程仓库。</p>
+<p><code>git fetch &lt;远程仓库名&gt;</code>: 从远程仓库获取最新的提交历史和文件更改，但不会自动合并到当前分支。</p>
+<p><code>git pull &lt;远程仓库名&gt; &lt;远程分支名&gt;</code>: 从远程仓库获取最新的更新，并自动将其合并到当前分支上。</p>
+<p><code>git push &lt;远程仓库名&gt; &lt;本地分支名&gt;:&lt;远程分支名&gt;</code>: 将本地的提交推送到远程仓库的指定分支上。</p>
+<p><code>git push --all &lt;远程仓库名&gt;</code>: 将所有本地分支的更新推送到远程仓库。</p>
+<p><code>git branch -vv</code>: 查看本地分支与远程分支的映射关系。</p>
+<p><code>git remote show &lt;远程仓库名&gt;</code>: 查看远程仓库的详细信息，包括远程分支、本地分支与远程分支的关系等。</p>
+<p><code>git remote prune &lt;远程仓库名&gt;</code>: 清理本地不存在的远程分支引用。</p>
+</li>
+</ul>
 <blockquote>
 <p>在GitHub上面新建一个仓库（这里我新建仓库名字为test_repository用作测试）：</p>
 </blockquote>
@@ -978,26 +1023,8 @@
 </blockquote>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> push -u origin main<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-
-
-<blockquote>
-<p>回滚至之前版本</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log
-<span class="token function">git</span> reset --hard 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>回滚至之后版本</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reflog
-<span class="token function">git</span> reset --hard 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> reset --mix 版本号<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <hr>
-<h3 id="二、git的工作原理"><a href="#二、git的工作原理" class="headerlink" title="二、git的工作原理"></a>二、git的工作原理</h3><blockquote>
+<h3 id="PS：git的工作原理"><a href="#PS：git的工作原理" class="headerlink" title="PS：git的工作原理"></a>PS：git的工作原理</h3><blockquote>
 <p>Git把管理的文件分为了两个区域四个状态。</p>
 </blockquote>
 <p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220831011920.png"></p>
@@ -1005,7 +1032,7 @@
 <p><strong>版本库</strong>：工作区检测到有文件发生变化，那么意味着较上一个版本之后对程序进行了修改，修改完成之后，可以当做下一版本进行提交，那么就是执行 <code>git add .</code> 将所有文件提交到暂存区，然后再执行<code>git commit -m '又一个版本'</code>提交到版本库的分支即可，之后可以使用<code>git log</code>命令查看版本记录。</p>
 <p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220831012214.png"></p>
 <hr>
-<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wupeiqi/p/7295372.html">https://www.cnblogs.com/wupeiqi/p/7295372.html</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/465954849">https://zhuanlan.zhihu.com/p/465954849</a></p>
+<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wupeiqi/p/7295372.html">老铁，这年头不会点Git真不行！！！ </a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/465954849">使用分支——Git Checkout</a></p>
 
                 
             </div>
@@ -1434,7 +1461,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">51.2k</span>&nbsp;字
+                class="white-color">51.9k</span>&nbsp;字
             
             
             
