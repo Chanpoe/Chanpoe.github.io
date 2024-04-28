@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2022/3, Chanpoe 计算机">
+    <meta name="keywords" content="Python代码模板, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2022/3 | Chanpoe</title>
+    <title>Python代码模板 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -714,381 +714,624 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Chanpoe`s Blog
-                
-            </div>
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Python代码模板</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-    <script>
-        $('.bg-cover').css('background-image', 'url(https://image-bed.obs.cn-north-4.myhuaweicloud.com/blog_banner.jpg)');
-    </script>
-    
 
-    </div>
-</div>
 
-<main class="content">
+<main class="post-container content">
 
     
-    <div class="container archive-calendar">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">
+                                <span class="chip bg-color">代码模板</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-04-11
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    61
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="代码模板"><a href="#代码模板" class="headerlink" title="代码模板"></a>代码模板</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># coding: utf-8</span>
+<span class="token comment"># Author：Chanpoe</span>
+<span class="token comment"># Date ：$DATE $TIME</span>
+<span class="token comment"># IDE：${PRODUCT_NAME}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在Pycharm中保存Python代码模板，下面是新建<code>test.py</code>文件的效果：</p>
+<img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240411232042.png" style="zoom: 67%;">
+
+<hr>
+<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lifengjuan/p/17685306.html">Pycharm创建文件时，自动生成文件头注释（作者、日期等信息）</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">
+                                    <span class="chip bg-color">代码模板</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2023-04-28", "2024-04-28"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2023-04-28", 0], ["2023-04-29", 0], ["2023-04-30", 0], ["2023-05-01", 0], ["2023-05-02", 0], ["2023-05-03", 0], ["2023-05-04", 0], ["2023-05-05", 0], ["2023-05-06", 0], ["2023-05-07", 0], ["2023-05-08", 0], ["2023-05-09", 0], ["2023-05-10", 0], ["2023-05-11", 0], ["2023-05-12", 0], ["2023-05-13", 0], ["2023-05-14", 0], ["2023-05-15", 0], ["2023-05-16", 0], ["2023-05-17", 0], ["2023-05-18", 0], ["2023-05-19", 0], ["2023-05-20", 0], ["2023-05-21", 0], ["2023-05-22", 0], ["2023-05-23", 0], ["2023-05-24", 0], ["2023-05-25", 0], ["2023-05-26", 0], ["2023-05-27", 1], ["2023-05-28", 1], ["2023-05-29", 0], ["2023-05-30", 0], ["2023-05-31", 1], ["2023-06-01", 0], ["2023-06-02", 0], ["2023-06-03", 0], ["2023-06-04", 0], ["2023-06-05", 0], ["2023-06-06", 0], ["2023-06-07", 0], ["2023-06-08", 0], ["2023-06-09", 0], ["2023-06-10", 0], ["2023-06-11", 0], ["2023-06-12", 0], ["2023-06-13", 0], ["2023-06-14", 0], ["2023-06-15", 0], ["2023-06-16", 0], ["2023-06-17", 0], ["2023-06-18", 0], ["2023-06-19", 0], ["2023-06-20", 0], ["2023-06-21", 0], ["2023-06-22", 0], ["2023-06-23", 0], ["2023-06-24", 0], ["2023-06-25", 0], ["2023-06-26", 0], ["2023-06-27", 0], ["2023-06-28", 0], ["2023-06-29", 0], ["2023-06-30", 0], ["2023-07-01", 0], ["2023-07-02", 0], ["2023-07-03", 0], ["2023-07-04", 0], ["2023-07-05", 0], ["2023-07-06", 0], ["2023-07-07", 0], ["2023-07-08", 0], ["2023-07-09", 0], ["2023-07-10", 0], ["2023-07-11", 0], ["2023-07-12", 0], ["2023-07-13", 0], ["2023-07-14", 0], ["2023-07-15", 0], ["2023-07-16", 0], ["2023-07-17", 0], ["2023-07-18", 0], ["2023-07-19", 0], ["2023-07-20", 0], ["2023-07-21", 0], ["2023-07-22", 0], ["2023-07-23", 0], ["2023-07-24", 0], ["2023-07-25", 0], ["2023-07-26", 0], ["2023-07-27", 0], ["2023-07-28", 0], ["2023-07-29", 0], ["2023-07-30", 0], ["2023-07-31", 0], ["2023-08-01", 0], ["2023-08-02", 0], ["2023-08-03", 0], ["2023-08-04", 0], ["2023-08-05", 0], ["2023-08-06", 0], ["2023-08-07", 0], ["2023-08-08", 0], ["2023-08-09", 0], ["2023-08-10", 0], ["2023-08-11", 0], ["2023-08-12", 0], ["2023-08-13", 0], ["2023-08-14", 0], ["2023-08-15", 0], ["2023-08-16", 0], ["2023-08-17", 0], ["2023-08-18", 0], ["2023-08-19", 0], ["2023-08-20", 0], ["2023-08-21", 0], ["2023-08-22", 0], ["2023-08-23", 0], ["2023-08-24", 0], ["2023-08-25", 0], ["2023-08-26", 0], ["2023-08-27", 0], ["2023-08-28", 0], ["2023-08-29", 0], ["2023-08-30", 0], ["2023-08-31", 0], ["2023-09-01", 0], ["2023-09-02", 0], ["2023-09-03", 0], ["2023-09-04", 0], ["2023-09-05", 0], ["2023-09-06", 0], ["2023-09-07", 0], ["2023-09-08", 0], ["2023-09-09", 0], ["2023-09-10", 0], ["2023-09-11", 0], ["2023-09-12", 0], ["2023-09-13", 0], ["2023-09-14", 0], ["2023-09-15", 0], ["2023-09-16", 0], ["2023-09-17", 0], ["2023-09-18", 0], ["2023-09-19", 0], ["2023-09-20", 0], ["2023-09-21", 0], ["2023-09-22", 0], ["2023-09-23", 0], ["2023-09-24", 0], ["2023-09-25", 0], ["2023-09-26", 0], ["2023-09-27", 0], ["2023-09-28", 0], ["2023-09-29", 0], ["2023-09-30", 0], ["2023-10-01", 0], ["2023-10-02", 0], ["2023-10-03", 0], ["2023-10-04", 0], ["2023-10-05", 0], ["2023-10-06", 0], ["2023-10-07", 0], ["2023-10-08", 0], ["2023-10-09", 0], ["2023-10-10", 0], ["2023-10-11", 0], ["2023-10-12", 0], ["2023-10-13", 0], ["2023-10-14", 0], ["2023-10-15", 0], ["2023-10-16", 0], ["2023-10-17", 0], ["2023-10-18", 0], ["2023-10-19", 0], ["2023-10-20", 0], ["2023-10-21", 0], ["2023-10-22", 0], ["2023-10-23", 0], ["2023-10-24", 0], ["2023-10-25", 0], ["2023-10-26", 0], ["2023-10-27", 0], ["2023-10-28", 0], ["2023-10-29", 0], ["2023-10-30", 0], ["2023-10-31", 0], ["2023-11-01", 0], ["2023-11-02", 0], ["2023-11-03", 0], ["2023-11-04", 0], ["2023-11-05", 0], ["2023-11-06", 0], ["2023-11-07", 0], ["2023-11-08", 0], ["2023-11-09", 0], ["2023-11-10", 0], ["2023-11-11", 0], ["2023-11-12", 0], ["2023-11-13", 0], ["2023-11-14", 0], ["2023-11-15", 0], ["2023-11-16", 0], ["2023-11-17", 0], ["2023-11-18", 0], ["2023-11-19", 0], ["2023-11-20", 0], ["2023-11-21", 0], ["2023-11-22", 0], ["2023-11-23", 0], ["2023-11-24", 0], ["2023-11-25", 0], ["2023-11-26", 0], ["2023-11-27", 0], ["2023-11-28", 0], ["2023-11-29", 0], ["2023-11-30", 0], ["2023-12-01", 0], ["2023-12-02", 0], ["2023-12-03", 0], ["2023-12-04", 0], ["2023-12-05", 0], ["2023-12-06", 0], ["2023-12-07", 0], ["2023-12-08", 0], ["2023-12-09", 0], ["2023-12-10", 0], ["2023-12-11", 0], ["2023-12-12", 0], ["2023-12-13", 0], ["2023-12-14", 0], ["2023-12-15", 0], ["2023-12-16", 0], ["2023-12-17", 0], ["2023-12-18", 0], ["2023-12-19", 0], ["2023-12-20", 0], ["2023-12-21", 0], ["2023-12-22", 0], ["2023-12-23", 0], ["2023-12-24", 0], ["2023-12-25", 0], ["2023-12-26", 0], ["2023-12-27", 0], ["2023-12-28", 0], ["2023-12-29", 0], ["2023-12-30", 0], ["2023-12-31", 0], ["2024-01-01", 0], ["2024-01-02", 0], ["2024-01-03", 0], ["2024-01-04", 0], ["2024-01-05", 0], ["2024-01-06", 0], ["2024-01-07", 0], ["2024-01-08", 0], ["2024-01-09", 0], ["2024-01-10", 0], ["2024-01-11", 0], ["2024-01-12", 0], ["2024-01-13", 0], ["2024-01-14", 0], ["2024-01-15", 0], ["2024-01-16", 0], ["2024-01-17", 0], ["2024-01-18", 0], ["2024-01-19", 0], ["2024-01-20", 0], ["2024-01-21", 0], ["2024-01-22", 0], ["2024-01-23", 0], ["2024-01-24", 0], ["2024-01-25", 0], ["2024-01-26", 0], ["2024-01-27", 0], ["2024-01-28", 0], ["2024-01-29", 0], ["2024-01-30", 0], ["2024-01-31", 0], ["2024-02-01", 0], ["2024-02-02", 0], ["2024-02-03", 0], ["2024-02-04", 1], ["2024-02-05", 0], ["2024-02-06", 0], ["2024-02-07", 0], ["2024-02-08", 0], ["2024-02-09", 0], ["2024-02-10", 0], ["2024-02-11", 0], ["2024-02-12", 0], ["2024-02-13", 0], ["2024-02-14", 0], ["2024-02-15", 0], ["2024-02-16", 0], ["2024-02-17", 0], ["2024-02-18", 0], ["2024-02-19", 0], ["2024-02-20", 0], ["2024-02-21", 0], ["2024-02-22", 0], ["2024-02-23", 0], ["2024-02-24", 0], ["2024-02-25", 0], ["2024-02-26", 0], ["2024-02-27", 0], ["2024-02-28", 0], ["2024-02-29", 0], ["2024-03-01", 0], ["2024-03-02", 0], ["2024-03-03", 0], ["2024-03-04", 0], ["2024-03-05", 0], ["2024-03-06", 0], ["2024-03-07", 0], ["2024-03-08", 0], ["2024-03-09", 0], ["2024-03-10", 0], ["2024-03-11", 0], ["2024-03-12", 0], ["2024-03-13", 0], ["2024-03-14", 0], ["2024-03-15", 0], ["2024-03-16", 0], ["2024-03-17", 0], ["2024-03-18", 0], ["2024-03-19", 0], ["2024-03-20", 0], ["2024-03-21", 0], ["2024-03-22", 0], ["2024-03-23", 0], ["2024-03-24", 0], ["2024-03-25", 0], ["2024-03-26", 0], ["2024-03-27", 0], ["2024-03-28", 0], ["2024-03-29", 0], ["2024-03-30", 0], ["2024-03-31", 0], ["2024-04-01", 0], ["2024-04-02", 1], ["2024-04-03", 0], ["2024-04-04", 0], ["2024-04-05", 0], ["2024-04-06", 0], ["2024-04-07", 0], ["2024-04-08", 0], ["2024-04-09", 0], ["2024-04-10", 0], ["2024-04-11", 1], ["2024-04-12", 0], ["2024-04-13", 0], ["2024-04-14", 0], ["2024-04-15", 0], ["2024-04-16", 0], ["2024-04-17", 0], ["2024-04-18", 0], ["2024-04-19", 0], ["2024-04-20", 0], ["2024-04-21", 0], ["2024-04-22", 0], ["2024-04-23", 0], ["2024-04-24", 0], ["2024-04-25", 0], ["2024-04-26", 0], ["2024-04-27", 0], ["2024-04-28", 0]]
-        }]
+</div>
 
-    };
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
 
-    myChart.setOption(option);
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">谢谢你请我喝奶茶</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184517.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184855.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/b6650cca.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python代码模板">
+                        
+                        <span class="card-title">Python代码模板</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Pycharm创建文件时，自动生成文件头注释
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">
+                        <span class="chip bg-color">代码模板</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/undefined.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="glob库">
+                        
+                        <span class="card-title">glob库</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Python glob库
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/glob/">
+                        <span class="chip bg-color">glob</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
 
     
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2022">2022</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2022/03">03</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>06</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/6497bdb4.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220306085641.png" class="responsive-img" alt="“浅谈” IPV4 与 IPV6">
-                                
-                                <span class="card-title">“浅谈” IPV4 与 IPV6</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    IPV6 ——网络的未来？
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2022-03-06
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E7%BD%91%E7%BB%9C/"><span class="chip bg-color">网络</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>03</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/b6372170.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303194841.png" class="responsive-img" alt="ping不通GitHub的解决方法">
-                                
-                                <span class="card-title">ping不通GitHub的解决方法</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    git clone经常没网？
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2022-03-03
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/GitHub/"><span class="chip bg-color">GitHub</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>03</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/73565b1b.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Hexo.png" class="responsive-img" alt="Hexo关闭渲染">
-                                
-                                <span class="card-title">Hexo关闭渲染</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    如何关闭Hexo对某些文件的渲染
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2022-03-03
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>03</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/7732d74f.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303154543.png" class="responsive-img" alt="Linux一键搭建Alist">
-                                
-                                <span class="card-title">Linux一键搭建Alist</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    定制个性化云盘列表
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2022-03-03
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/Alist/"><span class="chip bg-color">Alist</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-    </div>
 
 </main>
 
