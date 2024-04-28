@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="拓扑结构, Chanpoe 计算机">
+    <meta name="keywords" content="标签: fastapi, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>拓扑结构 | Chanpoe</title>
+    <title>标签: fastapi | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -714,633 +714,407 @@
 
 </header>
 
-    
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Chanpoe`s Blog
+                
+            </div>
 
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/202305280111853.png')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">拓扑结构</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+    <script>
+        $('.bg-cover').css('background-image', 'url(https://image-bed.obs.cn-north-4.myhuaweicloud.com/blog_banner.jpg)');
+    </script>
+    
 
+    </div>
+</div>
 
-<main class="post-container content">
+<main class="content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
 
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        background-color: white;
-        width: 345px;
-        padding-left: 20px;
-        border-radius: 10px;
-        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
-    }
-
-    .toc-widget .toc-title {
-        padding: 35px 0 15px 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-    
-    #toc-content {
-        height: calc(100vh - 300px);
-        overflow: scroll;
-
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-        bottom: 120px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
+<div id="tags" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%8B%93%E6%89%91/">
-                                <span class="chip bg-color">拓扑</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                学习记录
-                            </a>
-                        
-                    </div>
-                    
-                </div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
-
-            <div class="post-info">
+            <div class="tag-chips">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-06
-                </div>
                 
-
+                <a href="/tags/Anaconda/" title="Anaconda: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Anaconda" style="background-color: #F9EBEA;">Anaconda
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
-                </div>
+                <a href="/tags/Python/" title="Python: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #F5EEF8;">Python
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
-                </div>
+                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="机器学习" style="background-color: #D5F5E3;">机器学习
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
-
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
+                <a href="/tags/%E7%88%AC%E8%99%AB/" title="爬虫: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="爬虫" style="background-color: #E8F8F5;">爬虫
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/django/" title="django: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="django" style="background-color: #FEF9E7;">django
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Firewalld/" title="Firewalld: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Firewalld" style="background-color: #F8F9F9;">Firewalld
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Docker/" title="Docker: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Docker" style="background-color: #82E0AA;">Docker
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/ChatGPT/" title="ChatGPT: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="ChatGPT" style="background-color: #D7BDE2;">ChatGPT
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Git/" title="Git: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Git" style="background-color: #A3E4D7;">Git
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Alist/" title="Alist: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Alist" style="background-color: #85C1E9;">Alist
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/MySQL/" title="MySQL: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="MySQL" style="background-color: #F8C471;">MySQL
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/fastapi/" title="fastapi: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="fastapi" style="background-color: #F9E79F;">fastapi
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/glob/" title="glob: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="glob" style="background-color: #FEF9E7;">glob
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" title="代码模板: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="代码模板" style="background-color: #E8F8F5;">代码模板
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%87%BD%E6%95%B0%E6%B3%A8%E8%A7%A3/" title="函数注解: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="函数注解" style="background-color: #D5F5E3;">函数注解
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%AD%97%E5%85%B8/" title="字典: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="字典" style="background-color: #F8C471;">字典
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="正则表达式" style="background-color: #FFF;">正则表达式
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/format%E5%87%BD%E6%95%B0/" title="format函数: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="format函数" style="background-color: #F8C471;">format函数
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/loguru/" title="loguru: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="loguru" style="background-color: #F8F9F9;">loguru
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/" title="装饰器: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="装饰器" style="background-color: #FFF;">装饰器
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="面向对象" style="background-color: #FEF9E7;">面向对象
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/VSCode/" title="VSCode: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="VSCode" style="background-color: #FEF9E7;">VSCode
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Tmux/" title="Tmux: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Tmux" style="background-color: #D7BDE2;">Tmux
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Linux/" title="Linux: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Linux" style="background-color: #E8F8F5;">Linux
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Windows-11/" title="Windows 11: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Windows 11" style="background-color: #82E0AA;">Windows 11
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/GitHub/" title="GitHub: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="GitHub" style="background-color: #F8C471;">GitHub
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/hexo/" title="hexo: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="hexo" style="background-color: #FFF;">hexo
+                        <span class="tag-length">3</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/xpath/" title="xpath: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="xpath" style="background-color: #FEF9E7;">xpath
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/selenium/" title="selenium: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="selenium" style="background-color: #D7BDE2;">selenium
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E5%9B%BE%E5%BA%8A/" title="图床: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="图床" style="background-color: #F5EEF8;">图床
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E8%AF%B4%E6%98%8E/" title="说明: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="说明" style="background-color: #85C1E9;">说明
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E7%BD%91%E7%BB%9C/" title="网络: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="网络" style="background-color: #FFF;">网络
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%8B%93%E6%89%91/" title="拓扑: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="拓扑" style="background-color: #82E0AA;">拓扑
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" title="校园网: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="校园网" style="background-color: #82E0AA;">校园网
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
-        <hr class="clearfix">
+    </div>
+</div>
 
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
+    
 
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>今天学习神经网络的时候看到了一个<code>拓扑结构</code>的概念，对此比较陌生，所以便对此展开了学习。</p>
-<h1 id="一、拓扑结构："><a href="#一、拓扑结构：" class="headerlink" title="一、拓扑结构："></a>一、拓扑结构：</h1><p>首先我们来解释一下拓扑的含义，所谓“拓扑”就是把实体抽象成与其大小、形状无关的“点”，而把连接实体的线路抽象成“线”，进而以图的形式来表示这些点与线之间关系的方法，其目的在于研究这些点、线之间的相连关系。表示点和线之间关系的图被称为拓扑结构图。拓扑结构与几何结构属于两个不同的数学概念。在几何结构中，我们要考察的是点、线之间的位置关系，或者说几何结构强调的是点与线所构成的形状及大小。如梯形、正方形、平行四边形及圆都属于不同的几何结构，但从拓扑结构的角度去看，由于点、线间的连接关系相同，从而具有相同的拓扑结构即环型结构。也就是说，不同的几何结构可能具有相同的拓扑结构。</p>
-<p>类似地，在计算机网络中，我们把计算机、终端、通信处理机等设备抽象成点，把连接这些设备的通信线路抽象成线，并将由这些点和线所构成的拓扑称为网络拓扑结构。<br>网络拓扑结构反映出网络的结构关系，它对于网络的性能、可靠性以及建设管理成本等都有着重要的影响，因此网络拓扑结构的设计在整个网络设计中占有十分重要的地位，在网络构建时，网络拓常见的网络拓扑结构。<br>在计算机网络中常见的拓扑结构有<code>总线型</code>、<code>星型</code>、<code>环型</code>、<code>树型</code>和<code>网状型</code>等。</p>
-<h1 id="二、不同类型的拓扑结构："><a href="#二、不同类型的拓扑结构：" class="headerlink" title="二、不同类型的拓扑结构："></a>二、不同类型的拓扑结构：</h1><h3 id="1-总线型拓扑："><a href="#1-总线型拓扑：" class="headerlink" title="1.总线型拓扑："></a>1.总线型拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/%E6%80%BB%E7%BA%BF%E5%9E%8B%E6%8B%93%E6%89%91.png"></p>
-<p>总线型拓扑中采用单根传输线路作为传输介质，所有站点通过专门的连接器连到这个公共信道上，这个公共的信道称为总线。任何一个站点发送的数据都能通过总线传播，同时能被总线上的所有其他站点接收到。可见，总线型结构的网络是一种广播网络。扑结构往往是首先要考虑的因素之一。<br>在总线结构中，总线有一定的负载能力，因此，总线长度有一定限制，一条总线也只能连接一定数量的结点。<br>总线布局的特点是：结构简单灵活，非常便于扩充;可靠性高，网络响应速度快;设备量少、价格低、安装使用方便;共享资源能力强，极便于广播式工作即一个结点发送所有结点都可接收。总线型拓扑是基本局域网拓扑形式之一。<br>在总线两端连接的器件称为端结器(末端阻抗匹配器、或终止器)。主要与总线进行阻抗匹配，最大限度吸收传送端部的能量，避免信号反射回总线产生不必要的干扰。<br>总线形网络结构是目前使用最广泛的结构，也是最传统的一种主流网络结构，适合于信息管理系统、办公自动化系统领域的应用。</p>
-<h3 id="2-星型拓扑："><a href="#2-星型拓扑：" class="headerlink" title="2.星型拓扑："></a>2.星型拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/xingxingtuopu.png"><br>星型拓扑中有一个中心节点，其他各节点通过各自的线路与中心节点相连，形成辐射型结构。各节点间的通信必须通过中心节点的作用，如图A 到B 或A到C 都要经过中心节点D。<br>星型拓扑的网络具有结构简单、易于建网和易于管理等特点。但这种结构要耗费大量的电缆，同时中心节点的故障会直接造成整个网络的瘫痪。星型拓扑也经常应用于局域网中。<br>星型布局是以中央结点为中心与各结点连接而组成的，各结点与中央结点通过点与点方式连接，中央点执行集中式通信控制策略，因此中央结点相当复杂，负担也重。<br>目前流行的PBX就是星型拓扑结构的典型实例，如图所示。<br>以星型拓扑结构组网，其中任何两个站点要进行通信都必须经过中央结点控制。中央结点主要功能有</p>
-<ol>
-<li><p>为需要通信的设备建立物理连接</p>
-</li>
-<li><p>为两台设备通信过程中维持这一通路</p>
-</li>
-<li><p>在完成通信或不成功时,拆除通道<br>在文件服务器/工作站(File Server/Workstation )局域网模式中，中心点为文件服务器，存放共享资源。由于这种拓扑结构，中心点与多台工作站相连,为便于集中连线，目前多采用集线器(HUB)。<br>星型拓扑结构特点:网络结构简单,便于管理、集中控制, 组网容易;网络延迟时间短，误码率低，网络共享能力较差，通信线路利用率不高，中央节点负担过重，可同时连双绞线、同轴电缆及光纤等多种媒介。<br>树型拓扑结构可以看作成星型拓扑的一种扩展，也称扩展星型拓扑。</p>
-</li>
-</ol>
-<hr>
-<h3 id="3-环形拓扑："><a href="#3-环形拓扑：" class="headerlink" title="3.环形拓扑："></a>3.环形拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/huanxingtuopu.png"></p>
-<p>如图所示，在环型拓扑中，各节点和通信线路连接形成的一个闭合的环。在环路中，数据按照一个方向传输。发送端发出的数据，延环绕行一周后，回到发送端，由发送端将其从环上删除。我们可以看到任何一个节点发出的数据都可以被环上的其他节点接收到。<br>环型拓扑具有结构简单，容易实现，传输时延确定以及路径选择简单等优点，但是，网络中的每一个节点或连接节点的通信线路都有可能成为网络可靠性的瓶颈。当网络中的任何一个节点出现故障都可能会造成网络的瘫痪。另外，在这种拓扑结构中，节点的加入和拆除过程比较复杂。环型拓扑也是局域网中常用的一种拓扑形式。<br>环形网的特点是：信息在网络中沿固定方向流动，两个结点间仅有唯一的通路，大大简化了路径选择的控制;某个结点发生故障时，可以自动旁路，可靠性较高;由于信息是串行穿过多个结点环路接口，当结点过多时，影响传输效率，使网络响应时间变长。但当网络确定时，其延时固定，实时性强;由于环路封闭故扩充不方便。<br>环形网也是微机局域网常用拓扑结构之一，适合信息处理系统和工厂自动化系统。1985年IBM公司推出的令牌环形网(IBM Token Ring)是其典范。在FDDI得以应用推广后，这种结构会进一步得到采用。</p>
-<h3 id="4-网状拓扑："><a href="#4-网状拓扑：" class="headerlink" title="4.网状拓扑："></a>4.网状拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/wangzhuangtuopu.png"></p>
-<p>在网状拓扑结构中，节点之间的连接是任意的，每个节点都有多条线路与其他节点相连，这样使得节点之间存在多条路径可选，如图1.7中从A 到C 可以是A-B-C 也可以是A-D-B-C，在传输数据时可以灵活的选用空闲路径或者避开故障线路。<br>可见网状拓扑可以充分、合理的使用网络资源，并且具有可靠性高的优点。我们知道，广域网覆盖面积大，传输距离长，网络的故障会给大量的用户带来严重的危害，因此在广域网中，为了提高网络的可靠性通常采用网状拓扑结构，如图所示为一个简单的广域网示意图。<br>但是我们也应该看到，这个优点是以高投资和高复杂的管理为代价的。将多个子网或多个局域网连接起来构成网状型拓扑结构。在一个子网中，集线器、中继器将多个设备连接起来，而桥接器、路由器及网关则将子网连接起来。根据组网硬件不同，主要有三种网状型拓扑:<br>①<code>网状网</code>：在一个大的区域内，用无线通信连路连接一个大型网络时，网状网是最好的拓扑结构。通过路由器与路由器相连，可让网络选择一条最快的路径传送数据。<br>②<code>主干网</code>：通过桥接器与路由器把不同的子网或LAN 连接起来形成单个总线或环型拓扑结构，这种网通常采用光纤做主干线。<br>③<code>星状相连网</code>：利用一些叫做超级集线器的设备将网络连接起来，由于星型结构的特点，网络中任一处的故障都可容易查找并修复。应该指出,在实际组网中,拓扑结构不一定是单一的,通常是几种结构的混用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/lizilizi.png"><br>比如，将总线型与星型结合起来就形成了总线型/星型拓扑结构，用一条或多条总线把多组设备连接起来，相连的每组设备呈星型分布。采用这种拓扑结构，用户很容易配置和重新配置网络设备。如图所示。</p>
-<h1 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/starshinning975/article/details/53511343">https://blog.csdn.net/starshinning975/article/details/53511343</a></p>
-
-                
-            </div>
-            <hr/>
-
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
             
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="fastapi" data-aos="fade-up">
+                <div class="card">
+                    <a href="/posts/undefined.html">
+                        <div class="card-image tag-image">
                             
-                                <a href="/tags/%E6%8B%93%E6%89%91/">
-                                    <span class="chip bg-color">拓扑</span>
-                                </a>
+                            <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="fastapi库">
                             
+                            <span class="card-title">fastapi库</span>
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">谢谢你请我喝奶茶</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184517.png" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220118184855.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/posts/926c01d0.html">
-                    <div class="card-image">
-                        
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 字典">
-                        
-                        <span class="card-title">Python 字典</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            dict.get()非常好用！
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AD%97%E5%85%B8/">
-                        <span class="chip bg-color">字典</span>
                     </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/fe0c2a50.html">
-                    <div class="card-image">
-                        
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/banner.jpeg" class="responsive-img" alt="博客格式记录">
-                        
-                        <span class="card-title">博客格式记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            分类和标签 以及Front-matter写法记录
-                        
-                    </div>
-                    <div class="publish-info">
+                    <div class="card-content article-content">
+                        <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-26
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Python/" class="post-category">
+                                Python
                                 </a>
-                            
-                            
-                        </span>
+                                
+                                
+                            </span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                </div>
-                
             </div>
+            
         </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-
+    </article>
 </main>
 
 

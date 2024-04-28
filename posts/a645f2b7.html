@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="拓扑结构, Chanpoe 计算机">
+    <meta name="keywords" content="glob库, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>拓扑结构 | Chanpoe</title>
+    <title>glob库 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -731,12 +731,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/202305280111853.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">拓扑结构</h1>
+                    <h1 class="description center-align post-title">glob库</h1>
                 </div>
             </div>
         </div>
@@ -857,8 +857,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8B%93%E6%89%91/">
-                                <span class="chip bg-color">拓扑</span>
+                            <a href="/tags/glob/">
+                                <span class="chip bg-color">glob</span>
                             </a>
                         
                     </div>
@@ -869,8 +869,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                学习记录
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -882,7 +882,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-06
+                    2024-04-02
                 </div>
                 
 
@@ -891,14 +891,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    7 分
                 </div>
                 
 
@@ -921,26 +921,199 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>今天学习神经网络的时候看到了一个<code>拓扑结构</code>的概念，对此比较陌生，所以便对此展开了学习。</p>
-<h1 id="一、拓扑结构："><a href="#一、拓扑结构：" class="headerlink" title="一、拓扑结构："></a>一、拓扑结构：</h1><p>首先我们来解释一下拓扑的含义，所谓“拓扑”就是把实体抽象成与其大小、形状无关的“点”，而把连接实体的线路抽象成“线”，进而以图的形式来表示这些点与线之间关系的方法，其目的在于研究这些点、线之间的相连关系。表示点和线之间关系的图被称为拓扑结构图。拓扑结构与几何结构属于两个不同的数学概念。在几何结构中，我们要考察的是点、线之间的位置关系，或者说几何结构强调的是点与线所构成的形状及大小。如梯形、正方形、平行四边形及圆都属于不同的几何结构，但从拓扑结构的角度去看，由于点、线间的连接关系相同，从而具有相同的拓扑结构即环型结构。也就是说，不同的几何结构可能具有相同的拓扑结构。</p>
-<p>类似地，在计算机网络中，我们把计算机、终端、通信处理机等设备抽象成点，把连接这些设备的通信线路抽象成线，并将由这些点和线所构成的拓扑称为网络拓扑结构。<br>网络拓扑结构反映出网络的结构关系，它对于网络的性能、可靠性以及建设管理成本等都有着重要的影响，因此网络拓扑结构的设计在整个网络设计中占有十分重要的地位，在网络构建时，网络拓常见的网络拓扑结构。<br>在计算机网络中常见的拓扑结构有<code>总线型</code>、<code>星型</code>、<code>环型</code>、<code>树型</code>和<code>网状型</code>等。</p>
-<h1 id="二、不同类型的拓扑结构："><a href="#二、不同类型的拓扑结构：" class="headerlink" title="二、不同类型的拓扑结构："></a>二、不同类型的拓扑结构：</h1><h3 id="1-总线型拓扑："><a href="#1-总线型拓扑：" class="headerlink" title="1.总线型拓扑："></a>1.总线型拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/%E6%80%BB%E7%BA%BF%E5%9E%8B%E6%8B%93%E6%89%91.png"></p>
-<p>总线型拓扑中采用单根传输线路作为传输介质，所有站点通过专门的连接器连到这个公共信道上，这个公共的信道称为总线。任何一个站点发送的数据都能通过总线传播，同时能被总线上的所有其他站点接收到。可见，总线型结构的网络是一种广播网络。扑结构往往是首先要考虑的因素之一。<br>在总线结构中，总线有一定的负载能力，因此，总线长度有一定限制，一条总线也只能连接一定数量的结点。<br>总线布局的特点是：结构简单灵活，非常便于扩充;可靠性高，网络响应速度快;设备量少、价格低、安装使用方便;共享资源能力强，极便于广播式工作即一个结点发送所有结点都可接收。总线型拓扑是基本局域网拓扑形式之一。<br>在总线两端连接的器件称为端结器(末端阻抗匹配器、或终止器)。主要与总线进行阻抗匹配，最大限度吸收传送端部的能量，避免信号反射回总线产生不必要的干扰。<br>总线形网络结构是目前使用最广泛的结构，也是最传统的一种主流网络结构，适合于信息管理系统、办公自动化系统领域的应用。</p>
-<h3 id="2-星型拓扑："><a href="#2-星型拓扑：" class="headerlink" title="2.星型拓扑："></a>2.星型拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/xingxingtuopu.png"><br>星型拓扑中有一个中心节点，其他各节点通过各自的线路与中心节点相连，形成辐射型结构。各节点间的通信必须通过中心节点的作用，如图A 到B 或A到C 都要经过中心节点D。<br>星型拓扑的网络具有结构简单、易于建网和易于管理等特点。但这种结构要耗费大量的电缆，同时中心节点的故障会直接造成整个网络的瘫痪。星型拓扑也经常应用于局域网中。<br>星型布局是以中央结点为中心与各结点连接而组成的，各结点与中央结点通过点与点方式连接，中央点执行集中式通信控制策略，因此中央结点相当复杂，负担也重。<br>目前流行的PBX就是星型拓扑结构的典型实例，如图所示。<br>以星型拓扑结构组网，其中任何两个站点要进行通信都必须经过中央结点控制。中央结点主要功能有</p>
-<ol>
-<li><p>为需要通信的设备建立物理连接</p>
-</li>
-<li><p>为两台设备通信过程中维持这一通路</p>
-</li>
-<li><p>在完成通信或不成功时,拆除通道<br>在文件服务器/工作站(File Server/Workstation )局域网模式中，中心点为文件服务器，存放共享资源。由于这种拓扑结构，中心点与多台工作站相连,为便于集中连线，目前多采用集线器(HUB)。<br>星型拓扑结构特点:网络结构简单,便于管理、集中控制, 组网容易;网络延迟时间短，误码率低，网络共享能力较差，通信线路利用率不高，中央节点负担过重，可同时连双绞线、同轴电缆及光纤等多种媒介。<br>树型拓扑结构可以看作成星型拓扑的一种扩展，也称扩展星型拓扑。</p>
-</li>
-</ol>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>平时我都是使用os库对文件进行读取和操作，今天偶然从别人那里学到了一个很好用的库，翻阅了几篇资料教程，发现确实方便很多。glob库可以用类似正则表达式的方式来匹配文件和目录，确实不戳，收至麾下。</p>
 <hr>
-<h3 id="3-环形拓扑："><a href="#3-环形拓扑：" class="headerlink" title="3.环形拓扑："></a>3.环形拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/huanxingtuopu.png"></p>
-<p>如图所示，在环型拓扑中，各节点和通信线路连接形成的一个闭合的环。在环路中，数据按照一个方向传输。发送端发出的数据，延环绕行一周后，回到发送端，由发送端将其从环上删除。我们可以看到任何一个节点发出的数据都可以被环上的其他节点接收到。<br>环型拓扑具有结构简单，容易实现，传输时延确定以及路径选择简单等优点，但是，网络中的每一个节点或连接节点的通信线路都有可能成为网络可靠性的瓶颈。当网络中的任何一个节点出现故障都可能会造成网络的瘫痪。另外，在这种拓扑结构中，节点的加入和拆除过程比较复杂。环型拓扑也是局域网中常用的一种拓扑形式。<br>环形网的特点是：信息在网络中沿固定方向流动，两个结点间仅有唯一的通路，大大简化了路径选择的控制;某个结点发生故障时，可以自动旁路，可靠性较高;由于信息是串行穿过多个结点环路接口，当结点过多时，影响传输效率，使网络响应时间变长。但当网络确定时，其延时固定，实时性强;由于环路封闭故扩充不方便。<br>环形网也是微机局域网常用拓扑结构之一，适合信息处理系统和工厂自动化系统。1985年IBM公司推出的令牌环形网(IBM Token Ring)是其典范。在FDDI得以应用推广后，这种结构会进一步得到采用。</p>
-<h3 id="4-网状拓扑："><a href="#4-网状拓扑：" class="headerlink" title="4.网状拓扑："></a>4.网状拓扑：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/wangzhuangtuopu.png"></p>
-<p>在网状拓扑结构中，节点之间的连接是任意的，每个节点都有多条线路与其他节点相连，这样使得节点之间存在多条路径可选，如图1.7中从A 到C 可以是A-B-C 也可以是A-D-B-C，在传输数据时可以灵活的选用空闲路径或者避开故障线路。<br>可见网状拓扑可以充分、合理的使用网络资源，并且具有可靠性高的优点。我们知道，广域网覆盖面积大，传输距离长，网络的故障会给大量的用户带来严重的危害，因此在广域网中，为了提高网络的可靠性通常采用网状拓扑结构，如图所示为一个简单的广域网示意图。<br>但是我们也应该看到，这个优点是以高投资和高复杂的管理为代价的。将多个子网或多个局域网连接起来构成网状型拓扑结构。在一个子网中，集线器、中继器将多个设备连接起来，而桥接器、路由器及网关则将子网连接起来。根据组网硬件不同，主要有三种网状型拓扑:<br>①<code>网状网</code>：在一个大的区域内，用无线通信连路连接一个大型网络时，网状网是最好的拓扑结构。通过路由器与路由器相连，可让网络选择一条最快的路径传送数据。<br>②<code>主干网</code>：通过桥接器与路由器把不同的子网或LAN 连接起来形成单个总线或环型拓扑结构，这种网通常采用光纤做主干线。<br>③<code>星状相连网</code>：利用一些叫做超级集线器的设备将网络连接起来，由于星型结构的特点，网络中任一处的故障都可容易查找并修复。应该指出,在实际组网中,拓扑结构不一定是单一的,通常是几种结构的混用。<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/lizilizi.png"><br>比如，将总线型与星型结合起来就形成了总线型/星型拓扑结构，用一条或多条总线把多组设备连接起来，相连的每组设备呈星型分布。采用这种拓扑结构，用户很容易配置和重新配置网络设备。如图所示。</p>
-<h1 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/starshinning975/article/details/53511343">https://blog.csdn.net/starshinning975/article/details/53511343</a></p>
+<h3 id="一、glob库介绍"><a href="#一、glob库介绍" class="headerlink" title="一、glob库介绍"></a>一、glob库介绍</h3><p><code>glob</code>库是Python的一个标准库，他提供了简单强大的匹配文件和目录的方法。</p>
+<p>通常情况下，在命令行中使用通配符来搜索文件，例如<code>*.txt</code>来匹配所有以<code>.txt</code>为后缀的文件。<code>glob</code>库允许我们以编程的方式在Python脚本中执行类似的文件匹配操作。</p>
+<hr>
+<h3 id="二、基本用法"><a href="#二、基本用法" class="headerlink" title="二、基本用法"></a>二、基本用法</h3><h4 id="1-使用通配符匹配文件"><a href="#1-使用通配符匹配文件" class="headerlink" title="1. 使用通配符匹配文件"></a>1. 使用通配符匹配文件</h4><p><code>glob</code>库使用通配符来匹配文件和目录。下面是一些常用的通配符(类似正则)：</p>
+<ul>
+<li><code>*</code>：匹配0个或多个字符。</li>
+<li><code>?</code>：匹配单个字符。</li>
+<li><code>[]</code>：匹配指定范围内的字符，如<code>[0-9]</code>匹配所有数字字符。</li>
+</ul>
+<p>让我们来看一个例子。假设我们有一个文件夹data，其中包含以下文件：</p>
+<pre class="line-numbers language-none"><code class="language-none">data/
+    file1.txt
+    file2.txt
+    image.jpg
+    data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>现在，我们想要匹配所有以<code>.txt</code>为后缀的文件。我们可以使用<code>*.txt</code>作为模式字符串：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">txt_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*.txt"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>txt_files<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/file1.txt', 'data/file2.txt']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+<p>正如我们所见，<code>glob.glob()</code>函数返回了一个列表，其中包含了所有以.txt为后缀的文件路径。</p>
+<h4 id="2-匹配特定目录"><a href="#2-匹配特定目录" class="headerlink" title="2. 匹配特定目录"></a>2. 匹配特定目录</h4><p>如果我们希望匹配的文件在子目录中，我们可以使用双星号<code>**</code>来进行递归搜索。例如，假设我们有以下文件结构：</p>
+<pre class="line-numbers language-none"><code class="language-none">data/
+    file1.txt
+    subdir/
+        file2.txt
+        file3.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们想要匹配所有以<code>.txt</code>为后缀的文件，不论它们位于哪个子目录中。我们可以使用<code>**/*.txt</code>作为模式字符串：</p>
+<pre class="line-numbers language-none"><code class="language-none">txt_files_recursive = glob.glob("data/**/*.txt", recursive=True)
+print(txt_files_recursive)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/file1.txt', 'data/subdir/file2.txt', 'data/subdir/file3.txt']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>使用<code>recursive=True</code>参数，我们可以匹配到所有子目录中的文件。</p>
+<h4 id="3-匹配多种后缀（错误，不能这样写）"><a href="#3-匹配多种后缀（错误，不能这样写）" class="headerlink" title="3. 匹配多种后缀（错误，不能这样写）"></a>3. 匹配多种后缀（错误，不能这样写）</h4><p><del>有时候我们需要匹配多种后缀的文件，可以使用<code>[]</code>来指定匹配的范围。例如，如果我们想要匹配<code>.txt</code>和<code>.csv</code>文件，我们可以使用<code>["*.txt", "*.csv"]</code>作为模式字符串：</del></p>
+<p>如果想要匹配以 .csv 或 .txt 结尾的文件，需要进行两次单独的 glob 调用，然后将结果合并。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># txt_and_csv_files = glob.glob("data/*.[txt|csv]")</span>
+<span class="token comment"># print(txt_and_csv_files)</span>
+<span class="token keyword">import</span> glob
+
+csv_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">'./data/*.csv'</span><span class="token punctuation">)</span>
+txt_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">'./data/*.txt'</span><span class="token punctuation">)</span>
+
+files_list <span class="token operator">=</span> csv_files <span class="token operator">+</span> txt_files
+<span class="token keyword">print</span><span class="token punctuation">(</span>files_list<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="4-获取目录列表"><a href="#4-获取目录列表" class="headerlink" title="4. 获取目录列表"></a>4. 获取目录列表</h4><p>除了匹配文件，<code>glob</code>库还可以获取目录列表。如果我们想要列出所有子目录，可以使用<code>*/</code>作为模式字符串：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">subdirs <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*/"</span><span class="token punctuation">)</span> 
+<span class="token keyword">print</span><span class="token punctuation">(</span>subdirs<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/subdir/']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="5-使用iglob-进行迭代"><a href="#5-使用iglob-进行迭代" class="headerlink" title="5. 使用iglob()进行迭代"></a>5. 使用<code>iglob()</code>进行迭代</h4><p>对于大型目录，一次性获取所有匹配的文件列表可能会占据大量内存。在这种情况下，可以使用<code>iglob()</code>函数来进行迭代获取。<code>iglob()</code>返回一个迭代器，逐个返回匹配的文件名。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">txt_files_iterator <span class="token operator">=</span> glob<span class="token punctuation">.</span>iglob<span class="token punctuation">(</span><span class="token string">"data/*.txt"</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> txt_files_iterator<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">data/file1.txt
+data/file2.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><code>iglob()</code>适用于处理大量文件时，可以节省内存开销。</p>
+<hr>
+<h3 id="三、过滤和排序匹配结果"><a href="#三、过滤和排序匹配结果" class="headerlink" title="三、过滤和排序匹配结果"></a>三、过滤和排序匹配结果</h3><h4 id="1-过滤匹配结果"><a href="#1-过滤匹配结果" class="headerlink" title="1. 过滤匹配结果"></a>1. 过滤匹配结果</h4><p><code>glob</code>库允许我们使用<code>fnmatch</code>模块的匹配方法来过滤匹配结果。例如，假设我们只想匹配以<code>file</code>开头的文件</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+<span class="token keyword">import</span> fnmatch
+
+<span class="token comment"># 获取所有以'file'开头的文件</span>
+file_starting_with_file <span class="token operator">=</span> fnmatch<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"file*"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>file_starting_with_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/file1.txt', 'data/file2.txt']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="2-排序匹配结果"><a href="#2-排序匹配结果" class="headerlink" title="2. 排序匹配结果"></a>2. 排序匹配结果</h4><p>glob库返回的匹配结果通常是按照操作系统的文件系统规则排序的。但是有时候我们可能需要按照自定义的方式对结果排序，因此我们可以使用python内置的<code>sorted()</code>函数对匹配结果进行排序。</p>
+<p>例如，我们按照文件大小对匹配的文件进行排序：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+<span class="token keyword">import</span> os
+
+<span class="token comment"># 获取匹配的文件并按照文件大小排序</span>
+matched_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*.txt"</span><span class="token punctuation">)</span>
+sorted_files_by_size <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>matched_files<span class="token punctuation">,</span> key<span class="token operator">=</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>getsize<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sorted_files_by_size<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/file1.txt', 'data/file2.txt']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>我们使用<code>os.path.getsize</code>作为<code>sorted()</code>函数的<code>key</code>参数，从而按照文件的大小对匹配结果进行排序。</p>
+<h4 id="3-自定义匹配规则"><a href="#3-自定义匹配规则" class="headerlink" title="3. 自定义匹配规则"></a>3. 自定义匹配规则</h4><p><code>glob</code>库允许我们使用自定义函数来对匹配的结果进行过滤和排序。例如，假设我们想要匹配所有以奇数数字结尾的文件，并且按照数字大小进行排序：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+
+<span class="token comment"># 自定义过滤函数</span>
+<span class="token keyword">def</span> <span class="token function">custom_filter</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    filename <span class="token operator">=</span> file_path<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    last_char <span class="token operator">=</span> <span class="token string">'.'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>filename<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 获取文件名中的最后一个数字</span>
+    <span class="token keyword">return</span> last_char<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token builtin">int</span><span class="token punctuation">(</span>last_char<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">1</span>
+
+<span class="token comment"># 获取匹配的文件并按照自定义规则排序</span>
+matched_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*"</span><span class="token punctuation">)</span>
+filtered_and_sorted_files <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span>custom_filter<span class="token punctuation">,</span> matched_files<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>filtered_and_sorted_files<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>过滤函数custom_filter()用来过滤以奇数数字结尾的文件，并使用sorted()函数按照自定义规则进行排序。</p>
+<h4 id="4-遍历子目录中的文件（已经用os-walk-替代）"><a href="#4-遍历子目录中的文件（已经用os-walk-替代）" class="headerlink" title="4. 遍历子目录中的文件（已经用os.walk()替代）"></a>4. 遍历子目录中的文件（已经用<code>os.walk()</code>替代）</h4><p><del>前面使用<code>**</code>来进行递归搜索，但如果只希望遍历子目录中的文件而不进一步进入子目录，可以使用<code>glob.glob()</code>结合<code>os.path.join()</code>来实现。</del></p>
+<p>现已更换<code>os.walk()</code>：</p>
+<p>假设目录结构如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">data/
+    file1.txt
+    subdir1/
+        file2.txt
+        file3.txt
+    subdir2/
+        file4.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># import glob</span>
+<span class="token comment"># import os</span>
+<span class="token comment"># </span>
+<span class="token comment"># def list_files_in_directory(directory):</span>
+<span class="token comment">#     files = []</span>
+<span class="token comment">#     for file_path in glob.glob(os.path.join(directory, "*")):</span>
+<span class="token comment">#         if os.path.isfile(file_path):</span>
+<span class="token comment">#             files.append(file_path)</span>
+<span class="token comment">#     return files</span>
+<span class="token comment"># </span>
+<span class="token comment"># directory_path = "data"</span>
+<span class="token comment"># files_in_directory = list_files_in_directory(directory_path)</span>
+<span class="token comment"># print(files_in_directory)</span>
+
+<span class="token comment"># os.walk()更好用</span>
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">list_all_files</span><span class="token punctuation">(</span>directory<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> dirpath<span class="token punctuation">,</span> dirnames<span class="token punctuation">,</span> filenames <span class="token keyword">in</span> os<span class="token punctuation">.</span>walk<span class="token punctuation">(</span>directory<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> filename <span class="token keyword">in</span> filenames<span class="token punctuation">:</span>
+            <span class="token keyword">yield</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dirpath<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+
+
+directory_path <span class="token operator">=</span> <span class="token string">"data"</span>
+all_files <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>list_all_files<span class="token punctuation">(</span>directory_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>all_files<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出：</p>
+<pre class="line-numbers language-none"><code class="language-none">['data/file1.txt', 'data/subdir1/file2.txt', 'data/subdir1/file3.txt', 'data/subdir2/file4.txt']<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在这个例子中，我们定义了一个<code>list_files_in_directory()</code>函数，该函数遍历指定目录中的文件，并忽略子目录。使用<code>os.path.join()</code>函数来构建文件路径，确保可以正确处理不同操作系统下的路径分隔符。</p>
+<h3 id="四、使用glob库进行文件处理"><a href="#四、使用glob库进行文件处理" class="headerlink" title="四、使用glob库进行文件处理"></a>四、使用glob库进行文件处理</h3><p><code>glob</code>库不仅仅用于匹配和获取文件列表，还可以方便地进行文件处理。我们可以将<code>glob</code>库与其他的python库（例如os、shutil等）结合使用，来执行各种文件操作。</p>
+<h4 id="1-复制文件"><a href="#1-复制文件" class="headerlink" title="1. 复制文件"></a>1. 复制文件</h4><p>假设我们想将所有以<code>.txt</code>为后缀的文件复制到另一个目录中，我们可以使用<code>shutil</code>库来实现：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+<span class="token keyword">import</span> shutil
+
+source_directory <span class="token operator">=</span> <span class="token string">"data"</span>
+destination_directory <span class="token operator">=</span> <span class="token string">"backup"</span>
+
+txt_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>source_directory<span class="token punctuation">,</span> <span class="token string">"*.txt"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> txt_file <span class="token keyword">in</span> txt_files<span class="token punctuation">:</span>
+    shutil<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>txt_file<span class="token punctuation">,</span> destination_directory<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在这个例子中，我们首先使用<code>glob</code>库来获取所有以<code>.txt</code>为后缀的文件列表，然后使用<code>shutil.copy()</code>函数将这些文件复制到<code>backup</code>目录中。</p>
+<h4 id="2-删除文件"><a href="#2-删除文件" class="headerlink" title="2. 删除文件"></a>2. 删除文件</h4><p>如果我们希望删除所有以<code>.csv</code>为后缀的文件，可以使用<code>os.remove()</code>函数来实现：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+<span class="token keyword">import</span> os
+
+csv_files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">"data/*.csv"</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> csv_file <span class="token keyword">in</span> csv_files<span class="token punctuation">:</span>
+    os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>csv_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-批量重命名文件"><a href="#3-批量重命名文件" class="headerlink" title="3. 批量重命名文件"></a>3. 批量重命名文件</h4><p><code>glob</code>库与字符串处理和<code>os.rename()</code>函数结合使用，可以批量重命名文件。假设我们有一系列文件名格式为<code>file_&lt;num&gt;.txt</code>（例如<code>file_1.txt</code>、<code>file_2.txt</code>等），现在我们希望将它们重命名为<code>data_&lt;num&gt;.txt</code>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> glob
+
+old_names <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">'data/*.txt'</span><span class="token punctuation">)</span>
+new_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'data/t1.txt'</span><span class="token punctuation">,</span> <span class="token string">'data/t2.txt'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>old_names<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>new_names<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The number of old file names and new file names does not match."</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> old_name<span class="token punctuation">,</span> new_name <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>old_names<span class="token punctuation">,</span> new_names<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>old_name<span class="token punctuation">,</span> new_name<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_21484461/article/details/131908308">【实用 Python 库】Python glob库：轻松应对文件和目录管理</a></p>
 
                 
             </div>
@@ -955,8 +1128,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8B%93%E6%89%91/">
-                                    <span class="chip bg-color">拓扑</span>
+                                <a href="/tags/glob/">
+                                    <span class="chip bg-color">glob</span>
                                 </a>
                             
                         </div>
@@ -1130,23 +1303,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/926c01d0.html">
+                <a href="/posts/b6650cca.html">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 字典">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python代码模板">
                         
-                        <span class="card-title">Python 字典</span>
+                        <span class="card-title">Python代码模板</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            dict.get()非常好用！
+                            Pycharm创建文件时，自动生成文件头注释
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-04-11
                         </span>
                         <span class="publish-author">
                             
@@ -1163,8 +1336,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%AD%97%E5%85%B8/">
-                        <span class="chip bg-color">字典</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">
+                        <span class="chip bg-color">代码模板</span>
                     </a>
                     
                 </div>
@@ -1178,30 +1351,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/fe0c2a50.html">
+                <a href="/posts/e686f33a.html">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/banner.jpeg" class="responsive-img" alt="博客格式记录">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 编写使用日志">
                         
-                        <span class="card-title">博客格式记录</span>
+                        <span class="card-title">Python 编写使用日志</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分类和标签 以及Front-matter写法记录
+                            loguru库的介绍和使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -1211,8 +1384,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/loguru/">
+                        <span class="chip bg-color">loguru</span>
                     </a>
                     
                 </div>
