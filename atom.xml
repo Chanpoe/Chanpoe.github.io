@@ -6,7 +6,7 @@
   <link href="https://www.chanpoe.top/atom.xml" rel="self"/>
   
   <link href="https://www.chanpoe.top/"/>
-  <updated>2024-04-28T01:54:45.373Z</updated>
+  <updated>2024-04-29T03:34:26.289Z</updated>
   <id>https://www.chanpoe.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式参照表</title>
+    <link href="https://www.chanpoe.top/posts/82f2334a.html"/>
+    <id>https://www.chanpoe.top/posts/82f2334a.html</id>
+    <published>2024-04-29T03:05:43.000Z</published>
+    <updated>2024-04-29T03:34:26.289Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="基础匹配模式"><a href="#基础匹配模式" class="headerlink" title="基础匹配模式"></a>基础匹配模式</h3><table><thead><tr><th>实例</th><th>描述</th></tr></thead><tbody><tr><td><code>.</code></td><td>匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td></tr><tr><td><code>?</code></td><td>匹配一个字符零次或一次，另一个作用是非贪婪模式</td></tr><tr><td><code>+</code></td><td>匹配1次或多次</td></tr><tr><td><code>*</code></td><td>匹配0次或多次</td></tr><tr><td><code>\b</code></td><td>匹配一个长度为<code>0</code>的子串</td></tr><tr><td><code>\d</code></td><td>匹配一个数字字符。等价于 [0-9]。</td></tr><tr><td><code>\D</code></td><td>匹配一个非数字字符。等价于 [^0-9]。</td></tr><tr><td><code>\s</code></td><td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。</td></tr><tr><td><code>\S</code></td><td>匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。</td></tr><tr><td><code>\w</code></td><td>匹配包括下划线的任何单词字符。等价于’[A-Za-z0-9_]’。</td></tr><tr><td><code>\W</code></td><td>匹配任何非单词字符。等价于 ‘[^A-Za-z0-9_]‘。</td></tr><tr><td><code>[Pp]ython</code></td><td>匹配 “Python” 或 “python”。</td></tr><tr><td><code>[abcdef]</code></td><td>匹配中括号内的任意一个字母。</td></tr><tr><td><code>[0-9]</code></td><td>匹配任何数字。类似于 [0123456789]。</td></tr><tr><td><code>[a-z]</code></td><td>匹配任何小写字母。</td></tr><tr><td><code>[A-Z]</code></td><td>匹配任何大写字母。</td></tr><tr><td><code>[a-zA-Z0-9]</code></td><td>匹配任何字母及数字。</td></tr><tr><td><code>[^au]</code></td><td>除了au字母以外的所有字符。</td></tr><tr><td><code>[^0-9]</code></td><td>匹配除了数字外的字符。</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://www.chanpoe.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>fastapi库</title>
@@ -483,30 +505,6 @@
     
     
     <category term="网络" scheme="https://www.chanpoe.top/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ping不通GitHub的解决方法</title>
-    <link href="https://www.chanpoe.top/posts/b6372170.html"/>
-    <id>https://www.chanpoe.top/posts/b6372170.html</id>
-    <published>2022-03-03T11:44:09.000Z</published>
-    <updated>2023-02-15T14:44:54.977Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>今天遇到了一个很头疼的问题：<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195428.png"></p><p>由于Github的CDN （Content Delivery Network，即内容分发网络，基本原理：利用全局负载技术将用户的访问指向当时较近的最佳的CDN节点）<del>被伟大的墙屏蔽，导致我们在国内访问Github会非常地慢，尤其是在clone仓库时，只有几十K的速度，下载半天，还会经常失败，让人头疼。</del></p><p>而Github是程序员的标配，俗话说：“工欲善其事，必先利其器”，所以，本文介绍的是：通过修改hosts文件的方法来绕过国内DNS解析。由于Github只是被DNS污染，而不是像Google那样被IP封锁，所以，我们不需要科学上网，也不需要海外的服务器辅助，这样操作一波后，就可以直接访问Github的CDN节点（主DNS根据一系列策略确定当时最适当的CDN节点，并将解析的结果（IP地址）发给用户，用户向给定的CDN节点请求相应网站的内容 ），从而达到加速的目的。</p><hr><h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>1.首先打开 <a href="https://websites.ipaddress.com/">ipaddress.com</a> 网站，查询以下网址对应地IP：</p><pre class="line-numbers language-none"><code class="language-none">github.comgithub.global.ssl.fastly.net<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303195839.png"></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200125.png"></p><p>记下IP地址</p><p>2.打开hosts文件</p><p>hosts文件是啥？将一些常用的网址域名与其对应的IP地址建立一个关联“数据库”，当用户在浏览器中输入一个需要登录的网址时，系统会首先自动从Hosts文件中寻找对应的IP地址，一旦找到，系统会立即打开对应网页，如果没有找到，则系统再会将网址提交DNS域名解析服务器进行IP地址的解析，如果发现是被屏蔽的IP或域名，就会禁止打开此网页！</p><p>目录：<br><code>C:\Windows\System32\drivers\etc\hosts</code></p><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200338.png"></p><p>3.复制查询后地ip，然后在hosts文件中做出相应地修改<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200427.png"></p><p>4.修改后保存退出，在cmd命令行执行刷新命令:</p><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">ipconfig/flushdns<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200635.png"></p><p>会发现已经可以ping通Github了<br><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220303200848.png"></p><hr><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章:"></a>参考文章:</h3><p><a href="https://blog.csdn.net/qq_42102911/article/details/121485672?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_42102911/article/details/121485672?spm=1001.2014.3001.5501</a><br><a href="https://blog.csdn.net/weixin_42232769/article/details/105655388">https://blog.csdn.net/weixin_42232769/article/details/105655388</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    <category term="教程" scheme="https://www.chanpoe.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="GitHub" scheme="https://www.chanpoe.top/tags/GitHub/"/>
     
   </entry>
   
