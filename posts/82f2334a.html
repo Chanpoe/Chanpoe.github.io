@@ -883,14 +883,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    298
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -922,7 +922,7 @@
 </thead>
 <tbody><tr>
 <td><code>.</code></td>
-<td>匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式。</td>
+<td>匹配除 “\n” 之外的任何单个字符 要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式</td>
 </tr>
 <tr>
 <td><code>?</code></td>
@@ -942,61 +942,106 @@
 </tr>
 <tr>
 <td><code>\d</code></td>
-<td>匹配一个数字字符。等价于 [0-9]。</td>
+<td>匹配一个数字字符 等价于 [0-9]</td>
 </tr>
 <tr>
 <td><code>\D</code></td>
-<td>匹配一个非数字字符。等价于 [^0-9]。</td>
+<td>匹配一个非数字字符 等价于 [^0-9]</td>
 </tr>
 <tr>
 <td><code>\s</code></td>
-<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。</td>
+<td>匹配任何空白字符，包括空格、制表符、换页符等等 等价于 [ \f\n\r\t\v]</td>
 </tr>
 <tr>
 <td><code>\S</code></td>
-<td>匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。</td>
+<td>匹配任何非空白字符 等价于 [^ \f\n\r\t\v]</td>
 </tr>
 <tr>
 <td><code>\w</code></td>
-<td>匹配包括下划线的任何单词字符。等价于’[A-Za-z0-9_]’。</td>
+<td>匹配包括下划线的任何单词字符 等价于 [A-Za-z0-9_]</td>
 </tr>
 <tr>
 <td><code>\W</code></td>
-<td>匹配任何非单词字符。等价于 ‘[^A-Za-z0-9_]‘。</td>
+<td>匹配任何非单词字符 等价于 [^A-Za-z0-9_]</td>
 </tr>
 <tr>
 <td><code>[Pp]ython</code></td>
-<td>匹配 “Python” 或 “python”。</td>
+<td>匹配 “Python” 或 “python”</td>
 </tr>
 <tr>
 <td><code>[abcdef]</code></td>
-<td>匹配中括号内的任意一个字母。</td>
+<td>匹配中括号内的任意一个字母</td>
 </tr>
 <tr>
 <td><code>[0-9]</code></td>
-<td>匹配任何数字。类似于 [0123456789]。</td>
+<td>匹配任何数字 类似于 [0123456789]</td>
 </tr>
 <tr>
 <td><code>[a-z]</code></td>
-<td>匹配任何小写字母。</td>
+<td>匹配任何小写字母</td>
 </tr>
 <tr>
 <td><code>[A-Z]</code></td>
-<td>匹配任何大写字母。</td>
+<td>匹配任何大写字母</td>
 </tr>
 <tr>
 <td><code>[a-zA-Z0-9]</code></td>
-<td>匹配任何字母及数字。</td>
+<td>匹配任何字母及数字</td>
 </tr>
 <tr>
 <td><code>[^au]</code></td>
-<td>除了au字母以外的所有字符。</td>
+<td>除了au字母以外的所有字符</td>
 </tr>
 <tr>
 <td><code>[^0-9]</code></td>
-<td>匹配除了数字外的字符。</td>
+<td>匹配除了数字外的字符</td>
 </tr>
 </tbody></table>
+<hr>
+<h3 id="高级匹配模式"><a href="#高级匹配模式" class="headerlink" title="高级匹配模式"></a>高级匹配模式</h3><h4 id="1-分组"><a href="#1-分组" class="headerlink" title="1. 分组"></a>1. 分组</h4><p>在正则表达式中还提供了一种将表达式<strong>分组</strong>的机制，当使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
+<p>要实现分组很简单，使用<code>()</code>即可。</p>
+<p>例如：</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430171629.png"></p>
+<p>这段正则表达式将文本<strong>分成了两组</strong>，第一组为：<code>0731</code>，第二组为<code>8825951</code>。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430171648.png"></p>
+<p>分组有一个非常重要的功能——<code>捕获数据</code>。所以<code>()</code>被称为捕获分组，用来捕获数据，当我们想要从匹配好的数据中提取关键数据的时候可以使用分组。</p>
+<p><code>(\d{4})</code> 和 <code>(\d{7})</code>就分别捕获了两段数据：</p>
+<ol>
+<li><code>0731</code></li>
+<li><code>8825951</code></li>
+</ol>
+<h4 id="2-先行断言"><a href="#2-先行断言" class="headerlink" title="2. 先行断言"></a>2. 先行断言</h4><p>很多人也称先行断言和后行断言为<strong>环视</strong>，也有人叫<strong>预搜索</strong>，其实叫什么无所谓，重要的是知道如何使用它们！</p>
+<blockquote>
+<p>[!NOTE]</p>
+<p>先行断言和后行断言总共有四种：</p>
+<ol>
+<li>正向先行断言</li>
+<li>反向先行断言</li>
+<li>正向后行断言</li>
+<li>反向后行断言</li>
+</ol>
+</blockquote>
+<h5 id="2-1-正向先行断言"><a href="#2-1-正向先行断言" class="headerlink" title="2.1 正向先行断言"></a>2.1 正向先行断言</h5><p><strong>正向先行断言：</strong><code>(?=表达式)</code>，指在某个位置向右看，表示所在位置右侧必须能匹配<code>表达式</code></p>
+<p>例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">我喜欢你 我喜欢 我喜欢我 喜欢 喜欢你<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果要取出<strong>喜欢</strong>两个字，要求这个<strong>喜欢</strong>后面有你，这个时候就要这么写：<code>喜欢(?=你)</code>，这就是<strong>正向先行断言</strong>。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://cdn.codejiaonang.com/download/cmVnZXhfY2hhcHRlcjIvaW1hZ2VzL2NoYXB0ZXIyL-WFiOihjOaWreiogC5wbmc=" alt="start"></p>
+<p><strong>例：提取包含大小写字母的字符串</strong></p>
+<p>先行断言可以用来判断字符串是否符合特定的规则，例如提取包含至少一个大小写字母的字符串：</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://cdn.codejiaonang.com/download/cmVnZXhfY2hhcHRlcjIvaW1hZ2VzL2NoYXB0ZXIyL-WFiOihjOaWreiogDIucG5n" alt="start"></p>
+<p><code>(?=.*?[a-z])(?=.*?[A-Z]).+</code> 这段正则表达式规定了匹配的字符串中必须包含<strong>至少一个大写和小写的字母</strong>。</p>
+<h5 id="2-1-反向先行断言"><a href="#2-1-反向先行断言" class="headerlink" title="2.1 反向先行断言"></a>2.1 反向先行断言</h5><p><strong>反向先行断言</strong><code>(?!表达式)</code>的作用是保证右边不能出现某字符。</p>
+<p>例如： <code>我喜欢你 我喜欢 我喜欢我 喜欢 喜欢你</code></p>
+<p>如果要取出<strong>喜欢</strong>两个字，要求这个<strong>喜欢</strong>后面没有你，这个时候就要这么写：<code>喜欢(?!你)</code>，这就是<strong>反向先行断言</strong>。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430172037.png"></p>
+<h4 id="3-后行断言"><a href="#3-后行断言" class="headerlink" title="3.后行断言"></a>3.后行断言</h4><h5 id="3-1-正向后行断言"><a href="#3-1-正向后行断言" class="headerlink" title="3.1 正向后行断言"></a>3.1 正向后行断言</h5><p>只需要你记住一句话：先行断言和后行断言只有一个区别，即<strong>先行断言从左往右看，后行断言从右往左看。</strong></p>
+<p><strong>正向后行断言：</strong><code>(?&lt;=表达式)</code>，指在某个位置向左看，表示所在位置左侧必须能匹配<code>表达式</code></p>
+<p>例如：如果要取出喜欢两个字，要求喜欢的<strong>前面有我</strong>，<strong>后面有你</strong>，这个时候就要这么写：<code>(?&lt;=我)喜欢(?=你)</code>。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430172256.png"></p>
+<h5 id="3-2-反向后行断言"><a href="#3-2-反向后行断言" class="headerlink" title="3.2 反向后行断言"></a>3.2 反向后行断言</h5><p><strong>反向后行断言：</strong><code>(?&lt;!表达式)</code>，指在某个位置向左看，表示所在位置左侧不能匹配<code>表达式</code></p>
+<p>例如：如果要取出喜欢两个字，要求喜欢的<strong>前面没有我</strong>，<strong>后面没有你</strong>，这个时候就要这么写：<code>(?&lt;!我)喜欢(?!你)</code>。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430172319.png"></p>
 
                 
             </div>
@@ -1416,7 +1461,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">55k</span>&nbsp;字
+                class="white-color">55.8k</span>&nbsp;字
             
             
             
