@@ -65,11 +65,11 @@
   </entry>
   
   <entry>
-    <title>规范</title>
+    <title>git commit规范</title>
     <link href="https://www.chanpoe.top/posts/af9fde63.html"/>
     <id>https://www.chanpoe.top/posts/af9fde63.html</id>
     <published>2024-05-16T08:52:09.000Z</published>
-    <updated>2024-07-31T00:58:53.928Z</updated>
+    <updated>2024-07-31T01:08:57.769Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="git-commit规范"><a href="#git-commit规范" class="headerlink" title="git commit规范"></a>git commit规范</h3><h4 id="1-type："><a href="#1-type：" class="headerlink" title="1. type："></a>1. type：</h4><ul><li><p>feat：新功能（feature）</p></li><li><p>fix/to：修复bug，可以是QA发现的BUG，也可以是研发自己发现的BUG：</p></li><li><ul><li>fix：产生diff并自动修复此问题。适合于一次提交直接修复问题</li><li>to：只产生diff不自动修复此问题。适合于多次提交。最终修复问题提交时使用fix</li></ul></li><li><p>docs：文档（documentation）。</p></li><li><p>style：格式（不影响代码运行的变动）</p></li><li><p>refactor：重构（即不是新增功能，也不是修改bug的代码变动）。</p></li><li><p>perf：优化相关，比如提升性能、体验。</p></li><li><p>test：增加测试。</p></li><li><p>chore：构建过程或辅助工具的变动。</p></li><li><p>revert：回滚到上一个版本。</p></li><li><p>merge：代码合并。</p></li><li><p>sync：同步主线或分支的Bug。</p></li><li><p>improvement：改进</p></li><li><p>ci：持续集成</p></li><li><p>build：打包</p></li></ul><h4 id="2-scope可选："><a href="#2-scope可选：" class="headerlink" title="2. scope可选："></a>2. scope可选：</h4><p>scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。</p><h4 id="3-subject："><a href="#3-subject：" class="headerlink" title="3. subject："></a>3. subject：</h4><p>subject是commit目的的简短描述，不超过50个字符。结尾不加句号或其他标点符号。例子：</p><pre class="line-numbers language-none"><code class="language-none">fix(DAO):用户查询缺少username属性 feat(Controller):用户查询接口开发<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>hook方式可用于自动判断提交的commit是否合格。</p>]]></content>
     
@@ -372,9 +372,9 @@
     <category term="学习记录" scheme="https://www.chanpoe.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     
     
-    <category term="Python" scheme="https://www.chanpoe.top/tags/Python/"/>
-    
     <category term="Anaconda" scheme="https://www.chanpoe.top/tags/Anaconda/"/>
+    
+    <category term="Python" scheme="https://www.chanpoe.top/tags/Python/"/>
     
     <category term="机器学习" scheme="https://www.chanpoe.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
@@ -474,9 +474,9 @@
     <category term="学习记录" scheme="https://www.chanpoe.top/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     
     
-    <category term="爬虫" scheme="https://www.chanpoe.top/tags/%E7%88%AC%E8%99%AB/"/>
-    
     <category term="Python" scheme="https://www.chanpoe.top/tags/Python/"/>
+    
+    <category term="爬虫" scheme="https://www.chanpoe.top/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
