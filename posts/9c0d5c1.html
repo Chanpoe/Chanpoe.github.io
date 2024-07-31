@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js对象和时间, Chanpoe 计算机">
+    <meta name="keywords" content="selenium手册, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js对象和时间 | Chanpoe</title>
+    <title>selenium手册 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -732,12 +732,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021744.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js对象和时间</h1>
+                    <h1 class="description center-align post-title">selenium手册</h1>
                 </div>
             </div>
         </div>
@@ -856,12 +856,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/selenium/">
+                                <span class="chip bg-color">selenium</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -870,7 +883,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-05-10
+                    2024-07-30
                 </div>
                 
 
@@ -879,7 +892,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    277
                 </div>
                 
 
@@ -909,7 +922,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="爬虫常用的option备份"><a href="#爬虫常用的option备份" class="headerlink" title="爬虫常用的option备份"></a>爬虫常用的option备份</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">options <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 无头模式</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
+<span class="token comment"># 无沙盒模式</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--no-sandbox'</span><span class="token punctuation">)</span>
+<span class="token comment"># 默认情况下，Chrome 使用 /dev/shm（共享内存）来提高性能，但在内存有限的系统中（如 Docker 容器），可能需要禁用</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--disable-dev-shm-usage'</span><span class="token punctuation">)</span>
+<span class="token comment"># 禁用所有 Chrome 扩展</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--disable-extensions'</span><span class="token punctuation">)</span>
+<span class="token comment"># 防止网站检测到自动化工具（即 WebDriver）</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-blink-features=AutomationControlled"</span><span class="token punctuation">)</span>
+<span class="token comment"># 禁用 GPU 硬件加速，在某些环境中（特别是无头模式），禁用 GPU 可以避免一些不兼容问题。</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--disable-gpu"</span><span class="token punctuation">)</span>
+<span class="token comment"># 当 DOMContentLoaded 事件触发时，Selenium 会认为页面加载完成，适合对页面完全加载不敏感的场景，可以提高效率。</span>
+options<span class="token punctuation">.</span>page_load_strategy <span class="token operator">=</span> <span class="token string">'eager'</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
+    <span class="token string">"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="切换窗口"><a href="#切换窗口" class="headerlink" title="切换窗口"></a>切换窗口</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>window_handles<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="使用远程selenium-driver"><a href="#使用远程selenium-driver" class="headerlink" title="使用远程selenium driver"></a>使用远程selenium driver</h3><pre class="line-numbers language-none"><code class="language-none"># Selenium Grid地址
+command_executor = "http://selenium example.com/wd/hub"
+# driver = webdriver.Remote(command_executor=command_executor, options=options)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="显式等待某个元素加载"><a href="#显式等待某个元素加载" class="headerlink" title="显式等待某个元素加载"></a>显式等待某个元素加载</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 等待搜索框元素加载完成</span>
+WebDriverWait<span class="token punctuation">(</span>driver<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>until<span class="token punctuation">(</span>EC<span class="token punctuation">.</span>presence_of_element_located<span class="token punctuation">(</span><span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span> <span class="token string">"//*[@class='search-wrapper main-search white']"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -922,7 +964,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/selenium/">
+                                    <span class="chip bg-color">selenium</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1090,36 +1136,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/undefined.html">
+                <a href="/posts/9c0d5c1.html">
                     <div class="card-image">
                         
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="selenium手册">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020616.jpg" class="responsive-img" alt="规范">
-                        
-                        <span class="card-title">规范</span>
+                        <span class="card-title">selenium手册</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            会用就行，那也是得会
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Chanpoe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1131,32 +1190,43 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/de0aae98.html">
+                <a href="/posts/dfa16b65.html">
                     <div class="card-image">
                         
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="pillow库">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020939.jpg" class="responsive-img" alt="js字符串">
-                        
-                        <span class="card-title">js字符串</span>
+                        <span class="card-title">pillow库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Python fastapi库
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-11
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Chanpoe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/pillow/">
+                        <span class="chip bg-color">pillow</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1303,7 +1373,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.5k</span>&nbsp;字
+                class="white-color">57.1k</span>&nbsp;字
             
             
             

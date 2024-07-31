@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js数组, Chanpoe 计算机">
+    <meta name="keywords" content="pillow库, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js数组 | Chanpoe</title>
+    <title>pillow库 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -732,12 +732,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021332.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js数组</h1>
+                    <h1 class="description center-align post-title">pillow库</h1>
                 </div>
             </div>
         </div>
@@ -858,14 +858,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/js%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">js逆向基础</span>
+                            <a href="/tags/pillow/">
+                                <span class="chip bg-color">pillow</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -874,7 +883,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-05-10
+                    2024-07-11
                 </div>
                 
 
@@ -883,14 +892,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    537
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    2 分
                 </div>
                 
 
@@ -913,175 +922,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="一、数组的定义与概述"><a href="#一、数组的定义与概述" class="headerlink" title="一、数组的定义与概述"></a>一、数组的定义与概述</h2><h3 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h3><p>数组的字面意思就是一组数据，一组(一般情况下相同类型)的数据（不一定都是数字）</p>
-<p>数组的作用是：使用单独的变量名来存储一系列的值。</p>
-<h3 id="2、数组的定义"><a href="#2、数组的定义" class="headerlink" title="2、数组的定义"></a>2、数组的定义</h3><ul>
-<li><p>new Array（参数，参数,…）: 只有一个数字参数时是数组的长度（new可以省略,但一般尽量写上）</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//定义一个空数组 </span>
-<span class="token comment">// 定义长度为10 的数组</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//创建一个包含 10 个元素的数组，没有赋值</span>
-<span class="token keyword">var</span> name<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
-name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"迪丽热巴"</span>
-name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"刘亦菲"</span>
-name<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Lucky"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>创建带值的数组</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token string">"芙蓉姐姐"</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//创建一个数组有两个元素</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>字面量定义方式</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">//字面量定义方式</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>快捷定义二维数组</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> arr3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">//快捷定义二维数组</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在Python2中，PIL(Python Imaging Library)是一个非常好用的图像处理库，但PIL不支持Python3，所以有人(Alex Clark和Contributors)提供了Pillow，可以在Python3中使用。  </p>
+<hr>
+<h3 id="一、安装pillow库："><a href="#一、安装pillow库：" class="headerlink" title="一、安装pillow库："></a>一、安装pillow库：</h3><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">pip install pillow<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<p>Pillow库安装成功后，导包时要用PIL来导入，而不能用pillow或Pillow。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> PIL
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<p>最常用的就是Image类，pillow库中的其他很多模块都是在Image的基础上对图像做进一步的处理。</p>
+<hr>
+<h3 id="二、打开一张图片："><a href="#二、打开一张图片：" class="headerlink" title="二、打开一张图片："></a>二、打开一张图片：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
 
-</li>
-</ul>
-<p>​        </p>
-<h2 id="二、数组的访问"><a href="#二、数组的访问" class="headerlink" title="二、数组的访问"></a>二、数组的访问</h2><h3 id="1、数组的下标"><a href="#1、数组的下标" class="headerlink" title="1、数组的下标"></a>1、数组的下标</h3><ul>
-<li><p>下标就是索引，即元素的序号，从0开始，下标最大取值是：数组的长度(length)-1；</p>
-</li>
-<li><p>下标可以是变量或表达式。</p>
-</li>
-</ul>
-<h3 id="2、使用数组元素（访问）"><a href="#2、使用数组元素（访问）" class="headerlink" title="2、使用数组元素（访问）"></a>2、使用数组元素（访问）</h3><ul>
-<li><p>arr3[0]:表示数组的第一个元素，0是下标，也叫索引</p>
-</li>
-<li><p>arr[1]:表示数组的第二个元素，1是下标</p>
-</li>
-</ul>
-<h3 id="3、数组的长度（length属性）"><a href="#3、数组的长度（length属性）" class="headerlink" title="3、数组的长度（length属性）"></a>3、数组的长度（length属性）</h3><ul>
-<li><p>数组元素的个数    </p>
-<p>arr.length</p>
-</li>
-<li><p>length属性,不止是只读的，可以设置</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> colors <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-colors<span class="token punctuation">.</span>length<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-colors<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>注意</p>
-<ul>
-<li>如果设置的length的长度大于原有长度 则使用empty来占位</li>
-<li>如果设置的length的长度小于原有长度  则会将小于长度个数的元素删除掉</li>
-</ul>
-</li>
-</ul>
-<h2 id="三、数组的使用与常用方法"><a href="#三、数组的使用与常用方法" class="headerlink" title="三、数组的使用与常用方法"></a>三、数组的使用与常用方法</h2><h3 id="1、数组的赋值"><a href="#1、数组的赋值" class="headerlink" title="1、数组的赋值"></a>1、数组的赋值</h3><ul>
-<li>概述</li>
-</ul>
-<p>给数组赋值，就是给数组的元素赋值，需要通过给数组的每个元素一一赋值，</p>
-<ul>
-<li><p>实例</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>  <span class="token comment">//让数组的第一个元素的值为20；</span>
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"test.png"</span><span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">;</span>  <span class="token comment">//让数组的第二个元素的值为12；</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>以下为通过循环给数组的每个元素赋值，赋成下标的平方。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token operator">*</span>i
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>以下为通过循环给数组的每个元素赋值，随机数:Math.random()</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="三、创建一张图片："><a href="#三、创建一张图片：" class="headerlink" title="三、创建一张图片："></a>三、创建一张图片：</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
 
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span>new<span class="token punctuation">(</span><span class="token string">'RGB'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">160</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+image<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>new(mode, size, color=0)</code>: 创建一张图片(画布)，用于绘图，是Image模块中的函数。有3个参数。</p>
+<p>mode, 图片的模式，如“RGB”(red,green,blue三原色的缩写，真彩图像)、“L”(灰度，黑白图像)等。</p>
+<p><code>size</code>, 图片的尺寸。是一个长度为2的元组(width, height)，表示的是像素大小。</p>
+<p><code>color</code>, 图片的颜色，默认值为0表示黑色。可以传入长度为3的元组表示颜色，也可以传入颜色的十六进制，在版本1.1.4后，还可以直接传入颜色的英文单词，如上面代码中的(0, 0, 255)可以换成‘#0000FF’或‘blue’，都是表示蓝色。</p>
+<hr>
+<h3 id="四、Image模块常用的属性"><a href="#四、Image模块常用的属性" class="headerlink" title="四、Image模块常用的属性:"></a>四、Image模块常用的属性:</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
 
+image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"text_effect.png"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'width: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>width<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'height: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>height<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'size: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'mode: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>mode<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'format: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">)</span>
+<span class="token comment"># print('category: ', image.category)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'readonly: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>readonly<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'info: '</span><span class="token punctuation">,</span> image<span class="token punctuation">.</span>info<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-</li>
-</ul>
-<h3 id="2、使用"><a href="#2、使用" class="headerlink" title="2、使用"></a>2、使用</h3><ul>
-<li><p>概述</p>
-<p>不能一次使用整个数组，使用数组就是在使用数组的每个元素，因为数组相当于若干个相同类型的变量。</p>
-</li>
-<li><p>遍历数组：</p>
-<ul>
-<li><p>普通for循环</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-   document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>for…in语句用于遍历数组或者对象的属性（快速遍历）</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token keyword">in</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
-  	document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3、常用方法"><a href="#3、常用方法" class="headerlink" title="3、常用方法"></a>3、常用方法</h3><ul>
-<li><p>push() 方法可以接收任意数量的参数，把它们逐个添加到数组的末尾，并返回修改后数组的长度。</p>
-<p>数组末尾添加一个元素，并且返回长度</p>
-<p><code>alert(box.push('lucky')); </code></p>
-</li>
-<li><p>pop()方法  则从数组末尾移除最后一个元素，减少数组的 length 值，然后返回移除的元素。  </p>
-<p>移除数组末尾元素,并返回移除的元素</p>
-<p><code>box.pop()</code></p>
-</li>
-<li><p>shift()        方法从数组前端移除一个元素,</p>
-<p><code>alert(box.shift());    移除数组开头元素，并返回移除的元素</code></p>
-</li>
-<li><p>unshift()     方法从数组前端添加一个或多个元素。</p>
-<p><code>alert(box.unshift('广东','深圳'));        数组开头添加两个元素</code></p>
-</li>
-<li><p>reverse()      逆向排序,原数组也被逆向排序了</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//逆向排序方法，返回排序后的数组</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>sort()     //从小到大排序 , 原数组也被升序排序了</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//从小到大排序，返回排序后的数组</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>concat() : 追加数据, 创建一个新数组, 不改变原数组</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'绿箭侠'</span><span class="token punctuation">,</span> <span class="token string">'黑寡妇'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> box2 <span class="token operator">=</span> box<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token string">'美队'</span><span class="token punctuation">,</span> <span class="token string">'雷神'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box2<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 类型依然为数组</span>
-<span class="token keyword">var</span> box2 <span class="token operator">=</span> box<span class="token operator">+</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>  <span class="token comment">// 为字符串的连接 字符串类型</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>slice(): 不修改原数组, 将原数组中的指定区域数据提取出来</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"绿巨人"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> box2 <span class="token operator">=</span> box<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//并没有修改原数组,将原数组中的元素提取出来,生成新数组,取的是下标在区域: [1,3)</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">alert</span><span class="token punctuation">(</span>box2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>box.join() 用数组的元素组成字符串</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 1,2,3,4 拼接成字符串用  默认用逗号作为分隔</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1-2-3-4 拼接成字符串用-作为值得分隔</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>Array.map()  对于每个值进行处理并返回处理后的值作为新数组中的元素 </p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-new_numbers <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">v</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">return</span> v <span class="token operator">+</span> <span class="token number">10</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// [14, 19, 26, 35]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>冒泡排序(了解)</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//冒泡排序</span>
-<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token operator">-</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">&gt;</span>arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">var</span> max <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> max<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
-
-</li>
-</ul>
+<p><code>width</code>属性表示图片的像素宽度，height属性表示图片的像素高度，width和height组成了size属性，size是一个元组。</p>
+<p><code>mode</code>属性表示图片的模式，如RGBA，RGB，P，L等。</p>
+<p>图片的模式可以参考：</p>
+<p><a target="_blank" rel="noopener" href="https://pillow.readthedocs.io/en/latest/handbook/concepts.html#concept-modes">https://pillow.readthedocs.io/en/latest/handbook/concepts.html#concept-modes</a></p>
+<p><code>format</code>属性表示图片的格式，格式一般与图片的后缀扩展名相关。category属性表示图片的的类别。</p>
+<p><code>readonly</code>属性表述图片是否为只读，值为1或0，表示的是布尔值。</p>
+<p><code>info</code>属性表示图片的信息，是一个字典。</p>
+<hr>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1794195">Python Pillow(PIL)库的用法介绍</a></p>
 
                 
             </div>
@@ -1096,8 +982,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/js%E9%80%86%E5%90%91%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">js逆向基础</span>
+                                <a href="/tags/pillow/">
+                                    <span class="chip bg-color">pillow</span>
                                 </a>
                             
                         </div>
@@ -1271,32 +1157,43 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/49e3a033.html">
+                <a href="/posts/9c0d5c1.html">
                     <div class="card-image">
                         
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="selenium手册">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928021440.jpg" class="responsive-img" alt="js数据类型">
-                        
-                        <span class="card-title">js数据类型</span>
+                        <span class="card-title">selenium手册</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            会用就行，那也是得会
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Chanpoe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1308,24 +1205,24 @@ console<span class="token punctuation">.</span><span class="token function">log<
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/82f2334a.html">
+                <a href="/posts/undefined.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928011708.jpg" class="responsive-img" alt="正则表达式参照表">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020616.jpg" class="responsive-img" alt="规范">
                         
-                        <span class="card-title">正则表达式参照表</span>
+                        <span class="card-title">规范</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常回来看看，万能的正则 :)
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-16
                             </span>
                         <span class="publish-author">
                             
@@ -1334,14 +1231,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1488,7 +1377,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.5k</span>&nbsp;字
+                class="white-color">57.1k</span>&nbsp;字
             
             
             
