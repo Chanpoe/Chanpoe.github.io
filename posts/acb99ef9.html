@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git commit规范, Chanpoe 计算机">
+    <meta name="keywords" content="pydantic库, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git commit规范 | Chanpoe</title>
+    <title>pydantic库 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -732,12 +732,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927002146.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git commit规范</h1>
+                    <h1 class="description center-align post-title">pydantic库</h1>
                 </div>
             </div>
         </div>
@@ -858,8 +858,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git/">
-                                <span class="chip bg-color">Git</span>
+                            <a href="/tags/pydantic/">
+                                <span class="chip bg-color">pydantic</span>
                             </a>
                         
                     </div>
@@ -870,8 +870,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                学习记录
+                            <a href="/categories/Python/" class="post-category">
+                                Python
                             </a>
                         
                     </div>
@@ -883,7 +883,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-05-16
+                    2024-07-30
                 </div>
                 
 
@@ -892,14 +892,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    708
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -922,49 +922,172 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="git-commit规范"><a href="#git-commit规范" class="headerlink" title="git commit规范"></a>git commit规范</h3><h4 id="1-type："><a href="#1-type：" class="headerlink" title="1. type："></a>1. type：</h4><ul>
-<li><p>feat：新功能（feature）</p>
-</li>
-<li><p>fix/to：修复bug，可以是QA发现的BUG，也可以是研发自己发现的BUG：</p>
-</li>
-<li><ul>
-<li>fix：产生diff并自动修复此问题。适合于一次提交直接修复问题</li>
-<li>to：只产生diff不自动修复此问题。适合于多次提交。最终修复问题提交时使用fix</li>
+                <h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>数据验证：可以定义数据模型并对数据进行验证。</li>
+<li>数据序列化：可以将数据序列化为JSON等格式。</li>
+<li>数据转换：可以将数据转换为特定类型。</li>
+<li>默认值和选项：可以设置字段的默认值和选项。</li>
+<li>异常处理：可以处理数据验证过程中的异常情况。</li>
 </ul>
-</li>
-<li><p>docs：文档（documentation）。</p>
-</li>
-<li><p>style：格式（不影响代码运行的变动）</p>
-</li>
-<li><p>refactor：重构（即不是新增功能，也不是修改bug的代码变动）。</p>
-</li>
-<li><p>perf：优化相关，比如提升性能、体验。</p>
-</li>
-<li><p>test：增加测试。</p>
-</li>
-<li><p>chore：构建过程或辅助工具的变动。</p>
-</li>
-<li><p>revert：回滚到上一个版本。</p>
-</li>
-<li><p>merge：代码合并。</p>
-</li>
-<li><p>sync：同步主线或分支的Bug。</p>
-</li>
-<li><p>improvement：改进</p>
-</li>
-<li><p>ci：持续集成</p>
-</li>
-<li><p>build：打包</p>
-</li>
-</ul>
-<h4 id="2-scope可选："><a href="#2-scope可选：" class="headerlink" title="2. scope可选："></a>2. scope可选：</h4><p>scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。</p>
-<h4 id="3-subject："><a href="#3-subject：" class="headerlink" title="3. subject："></a>3. subject：</h4><p>subject是commit目的的简短描述，不超过50个字符。结尾不加句号或其他标点符号。例子：</p>
-<pre class="line-numbers language-none"><code class="language-none">fix(DAO):用户查询缺少username属性 
-feat(Controller):用户查询接口开发<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h3 id="BaseModel类"><a href="#BaseModel类" class="headerlink" title="BaseModel类"></a>BaseModel类</h3><ol>
+<li>用于定义数据模型，并且对数据进行验证：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel
+
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token builtin">id</span><span class="token punctuation">:</span> <span class="token builtin">int</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+
+user1_dict <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'id'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">'username'</span><span class="token punctuation">:</span> <span class="token string">'Chanpoe'</span><span class="token punctuation">,</span>
+    <span class="token string">'email'</span><span class="token punctuation">:</span> <span class="token string">'chanpoe@example.com'</span>
+<span class="token punctuation">}</span>
+user1 <span class="token operator">=</span> User<span class="token punctuation">(</span><span class="token operator">**</span>user1_dict<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>user1<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>用于数据序列化，将数据序列化为JSON等格式：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>user1<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 得到结果：{"id": 1, "username": "Chanpoe", "email": "chanpoe@example.com"}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>   将用户对象序列化为JSON格式的数据，方便网络传输使用。</p>
+<hr>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li>数据验证</li>
+</ol>
+<p>用来验证用户输入数据的合法性，保证数据符合预期格式和规则：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel<span class="token punctuation">,</span> EmailStr<span class="token punctuation">,</span> validator
+
+<span class="token comment"># 自定义校验器（见下文高级功能介绍）</span>
+<span class="token keyword">class</span> <span class="token class-name">UserRegistration</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> EmailStr
+    password<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+    <span class="token comment"># 验证用户密码不能小于8位，并且要同时有数字和字母</span>
+    <span class="token decorator annotation punctuation">@validator</span><span class="token punctuation">(</span><span class="token string">'password'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">validate_password</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码不能小于8位'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>char<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> char <span class="token keyword">in</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码必须包含数字'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>char<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> char <span class="token keyword">in</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码必须包含字母'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> value
+
+
+<span class="token comment"># 处理用户注册请求</span>
+<span class="token keyword">def</span> <span class="token function">register_user</span><span class="token punctuation">(</span>user_data<span class="token punctuation">:</span> <span class="token builtin">dict</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>user_data<span class="token punctuation">)</span>
+    user <span class="token operator">=</span> UserRegistration<span class="token punctuation">(</span><span class="token operator">**</span>user_data<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+    <span class="token comment"># 处理注册逻辑</span>
+    <span class="token keyword">return</span> <span class="token string">"User registered successfully"</span>
+
+
+<span class="token comment"># 示例请求数据</span>
+request_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"username"</span><span class="token punctuation">:</span> <span class="token string">"john_doe"</span><span class="token punctuation">,</span> <span class="token string">"email"</span><span class="token punctuation">:</span> <span class="token string">"john.doe@example.com"</span><span class="token punctuation">,</span> <span class="token string">"password"</span><span class="token punctuation">:</span> <span class="token string">'chanpoezhang123'</span><span class="token punctuation">}</span>
+result <span class="token operator">=</span> register_user<span class="token punctuation">(</span>request_data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<p>hook方式可用于自动判断提交的commit是否合格。</p>
+<ol start="2">
+<li>API参数处理</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> fastapi <span class="token keyword">import</span> FastAPI
+<span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel<span class="token punctuation">,</span> constr
+
+app <span class="token operator">=</span> FastAPI<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">UserSearch</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    keyword<span class="token punctuation">:</span> constr<span class="token punctuation">(</span>min_length<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>post</span><span class="token punctuation">(</span><span class="token string">"/search"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">search_users</span><span class="token punctuation">(</span>search_data<span class="token punctuation">:</span> UserSearch<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    keyword <span class="token operator">=</span> search_data<span class="token punctuation">.</span>keyword
+    <span class="token comment"># 处理搜索逻辑</span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f"Searching users with keyword: </span><span class="token interpolation"><span class="token punctuation">{</span>keyword<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+
+<span class="token comment"># 示例请求数据</span>
+request_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"keyword"</span><span class="token punctuation">:</span> <span class="token string">"john"</span><span class="token punctuation">}</span>
+result <span class="token operator">=</span> search_users<span class="token punctuation">(</span>request_data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h3 id="高级功能"><a href="#高级功能" class="headerlink" title="高级功能"></a>高级功能</h3><ol>
+<li>自定义校验器：</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">UserRegistration</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> EmailStr
+    password<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+    <span class="token comment"># 验证用户密码不能小于8位，并且要同时有数字和字母</span>
+    <span class="token decorator annotation punctuation">@validator</span><span class="token punctuation">(</span><span class="token string">'password'</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">validate_password</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码不能小于8位'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>char<span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> char <span class="token keyword">in</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码必须包含数字'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>char<span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> char <span class="token keyword">in</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">'密码必须包含字母'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> value<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<ol start="2">
+<li>继承、扩展模型</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+<span class="token keyword">class</span> <span class="token class-name">AdminUser</span><span class="token punctuation">(</span>User<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    role<span class="token punctuation">:</span> <span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">"admin"</span>
+
+<span class="token comment"># 创建管理员用户对象并进行数据验证</span>
+admin_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"username"</span><span class="token punctuation">:</span> <span class="token string">"admin_user"</span><span class="token punctuation">,</span> <span class="token string">"email"</span><span class="token punctuation">:</span> <span class="token string">"admin@example.com"</span><span class="token punctuation">,</span> <span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"admin"</span><span class="token punctuation">}</span>
+admin_user <span class="token operator">=</span> AdminUser<span class="token punctuation">(</span><span class="token operator">**</span>admin_data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>admin_user<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>自定义序列化器和反序列化器</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pydantic <span class="token keyword">import</span> BaseModel<span class="token punctuation">,</span> root_validator
+
+<span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">(</span>BaseModel<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    username<span class="token punctuation">:</span> <span class="token builtin">str</span>
+    email<span class="token punctuation">:</span> <span class="token builtin">str</span>
+
+    <span class="token decorator annotation punctuation">@root_validator</span>
+    <span class="token keyword">def</span> <span class="token function">to_xml</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> values<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        xml_str <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"&lt;user&gt;&lt;username&gt;</span><span class="token interpolation"><span class="token punctuation">{</span>values<span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&lt;/username&gt;&lt;email&gt;</span><span class="token interpolation"><span class="token punctuation">{</span>values<span class="token punctuation">[</span><span class="token string">'email'</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&lt;/email&gt;&lt;/user&gt;"</span></span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token string">"xml_data"</span><span class="token punctuation">:</span> xml_str<span class="token punctuation">}</span>
+
+<span class="token comment"># 创建用户对象并进行数据转换</span>
+user_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"username"</span><span class="token punctuation">:</span> <span class="token string">"john_doe"</span><span class="token punctuation">,</span> <span class="token string">"email"</span><span class="token punctuation">:</span> <span class="token string">"john.doe@example.com"</span><span class="token punctuation">}</span>
+user <span class="token operator">=</span> User<span class="token punctuation">(</span><span class="token operator">**</span>user_data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>xml_data<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<hr>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/696103020">pydantic，一个超强的 Python 库！</a></p>
 
                 
             </div>
@@ -979,8 +1102,8 @@ feat(Controller):用户查询接口开发<span aria-hidden="true" class="line-nu
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git/">
-                                    <span class="chip bg-color">Git</span>
+                                <a href="/tags/pydantic/">
+                                    <span class="chip bg-color">pydantic</span>
                                 </a>
                             
                         </div>
@@ -1150,28 +1273,78 @@ feat(Controller):用户查询接口开发<span aria-hidden="true" class="line-nu
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/dfa16b65.html">
+                <a href="/posts/acb99ef9.html">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="pillow库">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="pydantic库">
                         
-                        <span class="card-title">pillow库</span>
+                        <span class="card-title">pydantic库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Python fastapi库
+                            数据验证、序列化
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-07-11
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/pydantic/">
+                        <span class="chip bg-color">pydantic</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/9c0d5c1.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="selenium手册">
+                        
+                        <span class="card-title">selenium手册</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            会用就行，那也是得会
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1187,53 +1360,8 @@ feat(Controller):用户查询接口开发<span aria-hidden="true" class="line-nu
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/pillow/">
-                        <span class="chip bg-color">pillow</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/82f2334a.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928011708.jpg" class="responsive-img" alt="正则表达式参照表">
-                        
-                        <span class="card-title">正则表达式参照表</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            常回来看看，万能的正则 :)
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Chanpoe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/selenium/">
+                        <span class="chip bg-color">selenium</span>
                     </a>
                     
                 </div>
