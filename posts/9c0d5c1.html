@@ -892,7 +892,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    277
+                    288
                 </div>
                 
 
@@ -940,7 +940,10 @@ options<span class="token punctuation">.</span>add_argument<span class="token pu
 options<span class="token punctuation">.</span>page_load_strategy <span class="token operator">=</span> <span class="token string">'eager'</span>
 options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
     <span class="token string">"user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span class="token comment"># 添加代理</span>
+options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"--proxy-server=</span><span class="token interpolation"><span class="token punctuation">{</span>proxy_ip<span class="token punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token punctuation">{</span>proxy_port<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="切换窗口"><a href="#切换窗口" class="headerlink" title="切换窗口"></a>切换窗口</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>window_handles<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
