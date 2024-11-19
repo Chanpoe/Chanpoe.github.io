@@ -48,6 +48,7 @@
 
 
 
+
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -768,12 +769,12 @@
                 
                 
                 
-                <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="学习记录: 13">
+                <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="学习记录: 14">
                   <div class="moleskine-wrapper">
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-active "
-                                  style="background-color: #CCEBE3;">                                               
+                                  style="background-color: #887589;">                                               
                               <div class="notebook-skin
                                    chip-active "
                                   >学习记录                                  
@@ -790,7 +791,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #0BFCB1;">                                               
+                                  style="background-color: #D91AF9;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >教程                                  
@@ -802,12 +803,12 @@
                 </a>
                 
                 
-                <a href="/categories/Python/" title="Python: 13">
+                <a href="/categories/Python/" title="Python: 16">
                   <div class="moleskine-wrapper">
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #9E7A00;">                                               
+                                  style="background-color: #83863B;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >Python                                  
@@ -938,6 +939,51 @@
 
     <article id="articles" class="container articles">
         <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/af9fde63.html">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220927002146.png" class="responsive-img" alt="git commit规范">
+                            
+                            <span class="card-title">git commit规范</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                建议的summary规范
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
+                                    学习记录
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Git/">
+                            <span class="chip bg-color">Git</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1176,55 +1222,6 @@
                 </div>
             </div>
             
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/a1ca777d.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220620193111.png" class="responsive-img" alt="Django记录">
-                            
-                            <span class="card-title">Django记录</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                记录学习django过程中的难点
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-20
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Python/">
-                            <span class="chip bg-color">Python</span>
-                        </a>
-                        
-                        <a href="/tags/django/">
-                            <span class="chip bg-color">django</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
 </main>
@@ -1271,7 +1268,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">54.7k</span>&nbsp;字
+                class="white-color">57.8k</span>&nbsp;字
             
             
             
@@ -1531,20 +1528,20 @@ $(function () {
     
 
 <!-- 深色模式按钮 -->
-    <script>
-        if (localStorage.getItem('dark') === '1') {
-        document.body.classList.add('dark');
-        }
-        else if (new Date().getHours() >= 22 || new Date().getHours() < 7) {
-        document.body.classList.add('dark');
-        } 
-        else if (matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-        }
-    </script>
-    <a onclick="switchNightMode()" id="sma">
-        <i class="fas fa-lightbulb" id="nightMode" aria-hidden="true"></i>
-    </a>
+<!--     <script> -->
+<!--         if (localStorage.getItem('dark') === '1') { -->
+<!--         document.body.classList.add('dark'); -->
+<!--         } -->
+<!--         else if (new Date().getHours() >= 22 || new Date().getHours() < 7) { -->
+<!--         document.body.classList.add('dark'); -->
+<!--         } -->
+<!--         else if (matchMedia('(prefers-color-scheme: dark)').matches) { -->
+<!--         document.body.classList.add('dark'); -->
+<!--         } -->
+<!--     </script> -->
+<!--     <a onclick="switchNightMode()" id="sma"> -->
+<!--         <i class="fas fa-lightbulb" id="nightMode" aria-hidden="true"></i> -->
+<!--     </a> -->
 
     <!-- 天气接口控件   -->
     
