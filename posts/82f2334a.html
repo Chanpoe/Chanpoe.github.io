@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="正则表达式参照表, Chanpoe 计算机">
+    <meta name="keywords" content="正则表达式使用手册, Chanpoe 计算机">
     <meta name="description" content="本科 | 计算机科学与技术 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>正则表达式参照表 | Chanpoe</title>
+    <title>正则表达式使用手册 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -732,12 +732,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928011708.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020502.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">正则表达式参照表</h1>
+                    <h1 class="description center-align post-title">正则表达式使用手册</h1>
                 </div>
             </div>
         </div>
@@ -883,14 +883,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -913,88 +913,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="基础匹配模式"><a href="#基础匹配模式" class="headerlink" title="基础匹配模式"></a>基础匹配模式</h3><table>
+                <h3 id="在线工具（2024-11-19更新）"><a href="#在线工具（2024-11-19更新）" class="headerlink" title="在线工具（2024.11.19更新）"></a>在线工具（2024.11.19更新）</h3><p><a target="_blank" rel="noopener" href="https://www.jyshare.com/front-end/854/">正则表达式在线测试</a></p>
+<p><a target="_blank" rel="noopener" href="https://r2coding.com/#/README?id=%e5%b8%b8%e7%94%a8%e6%ad%a3%e5%88%99%e8%a1%a8%e8%be%be%e5%bc%8f%e7%a4%ba%e4%be%8b">常用正则表达式</a></p>
+<blockquote>
+<p> 推荐阅读：<a href="https://www.chanpoe.top/posts/2f57a694.html">Python 正则表达式（本站）</a></p>
+</blockquote>
+<hr>
+<h3 id="基础匹配模式"><a href="#基础匹配模式" class="headerlink" title="基础匹配模式"></a>基础匹配模式</h3><table>
 <thead>
 <tr>
-<th>实例</th>
-<th>描述</th>
+<th align="left">实例</th>
+<th align="left">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>.</code></td>
-<td>匹配除 “\n” 之外的任何单个字符 要匹配包括 ‘\n’ 在内的任何字符，请使用象 ‘[.\n]’ 的模式</td>
+<td align="left"><code>.</code></td>
+<td align="left">匹配除 “\n” 之外的任何单个字符 要匹配包括 ‘\n’ 在内的任何字符，请使用像 ‘[.\n]’ 的模式</td>
 </tr>
 <tr>
-<td><code>?</code></td>
-<td>匹配一个字符零次或一次，另一个作用是非贪婪模式</td>
+<td align="left"><code>?</code></td>
+<td align="left">匹配一个字符零次或一次，另一个作用是非贪婪模式</td>
 </tr>
 <tr>
-<td><code>+</code></td>
-<td>匹配1次或多次</td>
+<td align="left"><code>+</code></td>
+<td align="left">匹配1次或多次</td>
 </tr>
 <tr>
-<td><code>*</code></td>
-<td>匹配0次或多次</td>
+<td align="left"><code>*</code></td>
+<td align="left">匹配0次或多次</td>
 </tr>
 <tr>
-<td><code>\b</code></td>
-<td>匹配一个长度为<code>0</code>的子串</td>
+<td align="left"><code>\b</code></td>
+<td align="left">匹配一个长度为<code>0</code>的子串</td>
 </tr>
 <tr>
-<td><code>\d</code></td>
-<td>匹配一个数字字符 等价于 [0-9]</td>
+<td align="left"><code>\d</code></td>
+<td align="left">匹配一个数字字符 等价于 [0-9]</td>
 </tr>
 <tr>
-<td><code>\D</code></td>
-<td>匹配一个非数字字符 等价于 [^0-9]</td>
+<td align="left"><code>\D</code></td>
+<td align="left">匹配一个非数字字符 等价于 [^0-9]</td>
 </tr>
 <tr>
-<td><code>\s</code></td>
-<td>匹配任何空白字符，包括空格、制表符、换页符等等 等价于 [ \f\n\r\t\v]</td>
+<td align="left"><code>\s</code></td>
+<td align="left">匹配任何空白字符，包括空格、制表符、换页符等等 等价于 [ \f\n\r\t\v]</td>
 </tr>
 <tr>
-<td><code>\S</code></td>
-<td>匹配任何非空白字符 等价于 [^ \f\n\r\t\v]</td>
+<td align="left"><code>\S</code></td>
+<td align="left">匹配任何非空白字符 等价于 [^ \f\n\r\t\v]</td>
 </tr>
 <tr>
-<td><code>\w</code></td>
-<td>匹配包括下划线的任何单词字符 等价于 [A-Za-z0-9_]</td>
+<td align="left"><code>\w</code></td>
+<td align="left">匹配包括下划线的任何单词字符 等价于 [A-Za-z0-9_]</td>
 </tr>
 <tr>
-<td><code>\W</code></td>
-<td>匹配任何非单词字符 等价于 [^A-Za-z0-9_]</td>
+<td align="left"><code>\W</code></td>
+<td align="left">匹配任何非单词字符 等价于 [^A-Za-z0-9_]</td>
 </tr>
 <tr>
-<td><code>[Pp]ython</code></td>
-<td>匹配 “Python” 或 “python”</td>
+<td align="left"><code>[Pp]ython</code></td>
+<td align="left">匹配 “Python” 或 “python”</td>
 </tr>
 <tr>
-<td><code>[abcdef]</code></td>
-<td>匹配中括号内的任意一个字母</td>
+<td align="left"><code>[abcdef]</code></td>
+<td align="left">匹配中括号内的任意一个字母</td>
 </tr>
 <tr>
-<td><code>[0-9]</code></td>
-<td>匹配任何数字 类似于 [0123456789]</td>
+<td align="left"><code>[0-9]</code></td>
+<td align="left">匹配任何数字 类似于 [0123456789]</td>
 </tr>
 <tr>
-<td><code>[a-z]</code></td>
-<td>匹配任何小写字母</td>
+<td align="left"><code>[a-z]</code></td>
+<td align="left">匹配任何小写字母</td>
 </tr>
 <tr>
-<td><code>[A-Z]</code></td>
-<td>匹配任何大写字母</td>
+<td align="left"><code>[A-Z]</code></td>
+<td align="left">匹配任何大写字母</td>
 </tr>
 <tr>
-<td><code>[a-zA-Z0-9]</code></td>
-<td>匹配任何字母及数字</td>
+<td align="left"><code>[a-zA-Z0-9]</code></td>
+<td align="left">匹配任何字母及数字</td>
 </tr>
 <tr>
-<td><code>[^au]</code></td>
-<td>除了au字母以外的所有字符</td>
+<td align="left"><code>[^au]</code></td>
+<td align="left">除了au字母以外的所有字符</td>
 </tr>
 <tr>
-<td><code>[^0-9]</code></td>
-<td>匹配除了数字外的字符</td>
+<td align="left"><code>[^0-9]</code></td>
+<td align="left">匹配除了数字外的字符</td>
 </tr>
 </tbody></table>
 <p>在Python中，正则表达式可以包含一些可选标志修饰符来控制匹配的模式。修饰符被指定为一个可选的标志。多个标志可以通过按位 OR(|) 它们来指定。如 re.I | re.M 被设置成 I 和 M 标志：</p>
@@ -1031,21 +1037,26 @@
 </tr>
 </tbody></table>
 <hr>
-<h3 id="高级匹配模式"><a href="#高级匹配模式" class="headerlink" title="高级匹配模式"></a>高级匹配模式</h3><h4 id="1-分组"><a href="#1-分组" class="headerlink" title="1. 分组"></a>1. 分组</h4><p>在正则表达式中还提供了一种将表达式<strong>分组</strong>的机制，当使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
-<p>要实现分组很简单，使用<code>()</code>即可。</p>
-<p>例如：</p>
+<h3 id="高级匹配模式"><a href="#高级匹配模式" class="headerlink" title="高级匹配模式"></a>高级匹配模式</h3><h4 id="1-分组与非捕获组（2024-11-19更新）"><a href="#1-分组与非捕获组（2024-11-19更新）" class="headerlink" title="1. 分组与非捕获组（2024.11.19更新）"></a>1. 分组与非捕获组（2024.11.19更新）</h4><h5 id="1-分组（捕获组）"><a href="#1-分组（捕获组）" class="headerlink" title="1. 分组（捕获组）"></a>1. 分组（捕获组）</h5><p>语法：<code>()</code></p>
+<p>介绍：同时匹配多块内容，方便引用，捕获，提取对应的内容</p>
 <p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430171629.png"></p>
 <p>这段正则表达式将文本<strong>分成了两组</strong>，第一组为：<code>0731</code>，第二组为<code>8825951</code>。</p>
 <p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20240430171648.png"></p>
-<p>分组有一个非常重要的功能——<code>捕获数据</code>。所以<code>()</code>被称为捕获分组，用来捕获数据，当我们想要从匹配好的数据中提取关键数据的时候可以使用分组。</p>
-<p><code>(\d{4})</code> 和 <code>(\d{7})</code>就分别捕获了两段数据：</p>
-<ol>
-<li><code>0731</code></li>
-<li><code>8825951</code></li>
-</ol>
+<h5 id="2-非捕获组"><a href="#2-非捕获组" class="headerlink" title="2. 非捕获组"></a>2. 非捕获组</h5><p>语法：<code>(?:...)</code></p>
+<p>介绍：不同于<code>()</code>的捕获功能，<code>(?:)</code>用于将一些表达式组合在一起，作为一个整体进行匹配，但不会捕获匹配的内容。</p>
+<p>优势：（Generated By Doubao）</p>
+<ul>
+<li>提高性能：<ul>
+<li>在一些复杂的正则表达式中，如果不需要捕获某些分组内容，使用<code>(?:)</code>可以减少正则表达式引擎需要保存的中间结果，从而提高匹配效率。例如，在一个需要匹配大量文本的场景中，存在很多分组，但只有部分分组的内容是后续需要使用的，对于那些不需要使用的分组，使用非捕获分组可以节省内存和时间。</li>
+</ul>
+</li>
+<li>简化反向引用逻辑：<ul>
+<li>有时候我们只是想将一些表达式组合起来进行匹配，而不想让这些分组干扰反向引用。例如，在一个复杂的表达式<code>(?:abc|def)+\d</code>中，我们只是想匹配<code>abc</code>或<code>def</code>出现一次或多次后跟着一个数字的情况，这里使用<code>(?:)</code>可以避免创建不必要的捕获分组，使正则表达式的逻辑更清晰，因为如果使用普通的捕获分组，可能会导致意外的反向引用或者混淆真正需要引用的分组。</li>
+</ul>
+</li>
+</ul>
 <h4 id="2-先行断言"><a href="#2-先行断言" class="headerlink" title="2. 先行断言"></a>2. 先行断言</h4><p>很多人也称先行断言和后行断言为<strong>环视</strong>，也有人叫<strong>预搜索</strong>，其实叫什么无所谓，重要的是知道如何使用它们！</p>
 <blockquote>
-<p>[!NOTE]</p>
 <p>先行断言和后行断言总共有四种：</p>
 <ol>
 <li>正向先行断言</li>
@@ -1495,7 +1506,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">57.8k</span>&nbsp;字
+                class="white-color">58.1k</span>&nbsp;字
             
             
             
