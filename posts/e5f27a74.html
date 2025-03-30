@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tmux, Chanpoe 计算机">
+    <meta name="keywords" content="什么是RAG, Chanpoe 计算机">
     <meta name="description" content="Chanpoe 的个人博客 | 专注于 AI 应用技术、Python 开发、自动化工具的研究与实践。分享机器学习、深度学习、Web 开发等技术文章，助你高效学习与成长！欢迎访问！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tmux | Chanpoe</title>
+    <title>什么是RAG | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -732,12 +732,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/202305280100178.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250331005029.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Tmux</h1>
+                    <h1 class="description center-align post-title">什么是RAG</h1>
                 </div>
             </div>
         </div>
@@ -858,12 +858,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Tmux/">
-                                <span class="chip bg-color">Tmux</span>
-                            </a>
-                        
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
                             </a>
                         
                     </div>
@@ -887,7 +883,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-01-28
+                    2025-02-09
                 </div>
                 
 
@@ -896,14 +892,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    8 分
                 </div>
                 
 
@@ -926,79 +922,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>为了让服务器实现窗口挂起，我曾经使用过GNU screen，为的就是保证关闭窗口后，会话不终止。这样做的好处有很多，比如说你在服务器上面搭建一个游戏服，一旦打开了游戏服，你的窗口就必须停留在电脑桌面，如果关闭电脑或是关闭窗口，会话也将随之停止，游戏服就会被强制关闭。还有，如果平常使用服务器窗口进行项目代码的编写时候，突然遇到不可逆的外界因素导致自己的电脑断网或者是突然关机，那么电脑与服务器的连接就会断开，刚才编辑的项目可能造成丢失，这就很必要有一个如上所述的功能来维护我们的操作。所以，学会服务器的终端复用，是我们进修Linux不可或缺的一步。</p>
-<h2 id="Tmux简介："><a href="#Tmux简介：" class="headerlink" title="Tmux简介："></a>Tmux简介：</h2><p>1.1 会话与进程</p>
-<p>命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称”窗口”），在里面输入命令。用户与计算机的这种临时的交互，称为一次”会话”（session） 。</p>
-<p>会话的一个重要特点是，窗口与其中启动的进程是连在一起的。打开窗口，会话开始；关闭窗口，会话结束，会话内部的进程也会随之终止，不管有没有运行完。</p>
-<p>一个典型的例子就是，SSH 登录远程计算机，打开一个远程窗口执行命令。这时，网络突然断线，再次登录的时候，是找不回上一次执行的命令的。因为上一次 SSH 会话已经终止了，里面的进程也随之消失了。</p>
-<p>为了解决这个问题，会话与窗口可以”解绑”：窗口关闭时，会话并不终止，而是继续运行，等到以后需要的时候，再让会话”绑定”其他窗口。</p>
-<p>1.2 Tmux 的作用</p>
-<p>Tmux 就是会话与窗口的”解绑”工具，将它们彻底分离。</p>
-<p>（1）它允许在单个窗口中，同时访问多个会话。这对于同时运行多个命令行程序很有用。 （2） 它可以让新窗口”接入”已经存在的会话。 （3）它允许每个会话有多个连接窗口，因此可以多人实时共享会话。 （4）它还支持窗口任意的垂直和水平拆分。</p>
-<p>类似的终端复用器还有 GNU Screen。Tmux 与它功能相似，但是更易用，也更强大。</p>
+                <h3 id="一、什么是RAG"><a href="#一、什么是RAG" class="headerlink" title="一、什么是RAG"></a>一、什么是RAG</h3><p>检索增强生成（RAG）是指对大型语言模型输出进行优化，使其能够在生成响应之前引用训练数据来源之外的权威知识库。大型语言模型（LLM）用海量数据进行训练，使用数十亿个参数为回答问题、翻译语言和完成句子等任务生成原始输出。在 LLM 本就强大的功能基础上，RAG 将其扩展为能访问特定领域或组织的内部知识库，所有这些都无需重新训练模型。这是一种经济高效地改进 LLM 输出的方法，让它在各种情境下都能保持相关性、准确性和实用性。</p>
 <hr>
-<h2 id="Tmux的安装："><a href="#Tmux的安装：" class="headerlink" title="Tmux的安装："></a>Tmux的安装：</h2><p>2.1 安装</p>
-<p>Tmux 一般需要自己安装。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Ubuntu安装：</span>
-$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> tmux
-
-<span class="token comment"># Centos安装：</span>
-$ <span class="token function">sudo</span> yum <span class="token function">install</span> tmux<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>2.2 使用（最强）配置文件<br><a target="_blank" rel="noopener" href="https://chanpoe.lanzoul.com/iXlmBzcabmf">点我下载</a></p>
-<p>使用scp将解压后的文件上传到自己的用户目录下。</p>
-<p>2.3 启动与退出</p>
-<p>安装完成后，键入tmux命令，就进入了 Tmux 窗口。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ tmux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>上面命令会启动 Tmux 窗口，底部有一个状态栏。状态栏的左侧是窗口信息（编号和名称），右侧是系统信息。</p>
-<h2 id="tmux教程"><a href="#tmux教程" class="headerlink" title="tmux教程"></a>tmux教程</h2><pre class="line-numbers language-none"><code class="language-none">功能：
-    (1) 分屏。
-    (2) 允许断开Terminal连接后，继续运行进程。
-结构：
-    一个tmux可以包含多个session，一个session可以包含多个window，一个window可以包含多个pane。
-    实例：
-        tmux:
-            session 0:
-                window 0:
-                    pane 0
-                    pane 1
-                    pane 2
-                    ...
-                window 1
-                window 2
-                ...
-            session 1
-            session 2
-            ...
-操作：
-    (1) tmux：新建一个session，其中包含一个window，window中包含一个pane，pane里打开了一个shell对话框。
-    (2) 按下Ctrl + a后手指松开，然后按%：将当前pane左右平分成两个pane。
-    (3) 按下Ctrl + a后手指松开，然后按"：将当前pane上下平分成两个pane。
-    (4) Ctrl + d：关闭当前pane；如果当前window的所有pane均已关闭，则自动关闭window；如果当前session的所有window均已关闭，则自动关闭session。
-    (5) 鼠标点击可以选pane。
-    (6) 按下ctrl + a后手指松开，然后按方向键：选择相邻的pane。
-    (7) 鼠标拖动pane之间的分割线，可以调整分割线的位置。
-    (8) 按住ctrl + a的同时按方向键，可以调整pane之间分割线的位置。
-    (9) 按下ctrl + a后手指松开，然后按z：将当前pane全屏/取消全屏。
-    (10) 按下ctrl + a后手指松开，然后按d：挂起当前session。
-    (11) tmux a：打开之前挂起的session。
-    (12) 按下ctrl + a后手指松开，然后按s：选择其它session。
-        方向键 —— 上：选择上一项 session/window/pane
-        方向键 —— 下：选择下一项 session/window/pane
-        方向键 —— 右：展开当前项 session/window
-        方向键 —— 左：闭合当前项 session/window
-    (13) 按下Ctrl + a后手指松开，然后按c：在当前session中创建一个新的window。
-    (14) 按下Ctrl + a后手指松开，然后按w：选择其他window，操作方法与(12)完全相同。
-    (15) 按下Ctrl + a后手指松开，然后按PageUp：翻阅当前pane内的内容。
-    (16) 鼠标滚轮：翻阅当前pane内的内容。
-    (17) 在tmux中选中文本时，需要按住shift键。（仅支持Windows和Linux，不支持Mac，不过该操作并不是必须的，因此影响不大）
-    (18) tmux中复制/粘贴文本的通用方式：
-        (1) 按下Ctrl + a后松开手指，然后按[
-        (2) 用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板
-        (3) 按下Ctrl + a后松开手指，然后按]，会将剪贴板中的内容粘贴到光标处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/335818087">https://zhuanlan.zhihu.com/p/335818087</a></p>
+<h3 id="二、RAG的重要性和好处"><a href="#二、RAG的重要性和好处" class="headerlink" title="二、RAG的重要性和好处"></a>二、RAG的重要性和好处</h3><h4 id="1-RAG的重要性"><a href="#1-RAG的重要性" class="headerlink" title="1. RAG的重要性"></a>1. RAG的重要性</h4><p>LLM 是一项关键的人工智能（AI）技术，为<strong>智能聊天机器人</strong>和其他<strong>自然语言处理（NLP）</strong>应用程序提供支持。目标是通过交叉引用权威知识来源，创建能够在各种环境中回答用户问题的机器人。不幸的是，LLM 技术的本质在 LLM 响应中引入了不可预测性。此外，LLM 训练数据是静态的，并引入了其所掌握知识的截止日期。</p>
+<p>LLM 面临的已知挑战包括：</p>
+<ul>
+<li>在没有答案的情况下提供虚假信息（也称 大模型幻觉）。</li>
+<li>当用户需要特定的当前响应时，提供过时或通用的信息。</li>
+<li>从非权威来源创建响应。</li>
+<li>由于术语混淆，不同的培训来源使用相同的术语来谈论不同的事情，因此会产生不准确的响应。</li>
+</ul>
+<p>您可以将大型语言模型看作是一个过于热情的新员工，他拒绝随时了解时事，但总是会绝对自信地回答每一个问题。不幸的是，这种态度会对用户的信任产生负面影响，这是您不希望聊天机器人效仿的！</p>
+<p>RAG 是解决其中一些挑战的一种方法。它会重定向 LLM，从权威的、预先确定的知识来源中检索相关信息。组织可以更好地控制生成的文本输出，并且用户可以深入了解 LLM 如何生成响应。</p>
+<h4 id="2-RAG的好处"><a href="#2-RAG的好处" class="headerlink" title="2. RAG的好处"></a>2. RAG的好处</h4><p>RAG 技术为组织的<strong>生成式人工智能</strong>工作带来了多项好处。</p>
+<h5 id="经济高效的实施"><a href="#经济高效的实施" class="headerlink" title="经济高效的实施"></a><strong>经济高效的实施</strong></h5><p>聊天机器人开发通常从基础模型开始。基础模型（FM）是在广泛的广义和未标记数据上训练的 API 可访问 LLM。针对组织或领域特定信息重新训练 FM 的计算和财务成本很高。RAG 是一种将新数据引入 LLM 的更加经济高效的方法。它使生成式人工智能技术更广泛地获得和使用。</p>
+<h5 id="当前信息"><a href="#当前信息" class="headerlink" title="当前信息"></a><strong>当前信息</strong></h5><p>即使 LLM 的原始训练数据来源适合您的需求，但保持相关性也具有挑战性。RAG 允许开发人员为生成模型提供最新的研究、统计数据或新闻。他们可以使用 RAG 将 LLM 直接连接到实时社交媒体提要、新闻网站或其他经常更新的信息来源。然后，LLM 可以向用户提供最新信息。</p>
+<h5 id="增强用户信任度"><a href="#增强用户信任度" class="headerlink" title="增强用户信任度"></a><strong>增强用户信任度</strong></h5><p>RAG 允许 LLM 通过来源归属来呈现准确的信息。输出可以包括对来源的引文或引用。如果需要进一步说明或更详细的信息，用户也可以自己查找源文档。这可以增加对您的生成式人工智能解决方案的信任和信心。</p>
+<h5 id="更多开发人员控制权"><a href="#更多开发人员控制权" class="headerlink" title="更多开发人员控制权"></a><strong>更多开发人员控制权</strong></h5><p>借助 RAG，开发人员可以更高效地测试和改进他们的聊天应用程序。他们可以控制和更改 LLM 的信息来源，以适应不断变化的需求或跨职能使用。开发人员还可以将敏感信息的检索限制在不同的授权级别内，并确保 LLM 生成适当的响应。此外，如果 LLM 针对特定问题引用了错误的信息来源，他们还可以进行故障排除并进行修复。组织可以更自信地为更广泛的应用程序实施生成式人工智能技术。</p>
+<hr>
+<h3 id="三、RAG的工作原理"><a href="#三、RAG的工作原理" class="headerlink" title="三、RAG的工作原理"></a>三、RAG的工作原理</h3><p>如果没有 RAG，LLM 会接受用户输入，并根据它所接受训练的信息或它已经知道的信息创建响应。RAG 引入了一个信息检索组件，该组件利用用户输入首先从新数据源提取信息。用户查询和相关信息都提供给 LLM。LLM 使用新知识及其训练数据来创建更好的响应。以下各部分概述了该过程。</p>
+<h5 id="创建外部数据"><a href="#创建外部数据" class="headerlink" title="创建外部数据"></a><strong>创建外部数据</strong></h5><p>LLM 原始训练数据集之外的新数据称为<em>外部数据</em>。它可以来自多个数据来源，例如 API、数据库或文档存储库。数据可能以各种格式存在，例如文件、数据库记录或长篇文本。另一种称为<em>嵌入语言模型（Embedding Language Model）</em>的 AI 技术将数据转换为数字表示形式并将其存储在向量数据库中。这个过程会创建一个生成式人工智能模型可以理解的知识库。</p>
+<blockquote>
+<p> 嵌入语言模型（Embedding Language Model）是一种用于将文本数据转换为高维向量表示的人工智能技术。在该过程中，原始文本数据通过深度学习模型（如 Transformer、BERT 或 OpenAI 的 text-embedding-ada 系列）进行编码，映射到一个连续的向量空间。这些向量（即嵌入）捕捉了文本的语义信息，使得语义相似的文本在高维空间中距离更近。这些嵌入通常存储在<strong>向量数据库</strong>（Vector Database）中，如 FAISS、Weaviate 或 Pinecone，以便高效检索。</p>
+<p>当生成式人工智能（Generative AI）模型需要查询外部知识时，它会将输入文本转换为向量，并在向量数据库中执行<strong>近似最近邻搜索（Approximate Nearest Neighbor, ANN）</strong>，检索与查询最相关的信息。这一机制通常用于<strong>增强检索（Retrieval-Augmented Generation, RAG）</strong>，以结合外部知识提升模型的生成能力。</p>
+</blockquote>
+<h5 id="检索相关信息"><a href="#检索相关信息" class="headerlink" title="检索相关信息"></a><strong>检索相关信息</strong></h5><p>下一步是执行相关性搜索。用户查询将转换为向量表示形式，并与向量数据库匹配。例如，考虑一个可以回答组织的人力资源问题的智能聊天机器人。如果员工搜索<em>：“我有多少年假？”</em>，系统将检索年假政策文件以及员工个人过去的休假记录。这些特定文件将被返回，因为它们与员工输入的内容高度相关。相关性是使用数学向量计算和表示法计算和建立的。</p>
+<h5 id="增强-LLM-提示"><a href="#增强-LLM-提示" class="headerlink" title="增强 LLM 提示"></a><strong>增强 LLM 提示</strong></h5><p>接下来，RAG 模型通过在上下文中添加检索到的相关数据来增强用户输入（或提示）。此步骤使用<em>提示工程技术（Prompt Engineering）</em>与 LLM 进行有效沟通。增强提示允许大型语言模型为用户查询生成准确的答案。</p>
+<blockquote>
+<p><strong>提示工程（Prompt Engineering）\</strong>是一种优化输入提示（Prompt）以引导大语言模型（LLM）生成更精确、符合预期的输出的技术。它涉及对提示的**设计、优化和结构调整**，以最大化模型的性能。</p>
+</blockquote>
+<h5 id="更新外部数据"><a href="#更新外部数据" class="headerlink" title="更新外部数据"></a><strong>更新外部数据</strong></h5><p>下一个问题可能是——如果外部数据过时了怎么办？ 要维护当前信息以供检索，请异步更新文档并更新文档的嵌入表示形式。您可以通过自动化实时流程或定期批处理来执行此操作。这是数据分析中常见的挑战——可以使用不同的数据科学方法进行变更管理。</p>
+<p>下图显示了将 RAG 与 LLM 配合使用的概念流程。</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://docs.aws.amazon.com/images/sagemaker/latest/dg/images/jumpstart/jumpstart-fm-rag.jpg"></p>
+<h3 id="四、RAG和语义搜索的区别"><a href="#四、RAG和语义搜索的区别" class="headerlink" title="四、RAG和语义搜索的区别"></a>四、RAG和语义搜索的区别</h3><p>语义搜索可以提高 RAG 结果，适用于想要在其 LLM 应用程序中添加大量外部知识源的组织。现代企业在各种系统中存储大量信息，例如手册、常见问题、研究报告、客户服务指南和人力资源文档存储库等。上下文检索在规模上具有挑战性，因此会降低生成输出质量。</p>
+<p>语义搜索技术可以扫描包含不同信息的大型数据库，并更准确地检索数据。例如，他们可以回答诸如 <em>“去年在机械维修上花了多少钱？”</em>之类的问题，方法是将问题映射到相关文档并返回特定文本而不是搜索结果。然后，开发人员可以使用该答案为 LLM 提供更多上下文。</p>
+<p>RAG 中的传统或关键字搜索解决方案对知识密集型任务产生的结果有限。开发人员在手动准备数据时还必须处理单词嵌入、文档分块和其他复杂问题。相比之下，语义搜索技术可以完成知识库准备的所有工作，因此开发人员不必这样做。它们还生成语义相关的段落和按相关性排序的标记词，以最大限度地提高 RAG 有效载荷的质量。</p>
+<blockquote>
+<h5 id="什么时候用-RAG，什么时候用语义搜索？"><a href="#什么时候用-RAG，什么时候用语义搜索？" class="headerlink" title="什么时候用 RAG，什么时候用语义搜索？"></a><strong>什么时候用 RAG，什么时候用语义搜索？</strong></h5><ul>
+<li><strong>如果只是查找相关文档</strong> → ✅ <strong>语义搜索</strong></li>
+<li><strong>如果需要 AI 生成基于检索信息的完整答案</strong> → ✅ <strong>RAG</strong></li>
+</ul>
+<p><strong>🔹 例如：</strong></p>
+<ul>
+<li><strong>搜索产品规格？</strong> → 语义搜索（返回产品文档）</li>
+<li><strong>问“这两个产品有什么区别？”</strong> → RAG（检索文档 + 生成答案）</li>
+</ul>
+</blockquote>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://aws.amazon.com/what-is/retrieval-augmented-generation/">什么是 RAG（检索增强生成）？</a></p>
 
                 
             </div>
@@ -1013,12 +983,8 @@ $ <span class="token function">sudo</span> yum <span class="token function">inst
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Tmux/">
-                                    <span class="chip bg-color">Tmux</span>
-                                </a>
-                            
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
                                 </a>
                             
                         </div>
@@ -1066,23 +1032,23 @@ $ <span class="token function">sudo</span> yum <span class="token function">inst
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/db977a1a.html">
+                <a href="/posts/936bc3bd.html">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20220218011305.png" class="responsive-img" alt="通过53端口udp转发校园网">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250212231917.png" class="responsive-img" alt="搭建Minecraft Server">
                         
-                        <span class="card-title">通过53端口udp转发校园网</span>
+                        <span class="card-title">搭建Minecraft Server</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            轻松上网
+                            在Ubuntu服务器部署MC服务器
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-14
                         </span>
                         <span class="publish-author">
                             
@@ -1099,8 +1065,8 @@ $ <span class="token function">sudo</span> yum <span class="token function">inst
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/">
-                        <span class="chip bg-color">校园网</span>
+                    <a href="/tags/Minecraft/">
+                        <span class="chip bg-color">Minecraft</span>
                     </a>
                     
                 </div>
@@ -1114,30 +1080,30 @@ $ <span class="token function">sudo</span> yum <span class="token function">inst
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/25dffcf6.html">
+                <a href="/posts/acb99ef9.html">
                     <div class="card-image">
                         
-                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/20220121234513.png" class="responsive-img" alt="Centos7 firewalld">
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="pydantic库">
                         
-                        <span class="card-title">Centos7 firewalld</span>
+                        <span class="card-title">pydantic库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            配置Centos7防火墙firewalld规则
+                            数据验证、序列化
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-07-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    学习记录
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -1147,8 +1113,8 @@ $ <span class="token function">sudo</span> yum <span class="token function">inst
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Firewalld/">
-                        <span class="chip bg-color">Firewalld</span>
+                    <a href="/tags/pydantic/">
+                        <span class="chip bg-color">pydantic</span>
                     </a>
                     
                 </div>
