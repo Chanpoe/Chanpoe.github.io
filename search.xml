@@ -1023,12 +1023,6 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="分类和标签："><a href="#分类和标签：" class="headerlink" title="分类和标签："></a>分类和标签：</h3><ul><li>Python<ul><li>字典</li><li>format函数</li><li>正则表达式</li><li>爬虫<ul><li>xpath</li><li>bs4</li><li>selenium</li></ul></li><li>函数注解</li></ul></li><li>学习记录<ul><li>拓扑</li><li>网络</li><li>firewalld</li><li>docker</li><li>tmux</li><li>Git</li><li>Anaconda</li><li>ChatGPT</li></ul></li><li>教程<ul><li>hexo</li><li>图床</li><li>Windows 11</li><li>校园网</li><li>alist</li><li>VsCode</li><li>GitHub</li></ul></li></ul><h3 id="Front-matter选项："><a href="#Front-matter选项：" class="headerlink" title="Front-matter选项："></a>Front-matter选项：</h3><p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/%E5%8D%9A%E5%AE%A2%E6%A0%BC%E5%BC%8F.png"></p><pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">author: Chanpoetitle: 搭建Minecraft Servertags: Minecraftcategories: 教程summary: 在Ubuntu服务器部署MC服务器date: 2025-02-14 00:07:34img: 'https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250212231917.png'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
-      <categories>
-          
-          <category> 学习记录 </category>
-          
-      </categories>
-      
       
         <tags>
             
