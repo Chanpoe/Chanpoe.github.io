@@ -948,7 +948,7 @@
     User user
     IdentityFile ~/.ssh/id_rsa<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="C:\Users\Chanpoe\AppData\Roaming\Typora\typora-user-images\image-20250330220400606.png" alt="image-20250330220400606"></p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-20250330220400606.png"></p>
 <hr>
 <h3 id="二、配置失败可能的问题"><a href="#二、配置失败可能的问题" class="headerlink" title="二、配置失败可能的问题"></a>二、配置失败可能的问题</h3><h4 id="1-远端未开启允许密钥认证"><a href="#1-远端未开启允许密钥认证" class="headerlink" title="1. 远端未开启允许密钥认证"></a>1. 远端未开启允许密钥认证</h4><p>确保远程服务器上的 SSH 服务配置文件 <code>/etc/ssh/sshd_config</code> 允许密钥认证。查找以下行，并确保它们没有被注释，并且设置正确：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PubkeyAuthentication <span class="token function">yes</span>
