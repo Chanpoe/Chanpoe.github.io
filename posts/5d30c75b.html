@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: Minecraft, Chanpoe 计算机">
+    <meta name="keywords" content="使用 InnoSetup 制作安装包, Chanpoe 计算机">
     <meta name="description" content="Chanpoe 的个人博客 | 专注于 AI 应用技术、Python 开发、自动化工具的研究与实践。分享机器学习、深度学习、Web 开发等技术文章，助你高效学习与成长！欢迎访问！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: Minecraft | Chanpoe</title>
+    <title>使用 InnoSetup 制作安装包 | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -715,452 +715,517 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Chanpoe`s Blog
-                
-            </div>
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250331003507.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">使用 InnoSetup 制作安装包</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-    <script>
-        $('.bg-cover').css('background-image', 'url(https://image-bed.obs.cn-north-4.myhuaweicloud.com/blog_banner.jpg)');
-    </script>
-    
 
-    </div>
-</div>
 
-<main class="content">
+<main class="post-container content">
 
     
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
 
-<div id="tags" class="container chip-container">
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/InnoSetup/">
+                                <span class="chip bg-color">InnoSetup</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-03-31
+                </div>
                 
-                <a href="/tags/Anaconda/" title="Anaconda: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Anaconda" style="background-color: #F9EBEA;">Anaconda
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
+
                 
-                <a href="/tags/Python/" title="Python: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Python" style="background-color: #F5EEF8;">Python
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    607
+                </div>
                 
+
                 
-                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="机器学习: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="机器学习" style="background-color: #D5F5E3;">机器学习
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
                 
+
                 
-                <a href="/tags/django/" title="django: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="django" style="background-color: #E8F8F5;">django
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%88%AC%E8%99%AB/" title="爬虫: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="爬虫" style="background-color: #FEF9E7;">爬虫
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Docker/" title="Docker: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Docker" style="background-color: #F8F9F9;">Docker
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ChatGPT/" title="ChatGPT: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ChatGPT" style="background-color: #82E0AA;">ChatGPT
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Firewalld/" title="Firewalld: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Firewalld" style="background-color: #D7BDE2;">Firewalld
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Alist/" title="Alist: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Alist" style="background-color: #A3E4D7;">Alist
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Git/" title="Git: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Git" style="background-color: #85C1E9;">Git
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Minecraft/" title="Minecraft: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="Minecraft" style="background-color: #F8C471;">Minecraft
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/MySQL/" title="MySQL: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MySQL" style="background-color: #F9E79F;">MySQL
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/loguru/" title="loguru: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="loguru" style="background-color: #F8F9F9;">loguru
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/glob/" title="glob: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="glob" style="background-color: #FEF9E7;">glob
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/pillow/" title="pillow: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="pillow" style="background-color: #D7BDE2;">pillow
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/fastapi/" title="fastapi: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="fastapi" style="background-color: #F9E79F;">fastapi
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/" title="代码模板: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="代码模板" style="background-color: #E8F8F5;">代码模板
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%87%BD%E6%95%B0%E6%B3%A8%E8%A7%A3/" title="函数注解: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="函数注解" style="background-color: #D5F5E3;">函数注解
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/pydantic/" title="pydantic: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="pydantic" style="background-color: #FFF;">pydantic
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/format%E5%87%BD%E6%95%B0/" title="format函数: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="format函数" style="background-color: #F8C471;">format函数
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%AD%97%E5%85%B8/" title="字典: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="字典" style="background-color: #F8C471;">字典
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/" title="装饰器: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="装饰器" style="background-color: #FFF;">装饰器
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="正则表达式" style="background-color: #FFF;">正则表达式
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Windows-11/" title="Windows 11: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Windows 11" style="background-color: #82E0AA;">Windows 11
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="面向对象: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面向对象" style="background-color: #FEF9E7;">面向对象
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Tmux/" title="Tmux: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Tmux" style="background-color: #D7BDE2;">Tmux
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Linux/" title="Linux: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Linux" style="background-color: #E8F8F5;">Linux
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/VSCode/" title="VSCode: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="VSCode" style="background-color: #FEF9E7;">VSCode
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/GitHub/" title="GitHub: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="GitHub" style="background-color: #F8C471;">GitHub
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/selenium/" title="selenium: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="selenium" style="background-color: #D7BDE2;">selenium
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/InnoSetup/" title="InnoSetup: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="InnoSetup" style="background-color: #F5EEF8;">InnoSetup
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%9B%BE%E5%BA%8A/" title="图床: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="图床" style="background-color: #F5EEF8;">图床
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/xpath/" title="xpath: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="xpath" style="background-color: #FEF9E7;">xpath
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%AF%B4%E6%98%8E/" title="说明: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="说明" style="background-color: #85C1E9;">说明
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #FFF;">hexo
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%8B%93%E6%89%91/" title="拓扑: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="拓扑" style="background-color: #82E0AA;">拓扑
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E7%BD%91%E7%BB%9C/" title="网络: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="网络" style="background-color: #FFF;">网络
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" title="校园网: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="校园网" style="background-color: #82E0AA;">校园网
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/SSH/" title="SSH: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="SSH" style="background-color: #F5EEF8;">SSH
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
-    </div>
-</div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="使用-InnoSetup-制作安装包"><a href="#使用-InnoSetup-制作安装包" class="headerlink" title="使用 InnoSetup 制作安装包"></a>使用 InnoSetup 制作安装包</h1><h2 id="InnoSetup-是什么？"><a href="#InnoSetup-是什么？" class="headerlink" title="InnoSetup 是什么？"></a><code>InnoSetup</code> 是什么？</h2><p><strong>Inno Setup</strong> 是一款专为 Windows 平台设计的开源免费工具，用于<strong>将应用程序及其相关文件打包成专业的安装程序</strong>。使用脚本语言 （<code>.iss</code> 文件）自定义安装流程，支持灵活定制安装行为。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/jrsoftware/issrc">https://github.com/jrsoftware/issrc</a></li>
+</ul>
+<p>但是<strong>它并不能帮你打包依赖</strong>，你需要自行先将程序的所有依赖寻找到，也就是做好“<em>打包</em>”，然后你才能使用它来生成一个安装包。</p>
+<h2 id="下载安装-InnoSetup"><a href="#下载安装-InnoSetup" class="headerlink" title="下载安装 InnoSetup"></a>下载安装 <code>InnoSetup</code></h2><p>我们可以通过官网去下载它的最新版本 <a target="_blank" rel="noopener" href="https://files.jrsoftware.org/is/6/innosetup-6.4.2.exe"><code>innosetup-6.4.2.exe</code></a>。</p>
+<p>安装没有什么好说的，一直点即可。</p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>你需要先将你的程序完全的打包好，比如你的 <code>.exe</code> 程序可能依赖许多的动态库、配置文件，均需要复制到同级目录。</p>
+<p>然后新建一个目录，将除了程序本身的所有依赖放到另一个文件夹中。</p>
+<h2 id="添加中文语言支持"><a href="#添加中文语言支持" class="headerlink" title="添加中文语言支持"></a>添加中文语言支持</h2><p>Inno Setup 默认不包含中文语言包，需要手动下载<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/jrsoftware/issrc/main/Files/Languages/Unofficial/ChineseSimplified.isl">简体中文翻译文件</a>。</p>
+<p>下载后，将文件放入 Inno Setup 安装目录的 <code>Languages</code> 文件夹中。在该文件夹内，你会发现多个 <code>.isl</code> 文件，它们分别对应不同语言的翻译。</p>
+<h2 id="使用示例，为一个程序制作安装包"><a href="#使用示例，为一个程序制作安装包" class="headerlink" title="使用示例，为一个程序制作安装包"></a>使用示例，为一个程序制作安装包</h2><p>双击打开安装好的 Inno Setup Complier。</p>
+<ol>
+<li><p>然后选择使用安装向导的方式创建脚本，点击 OK 后开始。</p>
+</li>
+<li><p>填写程序相关信息：</p>
+<p> <code>Application name</code> 应用程序的名字。<br> <code>Application version</code> 应用程序的版本号（v1.0）。<br> <code>Application publishe</code>r 应用的发布者。<br> <code>Application website</code> 应用程序的官网。</p>
+</li>
+<li><p><code>Application folder name</code> 是安装地址的文件夹名字，比如用户如何选择把程序安装到 <code>D:/</code> 那么就自动再创建一个文件夹（名字就是 <code>Application folder name</code>） 将程序放入，那么程序路径可能是：<code>D:/client/</code>。一般这个值可以不用改，就自动填上的程序名即可。</p>
+</li>
+<li><p>选择应用的执行文件，也就是启动程序 <code>.exe</code>；以及相关的资源文件和依赖。点击圈住的红色按钮进行设置，一个是可执行文件路径，一个是之前“<strong>前期准备</strong>”中创建的存放依赖的目录。</p>
+</li>
+</ol>
+<h2 id="参考视频"><a href="#参考视频" class="headerlink" title="参考视频"></a>参考视频</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1MZQ8YTEeg/?spm_id_from=333.337.search-card.all.click&amp;vd_source=75310977400d7b9e99795407c5732378">使用InnoSetup制作安装包进行发布</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/InnoSetup/">
+                                    <span class="chip bg-color">InnoSetup</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="Minecraft" data-aos="fade-up">
-                <div class="card">
-                    <a href="/posts/936bc3bd.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250212231917.png" class="responsive-img" alt="搭建Minecraft Server">
-                            
-                            <span class="card-title">搭建Minecraft Server</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-02-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+</div>
+
                 </div>
             </div>
             
         </div>
-    </article>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/5d30c75b.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250331003507.png" class="responsive-img" alt="使用 InnoSetup 制作安装包">
+                        
+                        <span class="card-title">使用 InnoSetup 制作安装包</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            给你的exe软件制作Windows安装程序
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/InnoSetup/">
+                        <span class="chip bg-color">InnoSetup</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/788b44f9.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250330220720.png" class="responsive-img" alt="配置SSH免密登录">
+                        
+                        <span class="card-title">配置SSH免密登录</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            配置免密SSH登录服务器
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
