@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python包管理工具uv</title>
+      <link href="/posts/1ac4fef8.html"/>
+      <url>/posts/1ac4fef8.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="一、新一代包管理工具uv"><a href="#一、新一代包管理工具uv" class="headerlink" title="一、新一代包管理工具uv"></a>一、新一代包管理工具uv</h3><p><code>Python</code> 包管理生态中存在多种工具，如 <code>pip</code>、<code>pip-tools</code>、<code>poetry</code>、<code>conda</code> 等，各自具备一定功能。</p><p>而今天介绍的<code>uv</code> 是 <code>Astral</code> 公司推出的一款基于 <code>Rust</code> 编写的 <code>Python</code> 包管理工具，旨在成为 “<strong>Python 的 Cargo</strong>”。</p><blockquote><p><code>Cargo</code> 是 Rust 编程语言的包管理和构建工具。它用于简化 Rust 项目的依赖管理、构建过程、测试和发布。 </p></blockquote><p>它提供了快速、可靠且易用的包管理体验，在性能、兼容性和功能上都有出色表现，为 <code>Python</code> 项目的开发和管理带来了新的选择。</p><p>✨与其他<code>Python</code>中的包管理工具相比，<code>uv</code>更像是一个全能选手，它的优势在于：</p><ol><li><strong>速度快</strong>：得益于<code>Rust</code>，<code>uv</code>工具的速度让人惊艳，比如安装依赖，速度比其他工具快很多</li><li><strong>功能全面</strong>：<code>uv</code> 是“<strong>一站式服务</strong>”的工具，从安装 Python、管理虚拟环境，到安装和管理包，再到管理项目依赖，它统统都能处理得很好</li><li><strong>前景光明</strong>：背后有风投公司<code>Astral</code>支持，且采用了<code>MIT</code>许可，即使未来出现问题，社区也有应对的办法</li></ol><p>使用<code>uv</code>，也可以像<code>NodeJS</code>或者<code>Rust</code>项目那样方便的管理依赖。</p><hr><h3 id="二、如何安装"><a href="#二、如何安装" class="headerlink" title="二、如何安装"></a>二、如何安装</h3><blockquote><p>Github: <a href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a></p><p>Docs: <a href="https://docs.astral.sh/uv/">https://docs.astral.sh/uv/</a></p></blockquote><p>官方提供的一键安装脚本：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># On macOS and Linux.</span><span class="token function">curl</span> <span class="token parameter variable">-LsSf</span> https://astral.sh/uv/install.sh <span class="token operator">|</span> <span class="token function">sh</span><span class="token comment"># On Windows.</span>powershell <span class="token parameter variable">-ExecutionPolicy</span> ByPass <span class="token parameter variable">-c</span> <span class="token string">"irm https://astral.sh/uv/install.ps1 | iex"</span><span class="token comment"># With pip.</span>pip <span class="token function">install</span> uv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>安装之后，可以通过<code>uv help</code>命令检查是否安装成功</p><hr><h3 id="三、使用方法"><a href="#三、使用方法" class="headerlink" title="三、使用方法"></a>三、使用方法</h3><p>介绍<code>uv</code>工具主要使用的两个文件：</p><ul><li><code>pyproject.toml</code>：定义项目的主要依赖，包括项目名称、版本、描述、支持的 <code>Python</code> 版本等信息</li><li><code>uv.lock</code>：记录项目的所有依赖，包括依赖的依赖，且跨平台，确保在不同环境下安装的一致性。这个文件由 <code>uv</code> 自动管理，不要手动编辑</li></ul><p>使用<code>uv</code>创建项目</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 初始化一个名为 example 的新项目</span>$ uv init exampleInitialized project <span class="token variable"><span class="token variable">`</span>example<span class="token variable">`</span></span> at <span class="token variable"><span class="token variable">`</span>/home/user/example<span class="token variable">`</span></span>$ <span class="token builtin class-name">cd</span> example<span class="token comment"># 安装 ruff 包，它是一个 Python 代码检查工具。</span>$ uv <span class="token function">add</span> ruffCreating virtual environment at: .venvResolved <span class="token number">2</span> packages <span class="token keyword">in</span> 170ms   Built example @ file:///home/user/examplePrepared <span class="token number">2</span> packages <span class="token keyword">in</span> 627msInstalled <span class="token number">2</span> packages <span class="token keyword">in</span> 1ms + <span class="token assign-left variable">example</span><span class="token operator">==</span><span class="token number">0.1</span>.0 <span class="token punctuation">(</span>from file:///home/user/example<span class="token punctuation">)</span> + <span class="token assign-left variable">ruff</span><span class="token operator">==</span><span class="token number">0.5</span>.0<span class="token comment"># 运行 ruff 检查项目代码，确保没有错误。</span>$ uv run ruff checkAll checks passed<span class="token operator">!</span><span class="token comment"># 锁定当前项目的依赖版本，确保一致性。</span>$ uv lockResolved <span class="token number">2</span> packages <span class="token keyword">in</span> <span class="token number">0</span>.33ms<span class="token comment"># 同步项目依赖，确保依赖和锁文件一致。</span>$ uv <span class="token function">sync</span>Resolved <span class="token number">2</span> packages <span class="token keyword">in</span> <span class="token number">0</span>.70msAudited <span class="token number">1</span> package <span class="token keyword">in</span> <span class="token number">0</span>.02ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><hr><h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="https://www.cnblogs.com/wang_yb/p/18635441">Python包管理不再头疼：uv工具快速上手</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> uv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用 InnoSetup 制作安装包</title>
       <link href="/posts/5d30c75b.html"/>
       <url>/posts/5d30c75b.html</url>

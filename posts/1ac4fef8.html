@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2023/5, Chanpoe 计算机">
+    <meta name="keywords" content="Python包管理工具uv, Chanpoe 计算机">
     <meta name="description" content="Chanpoe 的个人博客 | 专注于 AI 应用技术、Python 开发、自动化工具的研究与实践。分享机器学习、深度学习、Web 开发等技术文章，助你高效学习与成长！欢迎访问！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2023/5 | Chanpoe</title>
+    <title>Python包管理工具uv | Chanpoe</title>
 
     <link rel="icon" type="image/png" href="https://image-bed.obs.cn-north-4.myhuaweicloud.com/favicon.png">
 
@@ -715,323 +715,557 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Chanpoe`s Blog
-                
-            </div>
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250422014348.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Python包管理工具uv</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-    <script>
-        $('.bg-cover').css('background-image', 'url(https://image-bed.obs.cn-north-4.myhuaweicloud.com/blog_banner.jpg)');
-    </script>
-    
 
-    </div>
-</div>
 
-<main class="content">
+<main class="post-container content">
 
     
-    <div class="container archive-calendar">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        background-color: white;
+        width: 345px;
+        padding-left: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+    
+    #toc-content {
+        height: calc(100vh - 300px);
+        overflow: scroll;
+
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+        bottom: 120px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/uv/">
+                                <span class="chip bg-color">uv</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-04-21
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    699
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="一、新一代包管理工具uv"><a href="#一、新一代包管理工具uv" class="headerlink" title="一、新一代包管理工具uv"></a>一、新一代包管理工具uv</h3><p><code>Python</code> 包管理生态中存在多种工具，如 <code>pip</code>、<code>pip-tools</code>、<code>poetry</code>、<code>conda</code> 等，各自具备一定功能。</p>
+<p>而今天介绍的<code>uv</code> 是 <code>Astral</code> 公司推出的一款基于 <code>Rust</code> 编写的 <code>Python</code> 包管理工具，旨在成为 “<strong>Python 的 Cargo</strong>”。</p>
+<blockquote>
+<p><code>Cargo</code> 是 Rust 编程语言的包管理和构建工具。它用于简化 Rust 项目的依赖管理、构建过程、测试和发布。 </p>
+</blockquote>
+<p>它提供了快速、可靠且易用的包管理体验，在性能、兼容性和功能上都有出色表现，为 <code>Python</code> 项目的开发和管理带来了新的选择。</p>
+<p>✨与其他<code>Python</code>中的包管理工具相比，<code>uv</code>更像是一个全能选手，它的优势在于：</p>
+<ol>
+<li><strong>速度快</strong>：得益于<code>Rust</code>，<code>uv</code>工具的速度让人惊艳，比如安装依赖，速度比其他工具快很多</li>
+<li><strong>功能全面</strong>：<code>uv</code> 是“<strong>一站式服务</strong>”的工具，从安装 Python、管理虚拟环境，到安装和管理包，再到管理项目依赖，它统统都能处理得很好</li>
+<li><strong>前景光明</strong>：背后有风投公司<code>Astral</code>支持，且采用了<code>MIT</code>许可，即使未来出现问题，社区也有应对的办法</li>
+</ol>
+<p>使用<code>uv</code>，也可以像<code>NodeJS</code>或者<code>Rust</code>项目那样方便的管理依赖。</p>
+<hr>
+<h3 id="二、如何安装"><a href="#二、如何安装" class="headerlink" title="二、如何安装"></a>二、如何安装</h3><blockquote>
+<p>Github: <a target="_blank" rel="noopener" href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a></p>
+<p>Docs: <a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/">https://docs.astral.sh/uv/</a></p>
+</blockquote>
+<p>官方提供的一键安装脚本：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># On macOS and Linux.</span>
+<span class="token function">curl</span> <span class="token parameter variable">-LsSf</span> https://astral.sh/uv/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
+
+<span class="token comment"># On Windows.</span>
+powershell <span class="token parameter variable">-ExecutionPolicy</span> ByPass <span class="token parameter variable">-c</span> <span class="token string">"irm https://astral.sh/uv/install.ps1 | iex"</span>
+
+<span class="token comment"># With pip.</span>
+pip <span class="token function">install</span> uv
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>安装之后，可以通过<code>uv help</code>命令检查是否安装成功</p>
+<hr>
+<h3 id="三、使用方法"><a href="#三、使用方法" class="headerlink" title="三、使用方法"></a>三、使用方法</h3><p>介绍<code>uv</code>工具主要使用的两个文件：</p>
+<ul>
+<li><code>pyproject.toml</code>：定义项目的主要依赖，包括项目名称、版本、描述、支持的 <code>Python</code> 版本等信息</li>
+<li><code>uv.lock</code>：记录项目的所有依赖，包括依赖的依赖，且跨平台，确保在不同环境下安装的一致性。这个文件由 <code>uv</code> 自动管理，不要手动编辑</li>
+</ul>
+<p>使用<code>uv</code>创建项目</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 初始化一个名为 example 的新项目</span>
+$ uv init example
+Initialized project <span class="token variable"><span class="token variable">`</span>example<span class="token variable">`</span></span> at <span class="token variable"><span class="token variable">`</span>/home/user/example<span class="token variable">`</span></span>
+
+$ <span class="token builtin class-name">cd</span> example
+
+<span class="token comment"># 安装 ruff 包，它是一个 Python 代码检查工具。</span>
+$ uv <span class="token function">add</span> ruff
+Creating virtual environment at: .venv
+Resolved <span class="token number">2</span> packages <span class="token keyword">in</span> 170ms
+   Built example @ file:///home/user/example
+Prepared <span class="token number">2</span> packages <span class="token keyword">in</span> 627ms
+Installed <span class="token number">2</span> packages <span class="token keyword">in</span> 1ms
+ + <span class="token assign-left variable">example</span><span class="token operator">==</span><span class="token number">0.1</span>.0 <span class="token punctuation">(</span>from file:///home/user/example<span class="token punctuation">)</span>
+ + <span class="token assign-left variable">ruff</span><span class="token operator">==</span><span class="token number">0.5</span>.0
+
+<span class="token comment"># 运行 ruff 检查项目代码，确保没有错误。</span>
+$ uv run ruff check
+All checks passed<span class="token operator">!</span>
+
+<span class="token comment"># 锁定当前项目的依赖版本，确保一致性。</span>
+$ uv lock
+Resolved <span class="token number">2</span> packages <span class="token keyword">in</span> <span class="token number">0</span>.33ms
+
+<span class="token comment"># 同步项目依赖，确保依赖和锁文件一致。</span>
+$ uv <span class="token function">sync</span>
+Resolved <span class="token number">2</span> packages <span class="token keyword">in</span> <span class="token number">0</span>.70ms
+Audited <span class="token number">1</span> package <span class="token keyword">in</span> <span class="token number">0</span>.02ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><hr>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wang_yb/p/18635441">Python包管理不再头疼：uv工具快速上手</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/uv/">
+                                    <span class="chip bg-color">uv</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2024-04-22", "2025-04-22"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2024-04-22", 0], ["2024-04-23", 0], ["2024-04-24", 0], ["2024-04-25", 0], ["2024-04-26", 1], ["2024-04-27", 0], ["2024-04-28", 0], ["2024-04-29", 1], ["2024-04-30", 0], ["2024-05-01", 0], ["2024-05-02", 0], ["2024-05-03", 0], ["2024-05-04", 0], ["2024-05-05", 0], ["2024-05-06", 0], ["2024-05-07", 0], ["2024-05-08", 0], ["2024-05-09", 0], ["2024-05-10", 0], ["2024-05-11", 0], ["2024-05-12", 0], ["2024-05-13", 0], ["2024-05-14", 0], ["2024-05-15", 0], ["2024-05-16", 1], ["2024-05-17", 0], ["2024-05-18", 0], ["2024-05-19", 0], ["2024-05-20", 0], ["2024-05-21", 0], ["2024-05-22", 0], ["2024-05-23", 0], ["2024-05-24", 0], ["2024-05-25", 0], ["2024-05-26", 0], ["2024-05-27", 0], ["2024-05-28", 0], ["2024-05-29", 0], ["2024-05-30", 0], ["2024-05-31", 0], ["2024-06-01", 0], ["2024-06-02", 0], ["2024-06-03", 0], ["2024-06-04", 0], ["2024-06-05", 0], ["2024-06-06", 0], ["2024-06-07", 0], ["2024-06-08", 0], ["2024-06-09", 0], ["2024-06-10", 0], ["2024-06-11", 0], ["2024-06-12", 0], ["2024-06-13", 0], ["2024-06-14", 0], ["2024-06-15", 0], ["2024-06-16", 0], ["2024-06-17", 0], ["2024-06-18", 0], ["2024-06-19", 0], ["2024-06-20", 0], ["2024-06-21", 0], ["2024-06-22", 0], ["2024-06-23", 0], ["2024-06-24", 0], ["2024-06-25", 0], ["2024-06-26", 0], ["2024-06-27", 0], ["2024-06-28", 0], ["2024-06-29", 0], ["2024-06-30", 0], ["2024-07-01", 0], ["2024-07-02", 0], ["2024-07-03", 0], ["2024-07-04", 0], ["2024-07-05", 0], ["2024-07-06", 0], ["2024-07-07", 0], ["2024-07-08", 0], ["2024-07-09", 0], ["2024-07-10", 0], ["2024-07-11", 1], ["2024-07-12", 0], ["2024-07-13", 0], ["2024-07-14", 0], ["2024-07-15", 0], ["2024-07-16", 0], ["2024-07-17", 0], ["2024-07-18", 0], ["2024-07-19", 0], ["2024-07-20", 0], ["2024-07-21", 0], ["2024-07-22", 0], ["2024-07-23", 0], ["2024-07-24", 0], ["2024-07-25", 0], ["2024-07-26", 0], ["2024-07-27", 0], ["2024-07-28", 0], ["2024-07-29", 0], ["2024-07-30", 2], ["2024-07-31", 0], ["2024-08-01", 0], ["2024-08-02", 0], ["2024-08-03", 0], ["2024-08-04", 0], ["2024-08-05", 0], ["2024-08-06", 0], ["2024-08-07", 0], ["2024-08-08", 0], ["2024-08-09", 0], ["2024-08-10", 0], ["2024-08-11", 0], ["2024-08-12", 0], ["2024-08-13", 0], ["2024-08-14", 0], ["2024-08-15", 0], ["2024-08-16", 0], ["2024-08-17", 0], ["2024-08-18", 0], ["2024-08-19", 0], ["2024-08-20", 0], ["2024-08-21", 0], ["2024-08-22", 0], ["2024-08-23", 0], ["2024-08-24", 0], ["2024-08-25", 0], ["2024-08-26", 0], ["2024-08-27", 0], ["2024-08-28", 0], ["2024-08-29", 0], ["2024-08-30", 0], ["2024-08-31", 0], ["2024-09-01", 0], ["2024-09-02", 0], ["2024-09-03", 0], ["2024-09-04", 0], ["2024-09-05", 0], ["2024-09-06", 0], ["2024-09-07", 0], ["2024-09-08", 0], ["2024-09-09", 0], ["2024-09-10", 0], ["2024-09-11", 0], ["2024-09-12", 0], ["2024-09-13", 0], ["2024-09-14", 0], ["2024-09-15", 0], ["2024-09-16", 0], ["2024-09-17", 0], ["2024-09-18", 0], ["2024-09-19", 0], ["2024-09-20", 0], ["2024-09-21", 0], ["2024-09-22", 0], ["2024-09-23", 0], ["2024-09-24", 0], ["2024-09-25", 0], ["2024-09-26", 0], ["2024-09-27", 0], ["2024-09-28", 0], ["2024-09-29", 0], ["2024-09-30", 0], ["2024-10-01", 0], ["2024-10-02", 0], ["2024-10-03", 0], ["2024-10-04", 0], ["2024-10-05", 0], ["2024-10-06", 0], ["2024-10-07", 0], ["2024-10-08", 0], ["2024-10-09", 0], ["2024-10-10", 0], ["2024-10-11", 0], ["2024-10-12", 0], ["2024-10-13", 0], ["2024-10-14", 0], ["2024-10-15", 0], ["2024-10-16", 0], ["2024-10-17", 0], ["2024-10-18", 0], ["2024-10-19", 0], ["2024-10-20", 0], ["2024-10-21", 0], ["2024-10-22", 0], ["2024-10-23", 0], ["2024-10-24", 0], ["2024-10-25", 0], ["2024-10-26", 0], ["2024-10-27", 0], ["2024-10-28", 0], ["2024-10-29", 0], ["2024-10-30", 0], ["2024-10-31", 0], ["2024-11-01", 0], ["2024-11-02", 0], ["2024-11-03", 0], ["2024-11-04", 0], ["2024-11-05", 0], ["2024-11-06", 0], ["2024-11-07", 0], ["2024-11-08", 0], ["2024-11-09", 0], ["2024-11-10", 0], ["2024-11-11", 0], ["2024-11-12", 0], ["2024-11-13", 0], ["2024-11-14", 0], ["2024-11-15", 0], ["2024-11-16", 0], ["2024-11-17", 0], ["2024-11-18", 0], ["2024-11-19", 0], ["2024-11-20", 0], ["2024-11-21", 0], ["2024-11-22", 0], ["2024-11-23", 0], ["2024-11-24", 0], ["2024-11-25", 0], ["2024-11-26", 0], ["2024-11-27", 0], ["2024-11-28", 0], ["2024-11-29", 0], ["2024-11-30", 0], ["2024-12-01", 0], ["2024-12-02", 0], ["2024-12-03", 0], ["2024-12-04", 0], ["2024-12-05", 0], ["2024-12-06", 0], ["2024-12-07", 0], ["2024-12-08", 0], ["2024-12-09", 0], ["2024-12-10", 0], ["2024-12-11", 0], ["2024-12-12", 0], ["2024-12-13", 0], ["2024-12-14", 0], ["2024-12-15", 0], ["2024-12-16", 0], ["2024-12-17", 0], ["2024-12-18", 0], ["2024-12-19", 0], ["2024-12-20", 0], ["2024-12-21", 0], ["2024-12-22", 0], ["2024-12-23", 0], ["2024-12-24", 0], ["2024-12-25", 0], ["2024-12-26", 0], ["2024-12-27", 0], ["2024-12-28", 0], ["2024-12-29", 0], ["2024-12-30", 0], ["2024-12-31", 0], ["2025-01-01", 0], ["2025-01-02", 0], ["2025-01-03", 0], ["2025-01-04", 0], ["2025-01-05", 0], ["2025-01-06", 0], ["2025-01-07", 0], ["2025-01-08", 0], ["2025-01-09", 0], ["2025-01-10", 0], ["2025-01-11", 0], ["2025-01-12", 0], ["2025-01-13", 0], ["2025-01-14", 0], ["2025-01-15", 0], ["2025-01-16", 0], ["2025-01-17", 0], ["2025-01-18", 0], ["2025-01-19", 0], ["2025-01-20", 0], ["2025-01-21", 0], ["2025-01-22", 0], ["2025-01-23", 0], ["2025-01-24", 0], ["2025-01-25", 0], ["2025-01-26", 0], ["2025-01-27", 0], ["2025-01-28", 0], ["2025-01-29", 0], ["2025-01-30", 0], ["2025-01-31", 0], ["2025-02-01", 0], ["2025-02-02", 0], ["2025-02-03", 0], ["2025-02-04", 0], ["2025-02-05", 0], ["2025-02-06", 0], ["2025-02-07", 0], ["2025-02-08", 0], ["2025-02-09", 1], ["2025-02-10", 0], ["2025-02-11", 0], ["2025-02-12", 0], ["2025-02-13", 0], ["2025-02-14", 1], ["2025-02-15", 0], ["2025-02-16", 0], ["2025-02-17", 0], ["2025-02-18", 0], ["2025-02-19", 0], ["2025-02-20", 0], ["2025-02-21", 0], ["2025-02-22", 0], ["2025-02-23", 0], ["2025-02-24", 0], ["2025-02-25", 0], ["2025-02-26", 0], ["2025-02-27", 0], ["2025-02-28", 0], ["2025-03-01", 0], ["2025-03-02", 0], ["2025-03-03", 0], ["2025-03-04", 0], ["2025-03-05", 0], ["2025-03-06", 0], ["2025-03-07", 0], ["2025-03-08", 0], ["2025-03-09", 0], ["2025-03-10", 0], ["2025-03-11", 0], ["2025-03-12", 0], ["2025-03-13", 0], ["2025-03-14", 0], ["2025-03-15", 0], ["2025-03-16", 0], ["2025-03-17", 0], ["2025-03-18", 0], ["2025-03-19", 0], ["2025-03-20", 0], ["2025-03-21", 0], ["2025-03-22", 0], ["2025-03-23", 0], ["2025-03-24", 0], ["2025-03-25", 0], ["2025-03-26", 0], ["2025-03-27", 0], ["2025-03-28", 0], ["2025-03-29", 1], ["2025-03-30", 0], ["2025-03-31", 1], ["2025-04-01", 0], ["2025-04-02", 0], ["2025-04-03", 0], ["2025-04-04", 0], ["2025-04-05", 0], ["2025-04-06", 0], ["2025-04-07", 0], ["2025-04-08", 0], ["2025-04-09", 0], ["2025-04-10", 0], ["2025-04-11", 0], ["2025-04-12", 0], ["2025-04-13", 0], ["2025-04-14", 0], ["2025-04-15", 0], ["2025-04-16", 0], ["2025-04-17", 0], ["2025-04-18", 0], ["2025-04-19", 0], ["2025-04-20", 0], ["2025-04-21", 1], ["2025-04-22", 0]]
-        }]
+</div>
 
-    };
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
-    myChart.setOption(option);
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/1ac4fef8.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250422014348.png" class="responsive-img" alt="Python包管理工具uv">
+                        
+                        <span class="card-title">Python包管理工具uv</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            高效的Python包管理工具uv
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-04-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/uv/">
+                        <span class="chip bg-color">uv</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/5d30c75b.html">
+                    <div class="card-image">
+                        
+                        <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250331003507.png" class="responsive-img" alt="使用 InnoSetup 制作安装包">
+                        
+                        <span class="card-title">使用 InnoSetup 制作安装包</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            给你的exe软件制作Windows安装程序
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-03-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/InnoSetup/">
+                        <span class="chip bg-color">InnoSetup</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
 
     
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2023">2023</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2023/05">05</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>31</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/a1b78483.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 面向对象编程">
-                                
-                                <span class="card-title">Python 面向对象编程</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    一种符合人类思维习惯的编程思想
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2023-05-31
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Python/" class="post-category">
-                                    Python
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><span class="chip bg-color">面向对象</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>28</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/d89d2c35.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 装饰器">
-                                
-                                <span class="card-title">Python 装饰器</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    函数的装饰器
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Python/" class="post-category">
-                                    Python
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"><span class="chip bg-color">装饰器</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>27</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/b39b89bc.html">
-                            <div class="card-image">
-                                
-                                <img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/image-bed/Python图片.jpeg" class="responsive-img" alt="Python 函数注解">
-                                
-                                <span class="card-title">Python 函数注解</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    什么是函数注解？
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2023-05-27
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/Python/" class="post-category">
-                                    Python
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E5%87%BD%E6%95%B0%E6%B3%A8%E8%A7%A3/"><span class="chip bg-color">函数注解</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-    </div>
 
 </main>
 
