@@ -892,14 +892,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    699
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    6 分
                 </div>
                 
 
@@ -930,13 +930,17 @@
 <p>它提供了快速、可靠且易用的包管理体验，在性能、兼容性和功能上都有出色表现，为 <code>Python</code> 项目的开发和管理带来了新的选择。</p>
 <p>✨与其他<code>Python</code>中的包管理工具相比，<code>uv</code>更像是一个全能选手，它的优势在于：</p>
 <ol>
-<li><strong>速度快</strong>：得益于<code>Rust</code>，<code>uv</code>工具的速度让人惊艳，比如安装依赖，速度比其他工具快很多</li>
-<li><strong>功能全面</strong>：<code>uv</code> 是“<strong>一站式服务</strong>”的工具，从安装 Python、管理虚拟环境，到安装和管理包，再到管理项目依赖，它统统都能处理得很好</li>
-<li><strong>前景光明</strong>：背后有风投公司<code>Astral</code>支持，且采用了<code>MIT</code>许可，即使未来出现问题，社区也有应对的办法</li>
+<li><p><strong>速度快</strong>：得益于<code>Rust</code>，<code>uv</code>工具的速度让人惊艳，比如安装依赖，速度比其他工具快很多</p>
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250508234620.png"></p>
+</li>
+<li><p><strong>功能全面</strong>：<code>uv</code> 是“<strong>一站式服务</strong>”的工具，从安装 Python、管理虚拟环境，到安装和管理包，再到管理项目依赖，它统统都能处理得很好</p>
+</li>
+<li><p><strong>前景光明</strong>：背后有风投公司<code>Astral</code>支持，且采用了<code>MIT</code>许可，即使未来出现问题，社区也有应对的办法</p>
+</li>
 </ol>
 <p>使用<code>uv</code>，也可以像<code>NodeJS</code>或者<code>Rust</code>项目那样方便的管理依赖。</p>
 <hr>
-<h3 id="二、如何安装"><a href="#二、如何安装" class="headerlink" title="二、如何安装"></a>二、如何安装</h3><blockquote>
+<h3 id="二、一键安装"><a href="#二、一键安装" class="headerlink" title="二、一键安装"></a>二、一键安装</h3><blockquote>
 <p>Github: <a target="_blank" rel="noopener" href="https://github.com/astral-sh/uv">https://github.com/astral-sh/uv</a></p>
 <p>Docs: <a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/">https://docs.astral.sh/uv/</a></p>
 </blockquote>
@@ -953,7 +957,7 @@ pip <span class="token function">install</span> uv
 
 <p>安装之后，可以通过<code>uv help</code>命令检查是否安装成功</p>
 <hr>
-<h3 id="三、使用方法"><a href="#三、使用方法" class="headerlink" title="三、使用方法"></a>三、使用方法</h3><p>介绍<code>uv</code>工具主要使用的两个文件：</p>
+<h3 id="三、快速上手"><a href="#三、快速上手" class="headerlink" title="三、快速上手"></a>三、快速上手</h3><p>介绍<code>uv</code>工具主要使用的两个文件：</p>
 <ul>
 <li><code>pyproject.toml</code>：定义项目的主要依赖，包括项目名称、版本、描述、支持的 <code>Python</code> 版本等信息</li>
 <li><code>uv.lock</code>：记录项目的所有依赖，包括依赖的依赖，且跨平台，确保在不同环境下安装的一致性。这个文件由 <code>uv</code> 自动管理，不要手动编辑</li>
@@ -989,8 +993,145 @@ Resolved <span class="token number">2</span> packages <span class="token keyword
 Audited <span class="token number">1</span> package <span class="token keyword">in</span> <span class="token number">0</span>.02ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h3><hr>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wang_yb/p/18635441">Python包管理不再头疼：uv工具快速上手</a></p>
+<h3 id="四、使用方法"><a href="#四、使用方法" class="headerlink" title="四、使用方法"></a>四、使用方法</h3><h4 id="1-常用指令"><a href="#1-常用指令" class="headerlink" title="1. 常用指令"></a>1. 常用指令</h4><ol>
+<li>查看pip包内容：</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv pip list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>全局安装第三方包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv pip <span class="token function">install</span> <span class="token parameter variable">--system</span> requests<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>查看可以更新的包</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv pip list <span class="token parameter variable">--outdated</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="4">
+<li><code>uv</code>更新</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv self update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="5">
+<li>查看已安装的python版本</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv python list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="6">
+<li>安装/卸载python</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 安装python 3.12</span>
+uv python <span class="token function">install</span> <span class="token number">3.12</span>
+<span class="token comment"># 卸载python 3.10</span>
+uv python uninstall <span class="token number">3.10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="7">
+<li>初始化项目</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv init project_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250508234318.png"></p>
+<ol start="8">
+<li>为项目添加依赖</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">uv <span class="token function">add</span> xxxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://image-bed.obs.cn-north-4.myhuaweicloud.com/loading.gif" data-original="https://image-bed.obs.cn-north-4.myhuaweicloud.com/20250508234424.png"></p>
+<h4 id="2-详细介绍"><a href="#2-详细介绍" class="headerlink" title="2. 详细介绍"></a>2. 详细介绍</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#python-versions">Python versions</a></p>
+</blockquote>
+<p>安装和管理 Python 本身。</p>
+<ul>
+<li><code>uv python install</code>：安装 Python 版本。</li>
+<li><code>uv python list</code>：查看可用的 Python 版本。</li>
+<li><code>uv python find</code>：查找已安装的 Python 版本。</li>
+<li><code>uv python pin</code>：固定当前项目以使用特定的 Python 版本。</li>
+<li><code>uv python uninstall</code>：卸载某个 Python 版本。</li>
+</ul>
+<p>请参阅<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/guides/install-python/">安装 Python 的指南</a>来开始。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#scripts">Scripts</a></p>
+</blockquote>
+<p>执行独立的 Python 脚本，例如<code>example.py</code>。</p>
+<ul>
+<li><code>uv run</code>：运行脚本。</li>
+<li><code>uv add --script</code>：向脚本添加依赖项</li>
+<li><code>uv remove --script</code>：从脚本中删除依赖项</li>
+</ul>
+<p>请参阅<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/guides/scripts/">运行脚本的指南</a>来开始。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#projects">Projects</a></p>
+</blockquote>
+<p>创建和处理 Python 项目，即使用<code>pyproject.toml</code>.</p>
+<ul>
+<li><code>uv init</code>：创建一个新的 Python 项目。</li>
+<li><code>uv add</code>：向项目添加依赖项。</li>
+<li><code>uv remove</code>：从项目中删除依赖项。</li>
+<li><code>uv sync</code>：将项目的依赖项与环境同步。</li>
+<li><code>uv lock</code>：为项目的依赖项创建一个锁文件。</li>
+<li><code>uv run</code>：在项目环境中运行命令。</li>
+<li><code>uv tree</code>：查看项目的依赖关系树。</li>
+<li><code>uv build</code>：将项目构建到分发档案中。</li>
+<li><code>uv publish</code>：将项目发布到包索引。</li>
+</ul>
+<p>请参阅<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/guides/projects/">项目指南</a>以开始操作。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#tools">Tools</a></p>
+</blockquote>
+<p>运行和安装发布到 Python 包索引的工具，例如<code>ruff</code>或<code>black</code>。</p>
+<ul>
+<li><code>uvx</code>/ <code>uv tool run</code>：在临时环境中运行工具。</li>
+<li><code>uv tool install</code>：安装用户范围内的工具。</li>
+<li><code>uv tool uninstall</code>：卸载工具。</li>
+<li><code>uv tool list</code>：列出已安装的工具。</li>
+<li><code>uv tool update-shell</code>：更新 shell 以包含工具可执行文件。</li>
+</ul>
+<p>请参阅<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/guides/tools/">工具指南</a>以开始使用。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#the-pip-interface">The pip interface</a></p>
+</blockquote>
+<p>手动管理环境和包 - 旨在用于传统工作流程或高级命令无法提供足够控制的情况。</p>
+<p>创建虚拟环境（替换<code>venv</code>和<code>virtualenv</code>）：</p>
+<ul>
+<li><code>uv venv</code>：创建一个新的虚拟环境。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/pip/environments/">有关详细信息，请参阅有关使用环境</a>的文档。</p>
+<p>管理环境中的包（替换<a target="_blank" rel="noopener" href="https://github.com/pypa/pip"><code>pip</code></a>和 <a target="_blank" rel="noopener" href="https://github.com/tox-dev/pipdeptree"><code>pipdeptree</code></a>）：</p>
+<ul>
+<li><code>uv pip install</code>：将包安装到当前环境中。</li>
+<li><code>uv pip show</code>：显示有关已安装软件包的详细信息。</li>
+<li><code>uv pip freeze</code>：列出已安装的软件包及其版本。</li>
+<li><code>uv pip check</code>：检查当前环境是否有兼容的包。</li>
+<li><code>uv pip list</code>：列出已安装的软件包。</li>
+<li><code>uv pip uninstall</code>：卸载软件包。</li>
+<li><code>uv pip tree</code>：查看环境的依赖关系树。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/pip/packages/">有关详细信息，请参阅管理包</a>的文档。</p>
+<p>锁定环境中的包（替换<a target="_blank" rel="noopener" href="https://github.com/jazzband/pip-tools"><code>pip-tools</code></a>）：</p>
+<ul>
+<li><code>uv pip compile</code>：将需求编译成锁文件。</li>
+<li><code>uv pip sync</code>：使用锁文件同步环境。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/pip/compile/">有关详细信息，请参阅锁定环境</a>的文档。</p>
+<p>重要的</p>
+<p>这些命令并未完全实现其所基于工具的接口和行为。您越偏离常用工作流程，就越有可能遇到差异。有关详细信息，请参阅<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/pip/compatibility/">pip 兼容性指南</a>。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#utility">Utility</a></p>
+</blockquote>
+<p>管理和检查 uv 的状态，例如缓存、存储目录或执行自我更新：</p>
+<ul>
+<li><code>uv cache clean</code>：删除缓存条目。</li>
+<li><code>uv cache prune</code>：删除过时的缓存条目。</li>
+<li><code>uv cache dir</code>：显示uv缓存目录路径。</li>
+<li><code>uv tool dir</code>：显示uv工具目录路径。</li>
+<li><code>uv python dir</code>：显示uv安装的Python版本路径。</li>
+<li><code>uv self update</code>：更新uv到最新版本。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/#next-steps">Next steps</a></p>
+<p>阅读<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/guides/">指南</a>了解每个功能的介绍，查看 <a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/concepts/">概念</a>页面了解有关 uv 功能的详细信息，或者了解 在遇到任何问题时如何<a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/help/">获得帮助</a></p>
+<hr>
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a target="_blank" rel="noopener" href="https://docs.astral.sh/uv/getting-started/features/">uv 官方文档</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wang_yb/p/18635441">Python包管理不再头疼：uv工具快速上手</a></p>
 
                 
             </div>
@@ -1287,7 +1428,7 @@ Audited <span class="token number">1</span> package <span class="token keyword">
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">62.8k</span>&nbsp;字
+                class="white-color">63.7k</span>&nbsp;字
             
             
             
