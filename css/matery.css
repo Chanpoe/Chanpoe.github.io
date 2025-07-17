@@ -50,7 +50,7 @@
 
 body {
     /* background-color: #eaeaea; */
-    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://image-bed.obs.cn-north-4.myhuaweicloud.com/20230111211917.png") 0px 0px;
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://image-bed.obs.cn-north-4.myhuaweicloud.com/blog_background.webp") 0px 0px;
     background-attachment: fixed;
     margin: 0;
     color: #34495e;
